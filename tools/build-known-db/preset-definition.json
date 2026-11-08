@@ -1,0 +1,225 @@
+{
+  "exported_at": "2026-11-08T00:00:00Z",
+  "preset": {
+    "label": "D-Solutions — Mẫu tiêu chuẩn",
+    "label_en": "D-Solutions — Standard",
+    "description": "Bộ nền tảng thường gặp trên website của D-Solutions: WordPress, Google Tag Manager, Google Analytics 4, Google Ads, Meta Pixel, TikTok Pixel, Microsoft Clarity, Zalo, Google reCAPTCHA, YouTube và WooCommerce. Không đổi cài đặt nào của plugin.",
+    "description_en": "Platforms common on D-Solutions websites: WordPress, Google Tag Manager, Google Analytics 4, Google Ads, Meta Pixel, TikTok Pixel, Microsoft Clarity, Zalo, Google reCAPTCHA, YouTube and WooCommerce. Changes no plugin setting."
+  },
+  "settings": {},
+  "services": [
+    {
+      "slug": "ds-cookie-consent",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "dscc_consent",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "wordpress-core",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "wordpress_test_cookie",
+          "status": "confirmed"
+        },
+        {
+          "name": "wordpress_logged_in_*",
+          "status": "confirmed"
+        },
+        {
+          "name": "wordpress_sec_*",
+          "status": "confirmed"
+        },
+        {
+          "name": "wp-settings-*",
+          "status": "confirmed"
+        },
+        {
+          "name": "wp-settings-time-*",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "woocommerce",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "woocommerce_cart_hash",
+          "status": "confirmed"
+        },
+        {
+          "name": "woocommerce_items_in_cart",
+          "status": "confirmed"
+        },
+        {
+          "name": "wp_woocommerce_session_*",
+          "status": "confirmed"
+        },
+        {
+          "name": "woocommerce_recently_viewed",
+          "status": "confirmed"
+        },
+        {
+          "name": "store_notice*",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "google-recaptcha",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_GRECAPTCHA",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "google-tag-manager",
+      "status": "confirmed",
+      "cookies": []
+    },
+    {
+      "slug": "google-analytics",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_ga",
+          "status": "confirmed"
+        },
+        {
+          "name": "_ga_*",
+          "status": "confirmed"
+        },
+        {
+          "name": "_gid",
+          "status": "confirmed"
+        },
+        {
+          "name": "_gat_UA-*",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-clarity",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_clck",
+          "status": "confirmed"
+        },
+        {
+          "name": "_clsk",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "woocommerce-order-attribution",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "sbjs_*",
+          "status": "confirmed"
+        },
+        {
+          "name": "sbjs_session",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "google-ads",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_gcl_au",
+          "status": "confirmed"
+        },
+        {
+          "name": "_gcl_aw",
+          "status": "confirmed"
+        },
+        {
+          "name": "_gcl_gb",
+          "status": "confirmed"
+        },
+        {
+          "name": "_gac_*",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "meta-pixel",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_fbp",
+          "status": "confirmed"
+        },
+        {
+          "name": "_fbc",
+          "status": "confirmed"
+        },
+        {
+          "name": "fr",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "tiktok-pixel",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "_ttp",
+          "status": "confirmed"
+        },
+        {
+          "name": "_tt_enable_cookie",
+          "status": "confirmed"
+        },
+        {
+          "name": "ttcsid*",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "youtube",
+      "status": "confirmed",
+      "cookies": [
+        {
+          "name": "VISITOR_INFO1_LIVE",
+          "status": "confirmed"
+        },
+        {
+          "name": "VISITOR_PRIVACY_METADATA",
+          "status": "confirmed"
+        },
+        {
+          "name": "YSC",
+          "status": "confirmed"
+        },
+        {
+          "name": "__Secure-ROLLOUT_TOKEN",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "slug": "zalo",
+      "status": "confirmed",
+      "cookies": []
+    }
+  ],
+  "row_order": []
+}

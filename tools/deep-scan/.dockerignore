@@ -1,0 +1,5 @@
+node_modules
+test
+Dockerfile
+report.json
+*.report.json

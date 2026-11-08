@@ -1,0 +1,98 @@
+<?php
+namespace DSolutions\CookieConsent\Tests\Unit;
+
+use DSolutions\CookieConsent\Scanner\DeepScanValidator;
+use DSolutions\CookieConsent\Scanner\DeepScanViolations;
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Violations: analytics / marketing present before a choice or after a rejection; accept phase is never checked.
+ */
+class DeepScanViolationsTest extends TestCase {
+
+	private function result( $name, $category, $slug = '', $storage = 'cookie', $status = 'auto' ) {
+		return array(
+			'name'         => $name,
+			'storage'      => $storage,
+			'category'     => $category,
+			'service_slug' => $slug,
+			'status'       => $status,
+		);
+	}
+
+	private function data( array $phases ) {
+		$out = DeepScanValidator::validate( DeepScanFixtures::report( $phases ) );
+		$this->assertTrue( $out['ok'], $out['message'] );
+		return $out['data'];
+	}
+
+	public function test_analytics_and_marketing_before_choice_and_after_reject_are_violations() {
+		$data = $this->data(
+			array(
+				'before_choice' => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( '_ga', 'localhost' ), DeepScanFixtures::cookie( 'LittleD_nec' ) ) ),
+				'after_reject'  => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( '_fbp' ) ) ),
+				'after_accept'  => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( '_clck' ) ) ),
+			)
+		);
+		$results = array(
+			$this->result( '_ga', 'analytics', 'google-analytics' ),
+			$this->result( 'LittleD_nec', 'necessary' ),
+			$this->result( '_fbp', 'marketing', 'meta-pixel' ),
+			$this->result( '_clck', 'analytics', 'microsoft-clarity' ),
+		);
+		$v = DeepScanViolations::compute( $data, $results, array() );
+		$this->assertSame( array( '_ga' ), array_column( $v['before_choice'], 'name' ) );
+		$this->assertSame( array( '_fbp' ), array_column( $v['after_reject'], 'name' ) );
+		$this->assertArrayNotHasKey( 'after_accept', $v );
+		$this->assertSame( 'marketing', $v['after_reject'][0]['category'] );
+		$this->assertSame( 'meta-pixel', $v['after_reject'][0]['service'] );
+	}
+
+	public function test_clean_phases_have_no_violations() {
+		$data = $this->data( array( 'before_choice' => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( 'LittleD_nec' ) ) ) ) );
+		$v    = DeepScanViolations::compute( $data, array( $this->result( 'LittleD_nec', 'necessary' ) ), array() );
+		$this->assertSame( array(), $v['before_choice'] );
+		$this->assertSame( array(), $v['after_reject'] );
+	}
+
+	public function test_unclassified_and_ignored_cookies_are_not_violations() {
+		$data = $this->data( array( 'before_choice' => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( 'LittleD_u' ), DeepScanFixtures::cookie( '_fbp' ) ) ) ) );
+		$v    = DeepScanViolations::compute(
+			$data,
+			array( $this->result( 'LittleD_u', 'unclassified', '', 'cookie', 'new' ), $this->result( '_fbp', 'marketing', 'meta-pixel', 'cookie', 'ignored' ) ),
+			array()
+		);
+		$this->assertSame( array(), $v['before_choice'] );
+	}
+
+	public function test_vendor_hosts_are_violations_only_in_the_checked_phases() {
+		$data    = $this->data(
+			array(
+				'before_choice' => DeepScanFixtures::phase( array(), array( 'localhost', 'www.clarity.ms' ) ),
+				'after_accept'  => DeepScanFixtures::phase( array(), array( 'connect.facebook.net' ) ),
+			)
+		);
+		$vendors = array(
+			array( 'host' => 'www.clarity.ms', 'slug' => 'microsoft-clarity', 'category' => 'analytics' ),
+			array( 'host' => 'connect.facebook.net', 'slug' => 'meta-pixel', 'category' => 'marketing' ),
+		);
+		$v = DeepScanViolations::compute( $data, array(), $vendors );
+		$this->assertSame( array( 'www.clarity.ms' ), array_column( $v['before_choice'], 'name' ) );
+		$this->assertSame( 'host', $v['before_choice'][0]['storage'] );
+		$this->assertSame( array(), $v['after_reject'] );
+	}
+
+	public function test_web_storage_keys_count_and_are_listed_once_per_phase() {
+		$report = DeepScanFixtures::report();
+		$report['phases']['after_reject']['storage']['local'] = array( array( 'origin' => 'http://localhost:8888', 'key' => '_ga_store' ) );
+		$report['phases']['after_reject']['cookies']          = array( DeepScanFixtures::cookie( '_ga' ), DeepScanFixtures::cookie( '_ga', '.localhost' ) );
+		$data = DeepScanValidator::validate( $report )['data'];
+		$v    = DeepScanViolations::compute(
+			$data,
+			array( $this->result( '_ga_store', 'analytics', 'google-analytics', 'localStorage' ), $this->result( '_ga', 'analytics', 'google-analytics' ) ),
+			array()
+		);
+		$this->assertCount( 2, $v['after_reject'] );
+		$this->assertSame( array( 'cookie', 'localStorage' ), array_column( $v['after_reject'], 'storage' ) );
+	}
+}

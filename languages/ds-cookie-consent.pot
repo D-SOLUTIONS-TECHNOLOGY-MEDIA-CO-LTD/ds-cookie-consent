@@ -1,0 +1,2285 @@
+# Copyright (C) 2026 D-Solutions
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DS Cookie Consent 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ds-cookie-consent\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-08T03:47:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ds-cookie-consent\n"
+
+#. Plugin Name of the plugin
+#: ds-cookie-consent.php
+msgid "DS Cookie Consent"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: ds-cookie-consent.php
+msgid "https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent"
+msgstr ""
+
+#. Description of the plugin
+#: ds-cookie-consent.php
+#: src/Update/GitHubUpdater.php:138
+msgid "Cookie consent banner with Google Consent Mode v2, consent log and live-preview settings. Reusable across many sites."
+msgstr ""
+
+#. Author of the plugin
+#: ds-cookie-consent.php
+msgid "D-Solutions"
+msgstr ""
+
+#: src/Admin/AdminMenu.php:31
+#: src/Admin/AdminMenu.php:32
+#: src/Admin/AdminMenu.php:44
+msgid "Cookie Consent"
+msgstr ""
+
+#: src/Admin/AdminMenu.php:39
+msgid "Overview"
+msgstr ""
+
+#: src/Admin/AdminMenu.php:40
+#: src/Admin/SettingsPage.php:115
+#: templates/admin/dashboard.php:103
+#: templates/admin/tab-transfer.php:80
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/AdminMenu.php:41
+msgid "Log"
+msgstr ""
+
+#: src/Admin/BlockingTab.php:44
+msgid "Script blocking"
+msgstr ""
+
+#: src/Admin/BlockingTab.php:91
+#: src/Admin/CookiesTab.php:85
+#: src/Admin/CookiesTab.php:130
+#: src/Admin/CookiesTab.php:150
+#: src/Admin/PlatformsTab.php:84
+#: src/Admin/QuickSetup.php:180
+#: src/Admin/QuickSetup.php:195
+#: src/Admin/ScanPanel.php:101
+#: src/Admin/ScanPanel.php:117
+#: src/Admin/SettingsPage.php:189
+#: src/Admin/TransferTab.php:86
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:21
+#: templates/admin/compliance-block.php:111
+#: templates/admin/compliance-quick-actions.php:15
+msgid "Necessary"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:22
+msgid "Functional"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:23
+#: templates/admin/compliance-quick-actions.php:16
+#: templates/admin/log.php:49
+msgid "Analytics"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:24
+#: templates/admin/compliance-quick-actions.php:17
+#: templates/admin/log.php:50
+msgid "Marketing"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:34
+msgid "Unclassified"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:44
+#: templates/admin/tab-transfer.php:74
+msgid "New"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:45
+msgid "Confirmed"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:46
+msgid "Automatic"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:47
+#: src/Admin/CookieListTable.php:109
+#: templates/admin/compliance-block.php:115
+#: templates/admin/compliance-quick-actions.php:19
+msgid "Ignored"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:58
+msgid "Known database"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:59
+msgid "Scan"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:60
+msgid "Deep scan"
+msgstr ""
+
+#: src/Admin/CatalogLabels.php:61
+msgid "Manual"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:72
+#: templates/admin/tab-cookies.php:77
+msgid "Cookie name"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:73
+#: templates/admin/tab-cookies.php:94
+msgid "Vendor"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:74
+#: src/Admin/SettingsPage.php:318
+#: templates/admin/tab-blocking.php:143
+#: templates/admin/tab-blocking.php:166
+#: templates/admin/tab-cookies.php:40
+msgid "Category"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:75
+msgid "Duration"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:76
+msgid "Set by"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:77
+msgid "Last seen"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:78
+msgid "Times seen"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:79
+#: templates/admin/tab-blocking.php:189
+msgid "Status"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:80
+#: templates/admin/log.php:51
+#: templates/admin/tab-cookies.php:47
+msgid "Source"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:108
+msgid "Confirm"
+msgstr ""
+
+#. translators: %s: category name
+#: src/Admin/CookieListTable.php:113
+#, php-format
+msgid "Move to category: %s"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:115
+#: src/Admin/FieldRenderer.php:150
+msgid "Delete"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:147
+msgid "No cookies yet. Tick a platform on the Platforms tab or add a cookie manually below."
+msgstr ""
+
+#: src/Admin/CookieListTable.php:187
+msgid "Quick edit"
+msgstr ""
+
+#. translators: %d: number of new cookies
+#: src/Admin/CookiesTab.php:45
+#, php-format
+msgid "Cookies (%d new)"
+msgstr ""
+
+#. translators: %d: number of new cookies
+#: src/Admin/CookiesTab.php:45
+#: templates/admin/tab-transfer.php:98
+msgid "Cookies"
+msgstr ""
+
+#. translators: %d: number of cookies
+#: src/Admin/CookiesTab.php:108
+#, php-format
+msgid "Cookies confirmed: %d."
+msgstr ""
+
+#. translators: %d: number of cookies
+#: src/Admin/CookiesTab.php:111
+#, php-format
+msgid "Skipped cookies without a vendor or category: %d. Move them to a category first, then confirm."
+msgstr ""
+
+#. translators: %d: number of cookies
+#: src/Admin/CookiesTab.php:115
+#, php-format
+msgid "Cookies ignored: %d."
+msgstr ""
+
+#. translators: %d: number of cookies
+#: src/Admin/CookiesTab.php:118
+#, php-format
+msgid "Cookies deleted: %d."
+msgstr ""
+
+#. translators: %d: number of cookies
+#: src/Admin/CookiesTab.php:121
+#, php-format
+msgid "Cookies moved to another category: %d."
+msgstr ""
+
+#: src/Admin/CookiesTab.php:139
+msgid "Cookie added."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:25
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:56
+msgid "Visitor choices chart"
+msgstr ""
+
+#: src/Admin/FieldRenderer.php:149
+msgid "Select image"
+msgstr ""
+
+#: src/Admin/LogPage.php:28
+msgid "Accept all"
+msgstr ""
+
+#: src/Admin/LogPage.php:29
+msgid "Reject all"
+msgstr ""
+
+#: src/Admin/LogPage.php:30
+msgid "Custom"
+msgstr ""
+
+#: src/Admin/LogPage.php:31
+#: templates/admin/tab-blocking.php:127
+msgid "Withdraw consent"
+msgstr ""
+
+#: src/Admin/LogPage.php:41
+msgid "You do not have permission to view the log."
+msgstr ""
+
+#: src/Admin/PlatformsTab.php:43
+#: templates/admin/tab-blocking.php:142
+#: templates/admin/tab-transfer.php:92
+msgid "Platforms"
+msgstr ""
+
+#: src/Admin/PlatformsTab.php:133
+msgid "Platform list saved."
+msgstr ""
+
+#: src/Admin/PlatformsTab.php:148
+msgid "Custom platform added."
+msgstr ""
+
+#: src/Admin/PlatformsTab.php:160
+msgid "The cookie database update URL is not configured (Advanced tab)."
+msgstr ""
+
+#. translators: 1: database version, 2: number of platforms, 3: number of cookies
+#: src/Admin/PlatformsTab.php:168
+#, php-format
+msgid "Cookie database updated to version %1$s (%2$d platforms, %3$d cookies)."
+msgstr ""
+
+#: src/Admin/QuickSetup.php:185
+msgid "Could not apply this to the selected cookies."
+msgstr ""
+
+#: src/Admin/ScannerTab.php:37
+msgid "Cookie scan"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:45
+msgid "Appearance"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:50
+msgid "Content"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:55
+#: templates/admin/tab-platforms.php:151
+msgid "Advanced"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:124
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#. translators: %s: contrast ratio, for example 3.2
+#: src/Admin/SettingsPage.php:145
+#, php-format
+msgid "White text on the primary colour (Accept button) only reaches a contrast of %s:1, below the 4.5:1 minimum (WCAG AA)."
+msgstr ""
+
+#. translators: %s: contrast ratio, for example 3.2
+#: src/Admin/SettingsPage.php:147
+#, php-format
+msgid "Banner text on the banner background only reaches a contrast of %s:1, below the 4.5:1 minimum (WCAG AA)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:202
+msgid "Invalid tab."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:292
+#: src/Admin/SettingsPage.php:337
+msgid "Could not apply the change. Please try again."
+msgstr ""
+
+#. translators: %s: contrast ratio
+#: src/Admin/SettingsPage.php:313
+#, php-format
+msgid "White text on the primary colour reaches a contrast of %s:1 (4.5:1 minimum required)."
+msgstr ""
+
+#. translators: %s: contrast ratio
+#: src/Admin/SettingsPage.php:315
+#, php-format
+msgid "Banner text on the banner background reaches a contrast of %s:1 (4.5:1 minimum required)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:316
+msgid "Select logo"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:317
+msgid "Use this image"
+msgstr ""
+
+#. translators: %s: vendor name
+#: src/Admin/SettingsPage.php:320
+#, php-format
+msgid "Changing the category applies to the whole vendor \"%s\" (every cookie of this vendor)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:321
+msgid "Purpose (Vietnamese)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:322
+#: templates/admin/tab-cookies.php:122
+msgid "Purpose (English)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:323
+msgid "Duration (Vietnamese)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:324
+#: templates/admin/tab-cookies.php:129
+msgid "Duration (English)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:325
+msgid "Row group in the policy table (cookies of one group are merged into one row)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:326
+msgid "Applies to (Vietnamese)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:327
+#: templates/admin/tab-cookies.php:136
+msgid "Applies to (English)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:328
+msgid "Save"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:329
+msgid "Cancel"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:330
+msgid "Could not save. Please try again."
+msgstr ""
+
+#. translators: 1: pages done, 2: pages total
+#: src/Admin/SettingsPage.php:332
+#, php-format
+msgid "Scanning: %1$s/%2$s pages..."
+msgstr ""
+
+#. translators: 1: cookies found, 2: new cookies
+#: src/Admin/SettingsPage.php:334
+#, php-format
+msgid "Scan finished: %1$s cookies set by the server, %2$s new cookies. Reloading the page..."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:335
+msgid "The scan failed. Check that the site can load itself (loopback), then try again."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:336
+msgid "Could not reach the server. Please try again."
+msgstr ""
+
+#: src/Admin/SvgUploadGuard.php:67
+msgid "Cannot upload SVG: the SVG sanitising filter is not available."
+msgstr ""
+
+#: src/Admin/SvgUploadGuard.php:72
+msgid "Could not read the SVG file."
+msgstr ""
+
+#: src/Admin/SvgUploadGuard.php:77
+msgid "The SVG file is unsafe or invalid."
+msgstr ""
+
+#: src/Admin/TransferTab.php:46
+msgid "Import / Export"
+msgstr ""
+
+#: src/Admin/TransferTab.php:149
+msgid "The import preview has expired. Choose the file again."
+msgstr ""
+
+#. translators: 1: settings changed, 2: platforms added or updated, 3: cookies added or updated
+#: src/Admin/TransferTab.php:158
+#, php-format
+msgid "Import finished: %1$d settings, %2$d platforms and %3$d cookies were added or updated."
+msgstr ""
+
+#: src/Admin/TransferTab.php:177
+#: src/Admin/TransferTab.php:183
+msgid "The file could not be uploaded."
+msgstr ""
+
+#: src/Admin/TransferTab.php:180
+#: src/Transfer/ImportReader.php:35
+msgid "The file is larger than 2 MB."
+msgstr ""
+
+#: src/Admin/TransferTab.php:188
+msgid "Choose a file or a preset first."
+msgstr ""
+
+#: src/Admin/TransferTab.php:191
+msgid "That preset does not exist."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:119
+msgid "Cookie not found."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:127
+msgid "Invalid cookie category."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:146
+msgid "Enter a cookie name."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:152
+msgid "The vendor does not exist."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:161
+msgid "Choose a vendor or a cookie category."
+msgstr ""
+
+#: src/Catalog/CookieActions.php:174
+msgid "Could not save the cookie."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:41
+msgid "The update URL must be a valid https address."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:55
+msgid "Update refused: the accompanying SHA-256 checksum does not match the downloaded file."
+msgstr ""
+
+#. translators: %s: first validation error
+#: src/Catalog/KnownDbUpdater.php:62
+#, php-format
+msgid "Update refused: the file is invalid (%s)."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:66
+msgid "Update refused: the file has no SHA-256 checksum to verify."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:123
+msgid "Could not download the cookie database file from the configured URL."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:138
+msgid "Could not create the uploads/dscc folder."
+msgstr ""
+
+#: src/Catalog/KnownDbUpdater.php:144
+msgid "Could not write the cookie database file to the uploads folder."
+msgstr ""
+
+#: src/Catalog/PlatformManager.php:157
+msgid "Enter a platform name."
+msgstr ""
+
+#: src/Catalog/PlatformManager.php:161
+msgid "Choose a valid cookie category."
+msgstr ""
+
+#: src/Catalog/PlatformManager.php:194
+msgid "Could not save the platform."
+msgstr ""
+
+#: src/Consent/LogExporter.php:65
+msgid "You do not have permission to export the consent log."
+msgstr ""
+
+#: src/Frontend/Preview.php:56
+msgid "The preview link is invalid or has expired."
+msgstr ""
+
+#: src/Frontend/Preview.php:81
+msgid "DS Cookie Consent preview"
+msgstr ""
+
+#: src/Integrations/LiteSpeedCache.php:68
+msgid "The plugin's scripts and the blocked hosts are added to the automatic Combine/Defer exclusion list. The cache stores the blocked HTML, identical for every visitor."
+msgstr ""
+
+#: src/Integrations/MetaPixel.php:143
+msgid "The plugin is kept on \"hold\" until the visitor accepts Marketing (no _fbp is set by the server, no pixel is initialised); the browser calls release() once the visitor accepts."
+msgstr ""
+
+#: src/Integrations/PixelYourSite.php:113
+msgid "Uses the plugin's GDPR filters (pys_disable_*_by_gdpr, pys_check_consent_by_gdpr) and enables value updates over AJAX so cached pages still follow the visitor's choice. Cost: the plugin calls admin-ajax to refresh values on every page view. How it refreshes after the visitor changes the choice has not been verified on the real plugin: test it on a staging site."
+msgstr ""
+
+#: src/Integrations/SiteKit.php:75
+msgid "Site Kit Consent Mode is off: the Google tags of Site Kit are blocked until the visitor accepts Analytics. You can turn on Consent Mode in Site Kit (Settings > Admin Settings > Consent Mode) so the tags load in denied mode."
+msgstr ""
+
+#: src/Integrations/SiteKit.php:77
+msgid "Site Kit Consent Mode is on: Site Kit tags are not blocked; the visitor's choice is passed on through the WP Consent API."
+msgstr ""
+
+#: src/Integrations/WpConsentApi.php:59
+msgid "The visitor's choice is synced to the statistics, marketing and preferences categories of the WP Consent API."
+msgstr ""
+
+#: src/Integrations/WpRocket.php:88
+msgid "Adds exclusions for the plugin's scripts, blocked hosts and blocked inline scripts (data-dscc marker) from Minify, Delay and Defer JS."
+msgstr ""
+
+#: src/Scanner/DeepScanEndpoint.php:36
+msgid "The report exceeds 2 MB."
+msgstr ""
+
+#: src/Scanner/DeepScanEndpoint.php:67
+msgid "You must sign in with an administrator's Application Password."
+msgstr ""
+
+#: src/Scanner/DeepScanEndpoint.php:81
+msgid "The body is not valid JSON."
+msgstr ""
+
+#. translators: 1: error code, 2: field path
+#: src/Scanner/DeepScanEndpoint.php:89
+#, php-format
+msgid "Invalid report (%1$s: %2$s)."
+msgstr ""
+
+#: src/Scanner/DeepScanEndpoint.php:97
+msgid "The report belongs to another site."
+msgstr ""
+
+#: src/Scanner/DeepScanEndpoint.php:101
+msgid "Could not save the scan result."
+msgstr ""
+
+#. translators: 1: site name, 2: number of new cookies
+#: src/Scanner/ScanNotifier.php:71
+#, php-format
+msgid "[%1$s] Cookie Consent: new cookies to classify: %2$d"
+msgstr ""
+
+#. translators: 1: site name, 2: number of cookies waiting for review
+#: src/Scanner/ScanNotifier.php:77
+#, php-format
+msgid "The cookie scan on %1$s just found new cookies. Cookies waiting for classification: %2$d. Unclassified cookies are blocked like the Marketing category and are hidden from visitors until you handle them."
+msgstr ""
+
+#. translators: %d: number of cookies not listed
+#: src/Scanner/ScanNotifier.php:85
+#, php-format
+msgid "... and %d more."
+msgstr ""
+
+#. translators: %s: platform names
+#: src/Scanner/ScanNotifier.php:92
+#, php-format
+msgid "Newly detected platforms, blocked from now on until the visitor consents (not shown in the popup until you confirm them on the Platforms tab): %s"
+msgstr ""
+
+#: src/Scanner/ScanRunner.php:64
+msgid "No page found to scan."
+msgstr ""
+
+#: src/Scanner/ScanRunner.php:88
+msgid "Could not create the scan run."
+msgstr ""
+
+#. translators: %s: setting name such as advanced.cookie_name
+#: src/Transfer/ImportDiff.php:53
+#, php-format
+msgid "The value of %s is not valid: the current value is kept."
+msgstr ""
+
+#. translators: %s: cookie name
+#: src/Transfer/ImportPlanner.php:40
+#, php-format
+msgid "The cookie \"%s\" was skipped because its platform is not in the file and not on this site."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:32
+msgid "The file is empty."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:41
+msgid "The file is not a valid JSON object."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:44
+msgid "This is not a DS Cookie Consent export file."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:47
+msgid "This export file was made by a newer version of the plugin. Update the plugin first."
+msgstr ""
+
+#. translators: %s: section name in the file
+#: src/Transfer/ImportReader.php:52
+#: src/Transfer/ImportReader.php:120
+#: src/Transfer/ImportReader.php:129
+#, php-format
+msgid "The \"%s\" section of the file is malformed."
+msgstr ""
+
+#. translators: 1: section name, 2: limit
+#: src/Transfer/ImportReader.php:124
+#, php-format
+msgid "The \"%1$s\" section has more than %2$d entries."
+msgstr ""
+
+#. translators: %s: list of setting names
+#: src/Transfer/ImportReader.php:161
+#, php-format
+msgid "Settings that do not exist or are specific to one site were ignored: %s"
+msgstr ""
+
+#. translators: %d: number of texts
+#: src/Transfer/ImportReader.php:188
+#, php-format
+msgid "Texts with an unknown key were ignored: %d."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:204
+msgid "A platform in the file has no valid slug or name."
+msgstr ""
+
+#. translators: %s: platform slug
+#: src/Transfer/ImportReader.php:208
+#, php-format
+msgid "The platform \"%s\" appears twice in the file."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:227
+msgid "A cookie in the file has no name."
+msgstr ""
+
+#: src/Transfer/ImportReader.php:230
+msgid "A cookie in the file has an invalid platform reference."
+msgstr ""
+
+#. translators: %s: cookie name
+#: src/Transfer/ImportReader.php:236
+#, php-format
+msgid "The cookie \"%s\" appears twice in the file."
+msgstr ""
+
+#. translators: %s: version number
+#: src/Update/GitHubUpdater.php:172
+#, php-format
+msgid "DS Cookie Consent %s has no published SHA-256 checksum on GitHub, so the download cannot be verified before it is installed."
+msgstr ""
+
+#: src/Update/GitHubUpdater.php:200
+msgid "The update package does not contain the DS Cookie Consent plugin file."
+msgstr ""
+
+#: src/Update/GitHubUpdater.php:210
+msgid "Could not rename the update folder to match the installed plugin."
+msgstr ""
+
+#: src/Update/PackageDownloader.php:71
+msgid "The update information has expired. Check for updates again and retry."
+msgstr ""
+
+#: src/Update/PackageDownloader.php:83
+msgid "The downloaded update does not match the checksum published by GitHub, so it was discarded."
+msgstr ""
+
+#: src/Update/PackageDownloader.php:112
+msgid "Could not create a temporary file for the update."
+msgstr ""
+
+#: src/Update/PackageDownloader.php:134
+msgid "GitHub answered with an unexpected download address."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: src/Update/PackageDownloader.php:141
+#, php-format
+msgid "GitHub refused the update download (HTTP %d)."
+msgstr ""
+
+#: templates/admin/compliance-block.php:20
+msgid "Compliance alerts"
+msgstr ""
+
+#: templates/admin/compliance-block.php:26
+msgid "Unclassified cookies:"
+msgstr ""
+
+#: templates/admin/compliance-block.php:27
+msgid "Blocking"
+msgstr ""
+
+#: templates/admin/compliance-block.php:27
+msgid "Report only"
+msgstr ""
+
+#: templates/admin/compliance-block.php:28
+msgid "Change the mode on the Script blocking tab"
+msgstr ""
+
+#: templates/admin/compliance-block.php:31
+msgid "The list of unknown cookies being blocked has reached the limit of 100 cookies; newer cookies are not blocked yet. Classify or ignore some cookies on the Cookies tab."
+msgstr ""
+
+#: templates/admin/compliance-block.php:34
+msgid "No alerts from recent scans."
+msgstr ""
+
+#: templates/admin/compliance-block.php:34
+msgid "No alerts yet. Run \"Scan now\" on the Cookies tab to check."
+msgstr ""
+
+#: templates/admin/compliance-block.php:38
+msgid "Cookies set before the visitor consented"
+msgstr ""
+
+#: templates/admin/compliance-block.php:57
+msgid "Cookies leaking after the visitor rejected"
+msgstr ""
+
+#: templates/admin/compliance-block.php:62
+msgid "Reported by visitors"
+msgstr ""
+
+#: templates/admin/compliance-block.php:62
+msgid "Reported by the deep scan"
+msgstr ""
+
+#. translators: 1: number of sightings, 2: date
+#: templates/admin/compliance-block.php:67
+#, php-format
+msgid "(%1$d times, latest %2$s)"
+msgstr ""
+
+#: templates/admin/compliance-block.php:80
+msgid "Clear leak alerts (after you have fixed them)"
+msgstr ""
+
+#. translators: %d: number of unclassified cookies
+#: templates/admin/compliance-block.php:98
+#, php-format
+msgid "%d unclassified cookie"
+msgid_plural "%d unclassified cookies"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/compliance-block.php:104
+msgid "Blocked like the Marketing category and hidden from visitors until you classify them."
+msgstr ""
+
+#: templates/admin/compliance-block.php:104
+msgid "Report only: the cookies are still sent and are not shown to visitors yet. Choose a category for each row below; Analytics and Marketing will be blocked until the visitor consents."
+msgstr ""
+
+#: templates/admin/compliance-block.php:105
+msgid "Classify now"
+msgstr ""
+
+#: templates/admin/compliance-block.php:108
+msgid "Actions for the selected cookies"
+msgstr ""
+
+#: templates/admin/compliance-block.php:110
+msgid "Actions for the selected rows..."
+msgstr ""
+
+#: templates/admin/compliance-block.php:112
+msgid "Analytics (blocked until consent)"
+msgstr ""
+
+#: templates/admin/compliance-block.php:113
+msgid "Marketing (blocked until consent)"
+msgstr ""
+
+#: templates/admin/compliance-block.php:114
+#: templates/admin/compliance-quick-actions.php:18
+msgid "Always keep"
+msgstr ""
+
+#: templates/admin/compliance-block.php:117
+msgid "Apply"
+msgstr ""
+
+#: templates/admin/compliance-block.php:139
+msgid "Cookies present on the site but missing from the policy page"
+msgstr ""
+
+#: templates/admin/compliance-block.php:146
+msgid "No Cookie policy page is selected on the Content tab, so cookies cannot be compared with the policy yet."
+msgstr ""
+
+#. translators: %s: cookie names
+#: templates/admin/compliance-block.php:155
+#, php-format
+msgid "Held back by the server cookie filter, a visitor who has not consented does not receive them: %s"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:17
+msgid "no page could be loaded"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:18
+msgid "no Reject / Accept button found on the banner"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:19
+msgid "the page has no DS Cookie Consent (window.DSCC)"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:23
+msgid "When the visitor has not chosen"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:24
+msgid "After the visitor rejected"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:28
+msgid "Latest deep scan (headless browser)"
+msgstr ""
+
+#. translators: 1: date and time, 2: site address, 3: number of pages, 4: yes/no for banner
+#: templates/admin/compliance-deep-scan.php:34
+#, php-format
+msgid "%1$s - %2$s - %3$d pages - banner: %4$s."
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:38
+msgid "found"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:38
+msgid "not found"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:46
+msgid "Scanned today."
+msgstr ""
+
+#. translators: %d: days
+#: templates/admin/compliance-deep-scan.php:48
+#, php-format
+msgid "Scanned %d days ago."
+msgstr ""
+
+#. translators: %s: reason
+#: templates/admin/compliance-deep-scan.php:60
+#, php-format
+msgid "The scan was inconclusive: %s. Its \"clean\" result is not counted and the older deep scan alerts are kept."
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:67
+msgid "No Analytics / Marketing cookie or service appeared before the visitor consented."
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:71
+msgid "New platforms created by the scan:"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:86
+msgid "third-party servers"
+msgstr ""
+
+#: templates/admin/dashboard.php:24
+msgid "Cookie Consent - Overview"
+msgstr ""
+
+#. translators: 1: milliseconds, 2: page path
+#: templates/admin/dashboard.php:31
+#, php-format
+msgid "The script blocker took %1$s ms on %2$s. See the Script blocking tab to fix it."
+msgstr ""
+
+#: templates/admin/dashboard.php:41
+msgid "Cookies on the site"
+msgstr ""
+
+#. translators: %d: number of new cookies
+#: templates/admin/dashboard.php:52
+#, php-format
+msgid "%d new cookie is waiting for classification."
+msgid_plural "%d new cookies are waiting for classification."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/dashboard.php:58
+msgid "View list"
+msgstr ""
+
+#. translators: %s: date and time
+#: templates/admin/dashboard.php:64
+#, php-format
+msgid "Latest cookie scan: %s."
+msgstr ""
+
+#. translators: %s: date and time
+#: templates/admin/dashboard.php:65
+msgid "No cookie scan has run yet."
+msgstr ""
+
+#. translators: %d: number of days
+#: templates/admin/dashboard.php:76
+#, php-format
+msgid "Last %d day"
+msgid_plural "Last %d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of recorded choices
+#: templates/admin/dashboard.php:83
+#, php-format
+msgid "Total choices recorded: %d."
+msgstr ""
+
+#. translators: 1: requests refused today, 2: requests refused in the last 7 days
+#: templates/admin/dashboard.php:97
+#, php-format
+msgid "Log requests blocked by the rate limit: %1$d today, %2$d in 7 days."
+msgstr ""
+
+#: templates/admin/dashboard.php:101
+msgid "View log"
+msgstr ""
+
+#: templates/admin/log.php:19
+msgid "Cookie Consent - Log"
+msgstr ""
+
+#: templates/admin/log.php:20
+msgid "Each row is one visitor choice on the banner. The data is anonymous: the IP is masked and not tied to a name or email. Times are UTC."
+msgstr ""
+
+#: templates/admin/log.php:24
+msgid "From date"
+msgstr ""
+
+#: templates/admin/log.php:25
+msgid "To date"
+msgstr ""
+
+#: templates/admin/log.php:26
+#: templates/admin/log.php:48
+msgid "Choice"
+msgstr ""
+
+#: templates/admin/log.php:28
+#: templates/admin/tab-cookies.php:28
+msgid "All"
+msgstr ""
+
+#: templates/admin/log.php:34
+#: templates/admin/tab-cookies.php:56
+msgid "Filter"
+msgstr ""
+
+#: templates/admin/log.php:35
+msgid "Export CSV"
+msgstr ""
+
+#. translators: %d: number of rows
+#: templates/admin/log.php:41
+#, php-format
+msgid "Records: %d."
+msgstr ""
+
+#: templates/admin/log.php:47
+msgid "Time (UTC)"
+msgstr ""
+
+#: templates/admin/log.php:52
+msgid "Consent ID"
+msgstr ""
+
+#: templates/admin/log.php:53
+msgid "Version"
+msgstr ""
+
+#: templates/admin/log.php:54
+#: templates/admin/tab-advanced.php:77
+msgid "Language"
+msgstr ""
+
+#: templates/admin/log.php:55
+msgid "Page"
+msgstr ""
+
+#: templates/admin/log.php:56
+msgid "IP (masked)"
+msgstr ""
+
+#: templates/admin/log.php:61
+msgid "No data yet."
+msgstr ""
+
+#: templates/admin/log.php:67
+#: templates/admin/log.php:68
+msgid "On"
+msgstr ""
+
+#: templates/admin/log.php:67
+#: templates/admin/log.php:68
+#: templates/admin/tab-scanner.php:34
+msgid "Off"
+msgstr ""
+
+#: templates/admin/preview-panel.php:10
+msgid "Live preview"
+msgstr ""
+
+#: templates/admin/preview-panel.php:12
+msgid "Preview screen"
+msgstr ""
+
+#: templates/admin/preview-panel.php:13
+msgid "Banner"
+msgstr ""
+
+#: templates/admin/preview-panel.php:14
+msgid "Preferences"
+msgstr ""
+
+#: templates/admin/preview-panel.php:15
+msgid "Icon"
+msgstr ""
+
+#: templates/admin/preview-panel.php:17
+msgid "Frame size"
+msgstr ""
+
+#: templates/admin/preview-panel.php:18
+msgid "Desktop"
+msgstr ""
+
+#: templates/admin/preview-panel.php:19
+msgid "Mobile 390px"
+msgstr ""
+
+#: templates/admin/preview-panel.php:23
+msgid "Cookie banner preview"
+msgstr ""
+
+#: templates/admin/preview-panel.php:25
+msgid "The preview updates as you change colours, text or logo, without saving."
+msgstr ""
+
+#: templates/admin/scan-panel.php:13
+msgid "in HTML"
+msgstr ""
+
+#: templates/admin/scan-panel.php:14
+msgid "detected through GTM"
+msgstr ""
+
+#: templates/admin/scan-panel.php:15
+msgid "cookie set by the server"
+msgstr ""
+
+#: templates/admin/scan-panel.php:16
+msgid "from visitors"
+msgstr ""
+
+#: templates/admin/scan-panel.php:17
+msgid "deep scan"
+msgstr ""
+
+#: templates/admin/scan-panel.php:22
+msgid "Scan now"
+msgstr ""
+
+#: templates/admin/scan-panel.php:23
+msgid "Loads the site's pages like a new visitor (nothing chosen yet), records the cookies the server sets and detects platforms in the HTML and GTM containers."
+msgstr ""
+
+#. translators: 1: date and time, 2: pages loaded, 3: cookies found, 4: new cookies
+#: templates/admin/scan-panel.php:35
+#, php-format
+msgid "Latest scan: %1$s - %2$d pages, %3$d cookies set by the server, %4$d new cookies."
+msgstr ""
+
+#: templates/admin/scan-panel.php:44
+msgid "No scan has run yet."
+msgstr ""
+
+#. translators: %s: date and time
+#: templates/admin/scan-panel.php:51
+#, php-format
+msgid "Latest deep scan: %s."
+msgstr ""
+
+#. translators: %d: number of findings
+#: templates/admin/scan-panel.php:65
+#, php-format
+msgid "Findings from visitors dropped because the review queue is full: %d. Classify or ignore some new cookies (server scan results are not subject to this limit)."
+msgstr ""
+
+#: templates/admin/scan-panel.php:73
+msgid "Platforms detected on the site:"
+msgstr ""
+
+#. translators: %s: list of host names
+#: templates/admin/scan-panel.php:103
+#, php-format
+msgid "Unrecognised third-party domains (not blocked; add a custom platform if they are tracking tools): %s"
+msgstr ""
+
+#: templates/admin/settings.php:20
+msgid "Settings saved."
+msgstr ""
+
+#: templates/admin/settings.php:21
+msgid "Default texts restored."
+msgstr ""
+
+#: templates/admin/settings.php:22
+msgid "Policy version increased: every visitor will be asked again."
+msgstr ""
+
+#: templates/admin/settings.php:25
+msgid "Custom CSS was not saved: the number of { and } does not match, which could break the whole page style. The previous CSS is kept; the other settings were saved."
+msgstr ""
+
+#. translators: %d: maximum number of regions
+#: templates/admin/settings.php:28
+#, php-format
+msgid "The Consent Mode region list exceeds the limit of %1$d regions: only the first %2$d regions were saved and the extra ones were dropped. The other settings were saved."
+msgstr ""
+
+#. translators: %d: maximum characters
+#: templates/admin/settings.php:34
+#, php-format
+msgid "The Consent Mode region list exceeds the limit of %d characters (codes joined by commas, because the head script is only 1.5 KB): the last regions were dropped. The other settings were saved."
+msgstr ""
+
+#. translators: %d: maximum length
+#: templates/admin/settings.php:39
+#, php-format
+msgid "The consent cookie name is invalid (letters, digits, underscore and hyphen only; at most %d characters): the old name is kept so visitors are not asked again. The other settings were saved."
+msgstr ""
+
+#: templates/admin/settings.php:42
+msgid "The cookie database update URL must start with https://: the previous value is kept. The other settings were saved."
+msgstr ""
+
+#: templates/admin/settings.php:43
+msgid "Custom CSS was not saved: it is longer than 20,000 characters. The previous CSS is kept; the other settings were saved."
+msgstr ""
+
+#: templates/admin/settings.php:47
+msgid "Cookie Consent - Settings"
+msgstr ""
+
+#. translators: 1: current size in bytes, 2: limit in bytes
+#: templates/admin/settings.php:68
+#, php-format
+msgid "The head script (Consent Mode) is %1$d bytes long, above the recommended %2$d bytes. Nothing was cut; shorten the consent cookie name or the region list."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:17
+msgid "Visitor choice"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:21
+msgid "Policy version"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:32
+msgid "Ask every visitor to choose again"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:36
+msgid "Change this value (or press the button) so every visitor sees the banner again."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:39
+msgid "Choice retention (days)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:54
+msgid "Consent cookie name"
+msgstr ""
+
+#. translators: %d: maximum length
+#: templates/admin/tab-advanced.php:57
+#, php-format
+msgid "Letters, digits, underscore and hyphen; at most %d characters."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:60
+msgid "Cookie domain"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:72
+msgid "Leave empty for the current host. Set \".example.com\" to share it across subdomains."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:81
+msgid "Default language"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:88
+#: templates/admin/tab-content.php:67
+msgid "Vietnamese"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:92
+msgid "Used for every site language other than Vietnamese or English."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:95
+msgid "Language detection"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:102
+msgid "By site (WordPress, WPML, Polylang)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:103
+msgid "By browser (the page lang attribute, for GTranslate)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:106
+msgid "When GTranslate is active the browser mode is used automatically: both languages are in the HTML and the browser picks one."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:111
+msgid "Skip the banner"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:114
+msgid "Skip by User-Agent"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:114
+msgid "One regular expression per line (case-insensitive). On a match no banner is shown, Consent Mode stays denied and nothing is logged."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:116
+msgid "When the User-Agent matches"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:123
+msgid "Like a bot: hide the banner, keep tracking scripts blocked, restore embedded videos and maps"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:124
+msgid "The host app manages consent: run every script as if the visitor pressed Accept all"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:127
+msgid "Applies to the User-Agent list above (for example an app webview). \"Run every script\" writes no consent cookie and no log; choose it only when the app already asked the visitor for consent. Search bots always follow the \"like a bot\" behaviour."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:129
+msgid "Skip search bots"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:129
+msgid "Googlebot, Bingbot and similar bots see no banner and are not logged"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:133
+msgid "Third-party widget compatibility"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:136
+msgid "Hide elements while the banner is open"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:136
+msgid "One CSS selector per line, for example #chat-widget-root. The elements are hidden while the banner is shown."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:137
+msgid "Move the minimised icon automatically"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:137
+msgid "Push the icon above the elements in the list above if they occupy the same corner"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:141
+msgid "Consent Mode"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:145
+msgid "Regions where \"denied\" is the default"
+msgstr ""
+
+#. translators: 1: maximum entries, 2: maximum characters
+#: templates/admin/tab-advanced.php:148
+#, php-format
+msgid "Leave empty for every region. One ISO 3166 code per line (for example VN, US-CA). At most %1$d regions and %2$d characters in total (the limit of the head script); the excess is dropped."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:150
+msgid "URL passthrough"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:150
+msgid "Keep advertising information in the URL while there is no cookie consent"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:151
+msgid "Functional category"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:151
+msgid "Show the Functional cookie category separately (merged into Necessary by default)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:155
+msgid "Data"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:159
+msgid "Visitor IP source"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:166
+msgid "Direct connection address (default)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:168
+msgid "X-Forwarded-For (first IP)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:171
+msgid "Choose a header only when the site really sits behind that proxy: the header can be forged if the site is reachable directly. Used to mask the IP in the log and to rate-limit per visitor."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:174
+msgid "Keep log (months)"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:187
+msgid "0 = never delete automatically."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:190
+msgid "Cookie database update URL"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:202
+msgid "The https address of known-cookies.json (known-cookies.json.sha256 in the same folder). The update button on the Platforms tab only loads the file when the SHA-256 checksum matches."
+msgstr ""
+
+#: templates/admin/tab-advanced.php:204
+msgid "Delete data on uninstall"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:204
+msgid "Also delete the log table when the plugin is uninstalled"
+msgstr ""
+
+#: templates/admin/tab-advanced.php:207
+#: templates/admin/tab-appearance.php:219
+#: templates/admin/tab-blocking.php:130
+#: templates/admin/tab-content.php:80
+#: templates/admin/tab-scanner.php:113
+msgid "Save changes"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:21
+msgid "Layout style"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:28
+msgid "Compact (small box in a corner)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:29
+msgid "Horizontal bar (with a 3-tab popup)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:33
+msgid "Banner logo"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:33
+msgid "PNG, WebP or SVG (SVG is sanitised on upload). Leave empty to use the site logo."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:34
+msgid "Popup logo"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:34
+msgid "Leave empty to use the banner logo."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:36
+msgid "Banner logo height (px)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:51
+msgid "Popup logo height (px)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:65
+msgid "Primary colour"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:65
+msgid "Accept button, active toggles, links, the selected tab."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:66
+msgid "Primary colour on hover"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:66
+msgid "Leave empty to compute it (12% darker)."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:67
+msgid "Banner text colour"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:68
+msgid "Banner background"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:69
+msgid "Reject button background"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:69
+msgid "Leave empty to compute it from the primary colour (12% mixed with white)."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:70
+msgid "Popup background"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:71
+msgid "Font"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:71
+msgid "\"inherit\" to follow the theme, or the name of a font already available on the site."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:73
+msgid "Button corner radius"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:85
+msgid "Leave empty for automatic (bar: pill, compact box: 8px). Enter \"pill\" or a number of px."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:88
+msgid "Button order on the banner"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:95
+msgid "Automatic by layout style"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:96
+msgid "Accept first"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:97
+msgid "Accept at the far right"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:102
+msgid "Customise button style"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:109
+msgid "Link"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:110
+msgid "Button"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:115
+msgid "Box position (Compact style)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:122
+msgid "Bottom left"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:123
+msgid "Bottom right"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:124
+msgid "Bottom centre"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:128
+msgid "Minimised icon"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:128
+msgid "Show the shield icon after the visitor chooses"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:128
+msgid "The Compact style always shows the icon because it is the visitor's only way to change the choice."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:130
+msgid "Icon corner"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:137
+msgid "Left"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:138
+msgid "Right"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:143
+msgid "Distance from the bottom edge (px)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:158
+msgid "Distance from the side edge (px)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:173
+msgid "When the icon is shown"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:180
+msgid "After every choice"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:181
+msgid "Only after Reject (bar style)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:186
+msgid "Text on icon hover"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:198
+msgid "Leave empty to use the default text (Content tab)."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:201
+msgid "Dark overlay while the popup is open (%)"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:215
+msgid "Per-vendor toggles"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:215
+msgid "Let visitors switch each vendor on or off in the popup"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:215
+msgid "Only takes effect when the cookie catalog has vendors."
+msgstr ""
+
+#: templates/admin/tab-appearance.php:216
+msgid "Custom CSS"
+msgstr ""
+
+#: templates/admin/tab-appearance.php:216
+msgid "Every selector is prefixed with #dscc automatically. @import, url(javascript:) and expression() are not allowed."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:24
+msgid "Page cache limits: blocked scripts in the HTML are identical for every visitor, so the cache does not affect them. Only cookies set by the server (for example _fbp from the Meta Pixel plugin) are filtered when the request reaches PHP; a page already in the cache does not run this filter. The thorough fix is to stop that plugin from setting the cookie in the first place (see the Integrations section below)."
+msgstr ""
+
+#. translators: 1: milliseconds, 2: page path, 3: date and time, 4: limit in milliseconds
+#: templates/admin/tab-blocking.php:33
+#, php-format
+msgid "The script blocker took %1$s ms (limit %4$d ms) on %2$s at %3$s. Add heavy scripts that do not need blocking to the exclusion list, or turn blocking off for the related platform. Save this tab to measure again."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:47
+msgid "A limit error of the regular expression engine (PCRE) on a page that is too large or has an unusual structure."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:48
+msgid "A PHP error occurred in the blocker."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:49
+msgid "An HTML tag had more than 1000 attributes or was too long, so it could not be parsed and was left as is."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:50
+msgid "A plugin flushed part of the page before it ended, so the blocker could not process that page."
+msgstr ""
+
+#. translators: 1: reason, 2: page path, 3: date and time
+#: templates/admin/tab-blocking.php:58
+#, php-format
+msgid "The blocker let a page through without blocking (the tracking scripts on that page ran before the visitor consented). Reason: %1$s Page: %2$s at %3$s. Save this tab to clear the warning."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:68
+msgid "Blocking mode"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:72
+msgid "Mode"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:79
+msgid "Block scripts before consent"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:80
+msgid "Observe only (do not block, only record what would be blocked)"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:83
+msgid "Run \"Observe only\" for about a week to see which scripts the blocker would touch before turning real blocking on. In this mode the plugin does not change the HTML, does not delete cookies, and the integrations (Meta Pixel, PixelYourSite) block nothing."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:86
+msgid "Google Tag Manager"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:93
+msgid "GTM + Consent Mode (do not block GTM)"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:94
+msgid "Block GTM too until the visitor consents to Analytics or Marketing"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:97
+msgid "Only applies when the Google Tag Manager platform is ticked on the Platforms tab. \"GTM + Consent Mode\": GTM is loaded up front and only the Google tags inside the container stop on their own through Consent Mode; third-party tags in the container (Meta, TikTok...) only stop if the container sets a trigger on the dscc_consent_update event or on the dscc_analytics / dscc_marketing variables. \"Block GTM\": GTM is only loaded when the visitor consents to Analytics OR Marketing, so consenting to Analytics alone also runs the Marketing tags in the container: set a trigger condition on each tag."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:100
+msgid "Exclusion list"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:103
+msgid "One piece of text per line (matched inside script and iframe tags) or a regular expression written between /.../. Matching tags are not blocked. At most 50 lines, 3 to 200 characters each."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:105
+msgid "Unclassified services"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:105
+msgid "Block detected third-party services that are not classified yet like the Marketing category"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:105
+msgid "Also covers new cookies found by a scan that are not classified yet (WordPress, WooCommerce and PHP cookies are always kept). Unclassified localStorage/sessionStorage keys are not deleted."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:107
+msgid "Unclassified cookies set by the server"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:114
+msgid "Report only (default): list and warn, do not delete cookies"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:115
+msgid "Block like the Marketing category until you classify them"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:118
+msgid "Applies to unknown cookies that a scan saw the server send to a new visitor. \"Report only\" (default): the cookies are still sent and only appear in the list and compliance alerts for you to classify; safe for the site's own cookies (login, cart). \"Block\": the cookies are removed by the server filter and deleted by the browser until the visitor consents or you classify them as Necessary; stricter, but it can break unclassified own cookies. Cookies that are confirmed or recognised automatically always follow their category, whatever this mode says."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:121
+msgid "Cookies to always keep"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:124
+msgid "One cookie name or pattern with * per line (for example my_session, shop_*). These cookies are never filtered or deleted, and are placed in the Necessary category when scanning. At most 30 lines, 3 to 64 characters each (letters, digits, _ . - % *)."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:126
+msgid "Meta Pixel for WordPress"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:126
+msgid "Keep the Meta Pixel plugin on \"hold\" until the visitor consents to Marketing"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:126
+msgid "Only takes effect when the Meta Pixel for WordPress plugin is active. Every page is rendered in the hold state (identical for every visitor, which suits page caching); for a visitor who consented, the browser calls release(), which adds one admin-ajax request per page view. Turn it off to avoid this cost; then only the script blocker and the server cookie filter remain."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:127
+msgid "Reload the page after the visitor withdraws consent (so scripts that already ran stop setting cookies)"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:132
+msgid "Platforms being blocked"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:134
+msgid "The \"block until consent\" switch of each platform is on the Platforms tab."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:135
+msgid "Open the Platforms tab"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:138
+msgid "No platform has a script pattern yet. Tick platforms on the Platforms tab to start blocking."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:144
+msgid "Block"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:151
+msgid "Yes"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:151
+msgid "No"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:159
+msgid "Observe mode report"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:161
+msgid "No script that would be blocked has been recorded yet. The report is written when visitors view pages (pages served from the cache do not run the blocker)."
+msgstr ""
+
+#: templates/admin/tab-blocking.php:165
+msgid "Service"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:167
+msgid "Page views"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:168
+msgid "Example"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:181
+msgid "Clear report"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:185
+msgid "Integrations"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:188
+msgid "Plugin"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:190
+msgid "Handling"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:196
+msgid "In use"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:196
+msgid "Not present"
+msgstr ""
+
+#: templates/admin/tab-blocking.php:202
+msgid "Contact Form 7, Elementor Forms, Cloudflare Turnstile and reCAPTCHA are never blocked. WPML, Polylang and GTranslate only provide the banner language."
+msgstr ""
+
+#: templates/admin/tab-content.php:26
+#: templates/admin/tab-transfer.php:44
+msgid "— None —"
+msgstr ""
+
+#: templates/admin/tab-content.php:36
+msgid "Policy links"
+msgstr ""
+
+#: templates/admin/tab-content.php:39
+msgid "Cookie Policy page"
+msgstr ""
+
+#: templates/admin/tab-content.php:40
+msgid "or enter the Cookie Policy URL"
+msgstr ""
+
+#: templates/admin/tab-content.php:40
+msgid "The page selected above takes priority."
+msgstr ""
+
+#: templates/admin/tab-content.php:41
+msgid "Privacy Policy page"
+msgstr ""
+
+#: templates/admin/tab-content.php:42
+msgid "or enter the Privacy Policy URL"
+msgstr ""
+
+#: templates/admin/tab-content.php:42
+msgid "If not configured, the Privacy policy tab is not shown in the popup."
+msgstr ""
+
+#: templates/admin/tab-content.php:44
+msgid "How the policy appears in the popup"
+msgstr ""
+
+#: templates/admin/tab-content.php:51
+msgid "Embed the page (iframe, same-domain pages only)"
+msgstr ""
+
+#: templates/admin/tab-content.php:52
+msgid "Only show a button that opens the page"
+msgstr ""
+
+#: templates/admin/tab-content.php:59
+msgid "Text shown to visitors"
+msgstr ""
+
+#: templates/admin/tab-content.php:60
+msgid "Leave empty to use the default text (shown faded in the field). You can use {site} (site name) and {policy_link} (link to the Cookie Policy)."
+msgstr ""
+
+#: templates/admin/tab-content.php:67
+msgid "English"
+msgstr ""
+
+#: templates/admin/tab-content.php:68
+msgid "Restore default texts"
+msgstr ""
+
+#: templates/admin/tab-content.php:79
+msgid "Restore default texts (both languages)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:42
+msgid "Every category"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:49
+msgid "Every source"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:54
+msgid "Search cookies"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:55
+msgid "Search by cookie name or vendor"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:64
+msgid "— Unclassified —"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:71
+msgid "Add a cookie manually"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:80
+msgid "Use * for the variable part, for example _ga_* or ttcsid*."
+msgstr ""
+
+#: templates/admin/tab-cookies.php:84
+msgid "Storage type"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:97
+msgid "— Choose a category below —"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:105
+msgid "Category (when no vendor is chosen)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:115
+msgid "Domain (optional)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:119
+msgid "Purpose (vi / en)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:126
+msgid "Duration (vi / en)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:128
+msgid "e.g. 180 ngày (Vietnamese text)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:133
+msgid "Applies to (vi / en)"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:137
+msgid "Optional. If empty, the policy table shows the cookie's domain or the site domain."
+msgstr ""
+
+#: templates/admin/tab-cookies.php:141
+msgid "Row group in the policy table"
+msgstr ""
+
+#: templates/admin/tab-cookies.php:144
+msgid "Optional. Cookies of one group share a row (names joined by commas); the purpose, duration and where they apply come from the first cookie."
+msgstr ""
+
+#: templates/admin/tab-cookies.php:148
+msgid "Add cookie"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:20
+msgid "Tick the platforms used on the site. The cookies of the selected platforms enter the cookie catalog (confirmed) and appear in the popup for visitors."
+msgstr ""
+
+#. translators: 1: database version, 2: number of platforms, 3: number of cookies
+#: templates/admin/tab-platforms.php:23
+#, php-format
+msgid "Known cookie catalog: version %1$s, %2$d platforms, %3$d cookies."
+msgstr ""
+
+#: templates/admin/tab-platforms.php:28
+msgid "Search platforms"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:29
+msgid "Search platforms..."
+msgstr ""
+
+#: templates/admin/tab-platforms.php:30
+msgid "Filter by category"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:32
+msgid "All categories"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:60
+msgid "Detected through GTM"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:60
+msgid "Detected on the site"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:63
+msgid "User-defined"
+msgstr ""
+
+#. translators: %d: number of cookies
+#: templates/admin/tab-platforms.php:74
+#, php-format
+msgid "%d cookie"
+msgid_plural "%d cookies"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/tab-platforms.php:76
+msgid "Policy"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:83
+msgid "In use on the site"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:87
+msgid "Block before the visitor consents"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:94
+msgid "No matching platform."
+msgstr ""
+
+#: templates/admin/tab-platforms.php:95
+msgid "Save platform list"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:99
+msgid "Add a custom platform"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:105
+msgid "Platform name"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:109
+msgid "Cookie category"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:119
+msgid "Platform policy link"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:123
+msgid "Script hosts"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:126
+msgid "One domain per line, for example cdn.littled.example. Used to block the script before the visitor consents."
+msgstr ""
+
+#: templates/admin/tab-platforms.php:130
+msgid "Script URL regex (optional)"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:133
+msgid "One expression per line, without delimiters and without the ~ character."
+msgstr ""
+
+#: templates/admin/tab-platforms.php:137
+msgid "Add platform"
+msgstr ""
+
+#: templates/admin/tab-platforms.php:141
+#: templates/admin/tab-platforms.php:158
+msgid "Update the cookie catalog"
+msgstr ""
+
+#. translators: %s: link to the Advanced tab
+#: templates/admin/tab-platforms.php:150
+#, php-format
+msgid "No source URL yet. Enter a URL on the %s tab to enable updates."
+msgstr ""
+
+#. translators: %s: source URL
+#: templates/admin/tab-platforms.php:155
+#, php-format
+msgid "Source: %s. The file is only loaded when its SHA-256 checksum matches."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:19
+msgid "The automatic scan detects the cookies and platforms running on the site. The manual scan is on the Cookies tab."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:20
+msgid "Open the Cookies tab"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:23
+msgid "Server scan"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:27
+msgid "Automatic scan"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:35
+msgid "Once a week (WP-Cron)"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:40
+msgid "Maximum pages per run"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:53
+msgid "The home page, pages with forms, WooCommerce pages and the 20 latest items of each public content type. The plugin only loads pages of this site itself."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:58
+msgid "Collect cookies from visitors"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:62
+msgid "Passive collection"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:64
+msgid "Collect cookies from visitors (beacon)"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:65
+msgid "Off by default. When on, a small share of visitors who accepted or rejected report to the site, 5 seconds after the page loads, the NAMES of cookies, localStorage/sessionStorage keys and the domains of loaded resources. Cookie values are never sent, no IP address is stored, and nothing is sent from logged-in users. Used to detect cookies set by client-side scripts and cookies that leak after the visitor rejected."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:68
+msgid "Sampling rate (%)"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:81
+msgid "From 0 to 100. Visitors are picked at random in the browser, so the page HTML stays identical for every visitor and no extra database queries are made."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:86
+msgid "Notifications"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:90
+msgid "Email on new cookies"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:92
+msgid "Send an email when a scan finds new cookies"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:93
+msgid "At most one email per day."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:96
+msgid "Recipient address"
+msgstr ""
+
+#. translators: %s: email address that is used now
+#: templates/admin/tab-scanner.php:109
+#, php-format
+msgid "Leave empty to use the site admin email. Currently sending to: %s"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:25
+msgid "Export"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:26
+msgid "Downloads the settings, text overrides, platforms and cookies as a JSON file to copy this configuration to another site. The consent log is never included."
+msgstr ""
+
+#: templates/admin/tab-transfer.php:27
+msgid "Download configuration"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:29
+msgid "Import"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:30
+msgid "Choose a file or a bundled preset. You see what would change first; nothing is saved until you apply it. Settings in the file overwrite the same settings here, platforms and cookies are added or updated, nothing is deleted and the consent log is not touched."
+msgstr ""
+
+#: templates/admin/tab-transfer.php:36
+msgid "Export file (.json)"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:41
+msgid "Or a bundled preset"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:49
+msgid "A preset is a ready-made configuration for one site. It is never applied automatically; a file you upload wins over the preset."
+msgstr ""
+
+#: templates/admin/tab-transfer.php:54
+msgid "Preview import"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:60
+msgid "What would change"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:73
+msgid "Item"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:75
+msgid "Updated"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:76
+msgid "Unchanged"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:86
+msgid "Texts"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:107
+msgid "Settings that change"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:110
+msgid "Setting"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:111
+msgid "Current"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:112
+msgid "After import"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:127
+msgid "Platforms added or updated:"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:130
+msgid "Cookies added or updated:"
+msgstr ""
+
+#: templates/admin/tab-transfer.php:134
+msgid "This file would not change anything: the site already has these settings, platforms and cookies."
+msgstr ""
+
+#: templates/admin/tab-transfer.php:140
+msgid "Apply import"
+msgstr ""

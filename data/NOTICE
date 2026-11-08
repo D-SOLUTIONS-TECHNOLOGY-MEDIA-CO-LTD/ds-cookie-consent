@@ -1,0 +1,27 @@
+DS Cookie Consent - third-party data notice
+===========================================
+
+data/known-cookies.json is a curated cookie database maintained by D-Solutions
+(overlay file: tools/build-known-db/overlay-services.json). Cookie names,
+durations and purposes were checked against the Open Cookie Database and
+against vendor documentation.
+
+Open Cookie Database
+--------------------
+Source:   https://github.com/jkwakman/Open-Cookie-Database
+Commit:   7786335566460016f07a50705a92fc781c976f6f
+File:     open-cookie-database.csv
+Licence:  Apache License, Version 2.0 (full text: data/LICENSE-open-cookie-database.txt)
+Copyright (c) the Open Cookie Database contributors.
+
+Modification statement (Apache-2.0 section 4(b)): this plugin does not
+redistribute the original files. data/known-cookies.json is a derived and
+modified work: a filtered subset of the services we support, with cookie names
+converted to our pattern notation (a trailing "*" marks wildcard rows),
+descriptions rewritten and translated into Vietnamese and English, durations
+normalised, and script detection patterns added. Where the Open Cookie
+Database and a vendor document disagree on a duration, the vendor document is
+used.
+
+The Open Cookie Database is provided "AS IS", without warranties or
+conditions of any kind, as stated in the Apache License.

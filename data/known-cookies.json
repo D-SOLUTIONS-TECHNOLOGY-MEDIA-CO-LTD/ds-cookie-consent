@@ -1,0 +1,1679 @@
+{
+  "version": "2026.11.08.1",
+  "generated_at": "2026-11-08T09:00:00Z",
+  "sha256": "c572557fab9caed80911bd9f1c9ad7fe74b4b57f4473f3ff7c339753d5ffbf77",
+  "services": [
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "category": "necessary",
+      "provider_company": "Cloudflare, Inc.",
+      "privacy_url": "https://www.cloudflare.com/privacypolicy/",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "static.cloudflareinsights.com"
+        ],
+        "src_regex": [
+          "cdn-cgi/challenge-platform",
+          "static\\.cloudflareinsights\\.com/beacon"
+        ],
+        "inline_regex": [
+          "__CF\\$cv\\$params",
+          "cdn-cgi/challenge-platform"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "__cf_bm",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Phân biệt người thật với bot để bảo vệ website khỏi truy cập tự động",
+          "purpose_en": "Tells humans from bots to protect the site from automated traffic",
+          "domain_hint": ""
+        },
+        {
+          "name": "__cflb",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên (tối đa 24 giờ)",
+          "duration_en": "Session (up to 24 hours)",
+          "duration_seconds": null,
+          "purpose_vi": "Giữ bạn trên cùng một máy chủ gốc khi website dùng cân bằng tải của Cloudflare",
+          "purpose_en": "Keeps you on the same origin server when the site uses Cloudflare load balancing",
+          "domain_hint": ""
+        },
+        {
+          "name": "_cfuvid",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Phân biệt người dùng dùng chung một địa chỉ IP khi áp dụng giới hạn tần suất truy cập",
+          "purpose_en": "Tells apart users sharing an IP address when rate limiting rules apply",
+          "domain_hint": ""
+        },
+        {
+          "name": "cf_clearance",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Theo cấu hình của website",
+          "duration_en": "Depends on site configuration",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi nhận bạn đã vượt qua bước kiểm tra bảo mật, tránh phải kiểm tra lại",
+          "purpose_en": "Records that a security challenge was passed so it is not re-issued",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "cloudflare-turnstile",
+      "name": "Cloudflare Turnstile",
+      "category": "necessary",
+      "provider_company": "Cloudflare, Inc.",
+      "privacy_url": "https://www.cloudflare.com/turnstile-privacy-policy/",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "challenges.cloudflare.com"
+        ],
+        "src_regex": [
+          "challenges\\.cloudflare\\.com/turnstile/"
+        ],
+        "inline_regex": [
+          "cf-turnstile",
+          "turnstile\\.(render|ready|execute)"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "contact-form-7",
+      "name": "Contact Form 7",
+      "category": "functional",
+      "provider_company": "Takayuki Miyoshi",
+      "privacy_url": "https://contactform7.com/privacy-policy/",
+      "country": "JP",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/contact-form-7/includes/js/"
+        ],
+        "inline_regex": [
+          "wpcf7\\s*=",
+          "wpcf7_recaptcha"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "ds-cookie-consent",
+      "name": "DS Cookie Consent",
+      "category": "necessary",
+      "provider_company": "D-Solutions",
+      "privacy_url": "https://d-solutions.vn/",
+      "country": "VN",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [],
+        "inline_regex": []
+      },
+      "cookies": [
+        {
+          "name": "dscc_consent",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "180 ngày",
+          "duration_en": "180 days",
+          "duration_seconds": 15552000,
+          "purpose_vi": "Lưu lựa chọn cookie của bạn (đồng ý, từ chối hoặc tuỳ chỉnh)",
+          "purpose_en": "Stores your cookie choices (accept, reject or custom)",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "elementor",
+      "name": "Elementor",
+      "category": "functional",
+      "provider_company": "Elementor Ltd.",
+      "privacy_url": "https://elementor.com/about/privacy/",
+      "country": "IL",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/elementor(-pro)?/assets/js/"
+        ],
+        "inline_regex": [
+          "elementorFrontendConfig"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "elementor",
+          "is_pattern": false,
+          "storage": "localStorage",
+          "duration_vi": "Đến khi bạn xoá dữ liệu trình duyệt",
+          "duration_en": "Until browser data is cleared",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi nhớ hành vi của khách (số lần xem, đã đóng) để hiển thị popup đúng điều kiện",
+          "purpose_en": "Remembers visitor activity (views, dismissals) so popups show under the right conditions",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "google-ads",
+      "name": "Google Ads",
+      "category": "marketing",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/technologies/ads",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "googleadservices.com"
+        ],
+        "src_regex": [
+          "googleadservices\\.com/pagead/conversion",
+          "googletagmanager\\.com/gtag/js[^\"'\\s]*[?&]id=AW-"
+        ],
+        "inline_regex": [
+          "google_conversion_id",
+          "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]AW-"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_gac_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Lưu thông tin chiến dịch quảng cáo của người dùng để đo lường chuyển đổi",
+          "purpose_en": "Stores the user's ad campaign information to measure conversions",
+          "domain_hint": ""
+        },
+        {
+          "name": "_gcl_au",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Đo lường chuyển đổi từ quảng cáo",
+          "purpose_en": "Measures conversions from ads",
+          "domain_hint": ""
+        },
+        {
+          "name": "_gcl_aw",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Lưu mã nhấp chuột quảng cáo (gclid) để ghi nhận chuyển đổi Google Ads",
+          "purpose_en": "Stores the ad click identifier (gclid) to attribute Google Ads conversions",
+          "domain_hint": ""
+        },
+        {
+          "name": "_gcl_gb",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Lưu thông tin nhấp chuột quảng cáo để đo lường chuyển đổi Google Ads",
+          "purpose_en": "Stores ad click information to measure Google Ads conversions",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "google-analytics",
+      "name": "Google Analytics (GA4)",
+      "category": "analytics",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "analytics.google.com",
+          "google-analytics.com"
+        ],
+        "src_regex": [
+          "google-analytics\\.com/(analytics|ga)\\.js",
+          "google-analytics\\.com/analytics_debug\\.js",
+          "googletagmanager\\.com/gtag/js[^\"'\\s]*[?&]id=(?:G|GT|UA)-"
+        ],
+        "inline_regex": [
+          "GoogleAnalyticsObject",
+          "_gaq\\.push",
+          "ga\\(\\s*['\"]create['\"]",
+          "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"](?:G|GT|UA)-"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_ga",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "2 năm",
+          "duration_en": "2 years",
+          "duration_seconds": 63072000,
+          "purpose_vi": "Phân biệt người dùng, giữ trạng thái phiên truy cập",
+          "purpose_en": "Distinguishes users and keeps visit session state",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ga_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "2 năm",
+          "duration_en": "2 years",
+          "duration_seconds": 63072000,
+          "purpose_vi": "Phân biệt người dùng, giữ trạng thái phiên truy cập (theo từng thuộc tính GA4)",
+          "purpose_en": "Distinguishes users and keeps visit session state (per GA4 property)",
+          "domain_hint": ""
+        },
+        {
+          "name": "_gat_UA-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "1 phút",
+          "duration_en": "1 minute",
+          "duration_seconds": 60,
+          "purpose_vi": "Giới hạn tần suất gửi dữ liệu về Google Analytics",
+          "purpose_en": "Throttles the request rate to Google Analytics",
+          "domain_hint": ""
+        },
+        {
+          "name": "_gid",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "24 giờ",
+          "duration_en": "24 hours",
+          "duration_seconds": 86400,
+          "purpose_vi": "Phân biệt người dùng trong ngày",
+          "purpose_en": "Distinguishes users within a day",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "google-floodlight",
+      "name": "Google Floodlight / DoubleClick",
+      "category": "marketing",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/technologies/ads",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "doubleclick.net"
+        ],
+        "src_regex": [
+          "googletagmanager\\.com/gtag/js[^\"'\\s]*[?&]id=DC-"
+        ],
+        "inline_regex": [
+          "['\"]allow_custom_scripts['\"]",
+          "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]DC-"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "IDE",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "13 tháng (EEA, Anh); 24 tháng nơi khác",
+          "duration_en": "13 months (EEA, UK); 24 months elsewhere",
+          "duration_seconds": 63072000,
+          "purpose_vi": "Đo lường hiệu quả quảng cáo và hiển thị quảng cáo phù hợp hơn trên các website",
+          "purpose_en": "Measures ad effectiveness and serves more relevant ads across websites",
+          "domain_hint": ".doubleclick.net"
+        },
+        {
+          "name": "_gcl_dc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Lưu thông tin nhấp chuột quảng cáo để đo lường chuyển đổi Floodlight",
+          "purpose_en": "Stores ad click information to measure Floodlight conversions",
+          "domain_hint": ""
+        },
+        {
+          "name": "test_cookie",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "15 phút",
+          "duration_en": "15 minutes",
+          "duration_seconds": 900,
+          "purpose_vi": "Kiểm tra trình duyệt có cho phép cookie hay không",
+          "purpose_en": "Checks whether the browser accepts cookies",
+          "domain_hint": ".doubleclick.net"
+        }
+      ]
+    },
+    {
+      "slug": "google-maps",
+      "name": "Google Maps",
+      "category": "marketing",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "maps.googleapis.com",
+          "maps.gstatic.com"
+        ],
+        "src_regex": [
+          "google\\.com/maps/embed",
+          "maps\\.google\\.com/maps",
+          "maps\\.googleapis\\.com/maps/api/js"
+        ],
+        "inline_regex": [
+          "google\\.maps\\.Map\\(",
+          "maps\\.googleapis\\.com/maps/api/js"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "AEC",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "6 tháng",
+          "duration_en": "6 months",
+          "duration_seconds": 15552000,
+          "purpose_vi": "Xác nhận yêu cầu trong phiên duyệt web là của bạn, chống lạm dụng",
+          "purpose_en": "Ensures requests within a browsing session are made by the user, preventing abuse",
+          "domain_hint": ".google.com"
+        },
+        {
+          "name": "NID",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "6 tháng",
+          "duration_en": "6 months",
+          "duration_seconds": 15552000,
+          "purpose_vi": "Lưu tuỳ chọn của bạn và hiển thị quảng cáo của Google khi xem bản đồ nhúng",
+          "purpose_en": "Stores your preferences and serves Google ads when viewing the embedded map",
+          "domain_hint": ".google.com"
+        }
+      ]
+    },
+    {
+      "slug": "google-recaptcha",
+      "name": "Google reCAPTCHA",
+      "category": "necessary",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "recaptcha.net"
+        ],
+        "src_regex": [
+          "google\\.com/recaptcha/(api|enterprise)\\.js",
+          "gstatic\\.com/recaptcha/",
+          "recaptcha\\.net/recaptcha/"
+        ],
+        "inline_regex": [
+          "g-recaptcha",
+          "grecaptcha\\.(execute|render|ready|enterprise)"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_GRECAPTCHA",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "179 ngày",
+          "duration_en": "179 days",
+          "duration_seconds": 15465600,
+          "purpose_vi": "Phân biệt người dùng thật với bot trên biểu mẫu (phân tích rủi ro của reCAPTCHA)",
+          "purpose_en": "Tells real users from bots on forms (reCAPTCHA risk analysis)",
+          "domain_hint": "www.google.com"
+        }
+      ]
+    },
+    {
+      "slug": "google-site-kit",
+      "name": "Google Site Kit",
+      "category": "functional",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/google-site-kit/"
+        ],
+        "inline_regex": [
+          "Site Kit by Google",
+          "google_gtagjs"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "google-tag-manager",
+      "name": "Google Tag Manager",
+      "category": "functional",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "googletagmanager\\.com/gtm\\.js",
+          "googletagmanager\\.com/ns\\.html\\?id=GTM-"
+        ],
+        "inline_regex": [
+          "GTM-[A-Z0-9]{4,8}",
+          "googletagmanager\\.com/gtm\\.js"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "hotjar",
+      "name": "Hotjar",
+      "category": "analytics",
+      "provider_company": "Hotjar Ltd (Contentsquare)",
+      "privacy_url": "https://www.hotjar.com/privacy/",
+      "country": "MT",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "script.hotjar.com",
+          "static.hotjar.com"
+        ],
+        "src_regex": [
+          "static\\.hotjar\\.com/c/hotjar-\\d+\\.js"
+        ],
+        "inline_regex": [
+          "_hjSettings",
+          "hjid\\s*:\\s*\\d+",
+          "static\\.hotjar\\.com/c/hotjar-"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_hjAbsoluteSessionInProgress",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Giúp Hotjar đếm tổng số phiên của khách từ lúc bắt đầu hành trình",
+          "purpose_en": "Lets Hotjar count the visitor's total sessions from the start of the journey",
+          "domain_hint": ""
+        },
+        {
+          "name": "_hjFirstSeen",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Xác định phiên đầu tiên của khách mới",
+          "purpose_en": "Identifies a new visitor's first session",
+          "domain_hint": ""
+        },
+        {
+          "name": "_hjSessionUser_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "365 ngày",
+          "duration_en": "365 days",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Lưu ID người dùng Hotjar để nhận ra cùng một khách ở các lần truy cập sau",
+          "purpose_en": "Persists the Hotjar user ID so the same visitor is recognised on later visits",
+          "domain_hint": ""
+        },
+        {
+          "name": "_hjSession_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Lưu dữ liệu phiên hiện tại để các yêu cầu trong phiên được gán cùng một phiên Hotjar",
+          "purpose_en": "Holds current session data so requests in the session map to one Hotjar session",
+          "domain_hint": ""
+        },
+        {
+          "name": "_hjTLDTest",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Kiểm tra phạm vi tên miền phù hợp nhất để Hotjar ghi cookie",
+          "purpose_en": "Finds the most generic domain scope on which Hotjar can store cookies",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "hubspot",
+      "name": "HubSpot",
+      "category": "marketing",
+      "provider_company": "HubSpot, Inc.",
+      "privacy_url": "https://legal.hubspot.com/privacy-policy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "js.hs-analytics.net",
+          "js.hs-scripts.com",
+          "js.hsadspixel.net",
+          "js.hsforms.net",
+          "js.usemessages.com"
+        ],
+        "src_regex": [
+          "js\\.hs-analytics\\.net/analytics/",
+          "js\\.hs-scripts\\.com/\\d+\\.js"
+        ],
+        "inline_regex": [
+          "_hsq\\s*=",
+          "hbspt\\.(forms|cta)\\.create"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "__hssc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Theo dõi phiên truy cập",
+          "purpose_en": "Keeps track of sessions",
+          "domain_hint": ""
+        },
+        {
+          "name": "__hssrc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Xác định khách có mở lại trình duyệt (bắt đầu phiên mới) hay không",
+          "purpose_en": "Determines whether the visitor restarted the browser (new session)",
+          "domain_hint": ""
+        },
+        {
+          "name": "__hstc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "13 tháng",
+          "duration_en": "13 months",
+          "duration_seconds": 33696000,
+          "purpose_vi": "Cookie chính theo dõi khách truy cập của HubSpot",
+          "purpose_en": "The main HubSpot cookie for tracking visitors",
+          "domain_hint": ""
+        },
+        {
+          "name": "hubspotutk",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "13 tháng",
+          "duration_en": "13 months",
+          "duration_seconds": 33696000,
+          "purpose_vi": "Theo dõi danh tính khách truy cập, gửi kèm HubSpot khi khách gửi biểu mẫu",
+          "purpose_en": "Tracks the visitor's identity; passed to HubSpot on form submission",
+          "domain_hint": ""
+        },
+        {
+          "name": "messagesUtk",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "13 tháng",
+          "duration_en": "13 months",
+          "duration_seconds": 33696000,
+          "purpose_vi": "Nhận ra khách đã trò chuyện qua khung chat HubSpot",
+          "purpose_en": "Recognises visitors who chat via the HubSpot chat widget",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "intercom",
+      "name": "Intercom",
+      "category": "analytics",
+      "provider_company": "Intercom, Inc.",
+      "privacy_url": "https://www.intercom.com/legal/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "js.intercomcdn.com",
+          "widget.intercom.io"
+        ],
+        "src_regex": [
+          "widget\\.intercom\\.io/widget/[a-z0-9]+"
+        ],
+        "inline_regex": [
+          "Intercom\\(\\s*['\"](boot|update)['\"]",
+          "intercomSettings"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "intercom-device-id-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "9 tháng",
+          "duration_en": "9 months",
+          "duration_seconds": 23328000,
+          "purpose_vi": "Định danh từng thiết bị tương tác với khung chat Intercom",
+          "purpose_en": "Identifier for each device that interacts with the Intercom messenger",
+          "domain_hint": ""
+        },
+        {
+          "name": "intercom-id-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "9 tháng",
+          "duration_en": "9 months",
+          "duration_seconds": 23328000,
+          "purpose_vi": "Định danh khách truy cập ẩn danh của khung chat Intercom",
+          "purpose_en": "Anonymous visitor identifier for the Intercom messenger",
+          "domain_hint": ""
+        },
+        {
+          "name": "intercom-session-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "1 tuần",
+          "duration_en": "1 week",
+          "duration_seconds": 604800,
+          "purpose_vi": "Định danh phiên trình duyệt của khung chat Intercom",
+          "purpose_en": "Identifier for each browser session of the Intercom messenger",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "jet-popup",
+      "name": "JetPopup (Crocoblock)",
+      "category": "functional",
+      "provider_company": "Crocoblock",
+      "privacy_url": "https://crocoblock.com/privacy-policy/",
+      "country": "UA",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/jet-popup/"
+        ],
+        "inline_regex": [
+          "jetPopupData"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "ladipage",
+      "name": "LadiPage (phân tích)",
+      "category": "analytics",
+      "provider_company": "Công ty Cổ phần LadiPage Việt Nam",
+      "privacy_url": "https://www.ladipage.vn/chinh-sach-bao-mat",
+      "country": "VN",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "ladicdn.com",
+          "ladipage.vn"
+        ],
+        "src_regex": [],
+        "inline_regex": [
+          "LADI_CLIENT_ID",
+          "LadiPageApp",
+          "LadiPageScript"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "LADI_CLIENT_ID",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "365–400 ngày",
+          "duration_en": "365–400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Định danh khách truy cập landing page",
+          "purpose_en": "Identifies the landing page visitor",
+          "domain_hint": ""
+        },
+        {
+          "name": "LADI_FFD",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "365–400 ngày",
+          "duration_en": "365–400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Định danh khách truy cập, đếm lượt xem (nhóm cookie phân tích của LadiPage)",
+          "purpose_en": "Visitor identification and view counting (LadiPage analytics cookie group)",
+          "domain_hint": ""
+        },
+        {
+          "name": "LADI_PAGE_VIEW",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "365–400 ngày",
+          "duration_en": "365–400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Đếm lượt xem trang landing page",
+          "purpose_en": "Counts landing page views",
+          "domain_hint": ""
+        },
+        {
+          "name": "LADI_UNIQUE_ID",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "365–400 ngày",
+          "duration_en": "365–400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Định danh khách truy cập landing page",
+          "purpose_en": "Identifies the landing page visitor",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ladipage_email",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Chưa xác định",
+          "duration_en": "Not specified",
+          "duration_seconds": null,
+          "purpose_vi": "CHỨA DỮ LIỆU CÁ NHÂN: lưu email khách đã nhập vào biểu mẫu LadiPage",
+          "purpose_en": "CONTAINS PERSONAL DATA: stores the email the visitor typed into a LadiPage form",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ladipage_name",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Chưa xác định",
+          "duration_en": "Not specified",
+          "duration_seconds": null,
+          "purpose_vi": "CHỨA DỮ LIỆU CÁ NHÂN: lưu họ tên khách đã nhập vào biểu mẫu LadiPage",
+          "purpose_en": "CONTAINS PERSONAL DATA: stores the full name the visitor typed into a LadiPage form",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ladipage_phone",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Chưa xác định",
+          "duration_en": "Not specified",
+          "duration_seconds": null,
+          "purpose_vi": "CHỨA DỮ LIỆU CÁ NHÂN: lưu số điện thoại khách đã nhập vào biểu mẫu LadiPage",
+          "purpose_en": "CONTAINS PERSONAL DATA: stores the phone number the visitor typed into a LadiPage form",
+          "domain_hint": ""
+        },
+        {
+          "name": "_timenow",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 ngày",
+          "duration_en": "1 day",
+          "duration_seconds": 86400,
+          "purpose_vi": "Định danh khách truy cập, đếm lượt xem (nhóm cookie phân tích của LadiPage)",
+          "purpose_en": "Visitor identification and view counting (LadiPage analytics cookie group)",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "ladipage-core",
+      "name": "LadiPage (cần thiết)",
+      "category": "necessary",
+      "provider_company": "Công ty Cổ phần LadiPage Việt Nam",
+      "privacy_url": "https://www.ladipage.vn/chinh-sach-bao-mat",
+      "country": "VN",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [],
+        "inline_regex": []
+      },
+      "cookies": [
+        {
+          "name": "LADI_DNS_CHECK",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "400 ngày",
+          "duration_en": "400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Kiểm tra tên miền của landing page",
+          "purpose_en": "Checks the landing page domain",
+          "domain_hint": ""
+        },
+        {
+          "name": "LADI_FORM_SUBMIT",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "400 ngày",
+          "duration_en": "400 days",
+          "duration_seconds": 34560000,
+          "purpose_vi": "Ghi nhận việc gửi biểu mẫu",
+          "purpose_en": "Records that a form was submitted",
+          "domain_hint": ""
+        },
+        {
+          "name": "d_brotli",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Nén nội dung trang để tải nhanh hơn",
+          "purpose_en": "Compresses page content for faster loading",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "linkedin-insight",
+      "name": "LinkedIn Insight Tag",
+      "category": "marketing",
+      "provider_company": "LinkedIn Corporation",
+      "privacy_url": "https://www.linkedin.com/legal/privacy-policy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "px.ads.linkedin.com",
+          "snap.licdn.com"
+        ],
+        "src_regex": [
+          "snap\\.licdn\\.com/li\\.lms-analytics/insight(\\.min)?\\.js"
+        ],
+        "inline_regex": [
+          "_linkedin_(data_)?partner_ids?"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "AnalyticsSyncHistory",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 ngày",
+          "duration_en": "30 days",
+          "duration_seconds": 2592000,
+          "purpose_vi": "Lưu kết quả đồng bộ dữ liệu với dịch vụ phân tích của LinkedIn",
+          "purpose_en": "Stores the result of syncing data with LinkedIn's analytics service",
+          "domain_hint": ".linkedin.com"
+        },
+        {
+          "name": "UserMatchHistory",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 ngày",
+          "duration_en": "30 days",
+          "duration_seconds": 2592000,
+          "purpose_vi": "Nhận diện người dùng để hiển thị quảng cáo LinkedIn phù hợp hơn",
+          "purpose_en": "Identifies the user so more relevant LinkedIn ads can be shown",
+          "domain_hint": ".linkedin.com"
+        },
+        {
+          "name": "bcookie",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Nhận diện trình duyệt khi dùng các dịch vụ nhúng của LinkedIn",
+          "purpose_en": "Identifies the browser when using LinkedIn embedded services",
+          "domain_hint": ".linkedin.com"
+        },
+        {
+          "name": "li_fat_id",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 ngày",
+          "duration_en": "30 days",
+          "duration_seconds": 2592000,
+          "purpose_vi": "Định danh gián tiếp thành viên LinkedIn để đo chuyển đổi và tiếp thị lại",
+          "purpose_en": "Member indirect identifier for conversion tracking and retargeting",
+          "domain_hint": ""
+        },
+        {
+          "name": "li_sugr",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Ước đoán danh tính người dùng để đo hiệu quả quảng cáo LinkedIn",
+          "purpose_en": "Makes a probabilistic match of the user's identity for LinkedIn ad measurement",
+          "domain_hint": ".linkedin.com"
+        },
+        {
+          "name": "lidc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 ngày",
+          "duration_en": "1 day",
+          "duration_seconds": 86400,
+          "purpose_vi": "Chọn trung tâm dữ liệu LinkedIn và định tuyến yêu cầu",
+          "purpose_en": "Selects the LinkedIn data centre and routes requests",
+          "domain_hint": ".linkedin.com"
+        }
+      ]
+    },
+    {
+      "slug": "meta-pixel",
+      "name": "Meta Pixel (Facebook)",
+      "category": "marketing",
+      "provider_company": "Meta Platforms, Inc.",
+      "privacy_url": "https://www.facebook.com/privacy/policy/",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "connect.facebook.net"
+        ],
+        "src_regex": [
+          "connect\\.facebook\\.net/[^/\"' ]+/fbevents\\.js",
+          "facebook\\.com/tr/?\\?id="
+        ],
+        "inline_regex": [
+          "connect\\.facebook\\.net/[^/'\"]+/fbevents\\.js",
+          "fbq\\(\\s*['\"]init['\"]"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_fbc",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Lưu mã nhấp chuột quảng cáo Facebook (fbclid) để ghi nhận chuyển đổi",
+          "purpose_en": "Stores the Facebook ad click identifier (fbclid) to attribute conversions",
+          "domain_hint": ""
+        },
+        {
+          "name": "_fbp",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Đo hiệu quả quảng cáo trên Facebook, Instagram",
+          "purpose_en": "Measures advertising effectiveness on Facebook and Instagram",
+          "domain_hint": ""
+        },
+        {
+          "name": "fr",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "90 ngày",
+          "duration_en": "90 days",
+          "duration_seconds": 7776000,
+          "purpose_vi": "Hiển thị và đo lường quảng cáo của Facebook",
+          "purpose_en": "Delivers and measures Facebook advertising",
+          "domain_hint": ".facebook.com"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-clarity",
+      "name": "Microsoft Clarity",
+      "category": "analytics",
+      "provider_company": "Microsoft Corporation",
+      "privacy_url": "https://privacy.microsoft.com/privacystatement",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "clarity.ms"
+        ],
+        "src_regex": [
+          "clarity\\.ms/tag/"
+        ],
+        "inline_regex": [
+          "\\(window,\\s*document,\\s*['\"]clarity['\"]",
+          "clarity\\.ms/tag/"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_clck",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Lưu ID người dùng Clarity và tuỳ chọn để ghi lại phiên truy cập và bản đồ nhiệt thao tác",
+          "purpose_en": "Persists the Clarity user ID and preferences used for session recordings and heatmaps",
+          "domain_hint": ""
+        },
+        {
+          "name": "_clsk",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 ngày",
+          "duration_en": "1 day",
+          "duration_seconds": 86400,
+          "purpose_vi": "Gom các lượt xem trang của một người dùng thành một bản ghi phiên Clarity",
+          "purpose_en": "Connects a user's page views into a single Clarity session recording",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-uet",
+      "name": "Microsoft Advertising (UET / Bing Ads)",
+      "category": "marketing",
+      "provider_company": "Microsoft Corporation",
+      "privacy_url": "https://privacy.microsoft.com/privacystatement",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "bat.bing.com"
+        ],
+        "src_regex": [
+          "bat\\.bing\\.com/bat\\.js",
+          "bat\\.bing\\.com/p/action/"
+        ],
+        "inline_regex": [
+          "\\buetq\\b",
+          "bat\\.bing\\.com/bat\\.js",
+          "new\\s+UET\\("
+        ]
+      },
+      "cookies": [
+        {
+          "name": "MUID",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Nhận diện trình duyệt trên các trang của Microsoft, dùng cho quảng cáo và phân tích",
+          "purpose_en": "Identifies unique browsers on Microsoft sites, used for advertising and analytics",
+          "domain_hint": ".bing.com"
+        },
+        {
+          "name": "_uetsid",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 ngày",
+          "duration_en": "1 day",
+          "duration_seconds": 86400,
+          "purpose_vi": "Nhận diện phiên truy cập để đo hiệu quả quảng cáo Microsoft Advertising (Bing)",
+          "purpose_en": "Identifies the visit session to measure Microsoft Advertising (Bing) effectiveness",
+          "domain_hint": ""
+        },
+        {
+          "name": "_uetvid",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "13 tháng",
+          "duration_en": "13 months",
+          "duration_seconds": 33696000,
+          "purpose_vi": "Nhận diện khách truy cập để đo hiệu quả quảng cáo Microsoft Advertising (Bing)",
+          "purpose_en": "Identifies the visitor to measure Microsoft Advertising (Bing) effectiveness",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "openai-ads-pixel",
+      "name": "OpenAI Ads Pixel",
+      "category": "marketing",
+      "provider_company": "OpenAI, L.L.C.",
+      "privacy_url": "https://openai.com/policies/privacy-policy/",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "bzrcdn.openai.com"
+        ],
+        "src_regex": [
+          "bzrcdn\\.openai\\.com/sdk/oaiq(\\.min)?\\.js"
+        ],
+        "inline_regex": [
+          "bzrcdn\\.openai\\.com/sdk/",
+          "oaiq\\(\\s*['\"]init['\"]"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "__obref",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "365 ngày",
+          "duration_en": "365 days",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Đo hiệu quả quảng cáo trên ChatGPT (lưu mã tham chiếu trình duyệt cho website)",
+          "purpose_en": "Measures advertising effectiveness on ChatGPT (stores a browser reference for the website)",
+          "domain_hint": ""
+        },
+        {
+          "name": "__oppref",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 ngày",
+          "duration_en": "30 days",
+          "duration_seconds": 2592000,
+          "purpose_vi": "Lưu mã nguồn quảng cáo dẫn khách đến trang để đo hiệu quả quảng cáo trên ChatGPT",
+          "purpose_en": "Stores the attribution identifier of the ad that led the visitor to the page",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "pancake-chat",
+      "name": "Pancake (chat plugin)",
+      "category": "functional",
+      "provider_company": "Pancake (StaryChat)",
+      "privacy_url": "https://pancake.vn",
+      "country": "VN",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "pages.fm",
+          "pancake.vn"
+        ],
+        "src_regex": [],
+        "inline_regex": [
+          "pancake-chat-plugin-root",
+          "pke_chat_plugin"
+        ]
+      },
+      "cookies": []
+    },
+    {
+      "slug": "polylang",
+      "name": "Polylang",
+      "category": "necessary",
+      "provider_company": "WP SYNTEX (Polylang)",
+      "privacy_url": "https://polylang.pro/privacy-policy/",
+      "country": "FR",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/polylang(-pro)?/"
+        ],
+        "inline_regex": []
+      },
+      "cookies": [
+        {
+          "name": "pll_language",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Ghi nhớ ngôn ngữ bạn đã chọn",
+          "purpose_en": "Remembers the language you chose",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "tiktok-pixel",
+      "name": "TikTok Pixel",
+      "category": "marketing",
+      "provider_company": "TikTok Pte. Ltd.",
+      "privacy_url": "https://www.tiktok.com/legal/page/global/privacy-policy/en",
+      "country": "SG",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "analytics.tiktok.com"
+        ],
+        "src_regex": [
+          "analytics\\.tiktok\\.com/i18n/pixel/(events|sdk)\\.js"
+        ],
+        "inline_regex": [
+          "TiktokAnalyticsObject",
+          "ttq\\.(load|page|track)"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_tt_enable_cookie",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Khoảng 13 tháng",
+          "duration_en": "About 13 months",
+          "duration_seconds": 33609600,
+          "purpose_vi": "Cho biết TikTok Pixel được phép dùng cookie để đo hiệu quả quảng cáo",
+          "purpose_en": "Indicates that TikTok Pixel may use cookies to measure advertising effectiveness",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ttp",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Khoảng 13 tháng",
+          "duration_en": "About 13 months",
+          "duration_seconds": 33609600,
+          "purpose_vi": "Nhận diện khách truy cập để đo hiệu quả quảng cáo trên TikTok",
+          "purpose_en": "Identifies the visitor to measure advertising effectiveness on TikTok",
+          "domain_hint": ""
+        },
+        {
+          "name": "ttcsid*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Nhận diện phiên truy cập để đo hiệu quả quảng cáo trên TikTok",
+          "purpose_en": "Identifies the visit session to measure advertising effectiveness on TikTok",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "woocommerce",
+      "name": "WooCommerce",
+      "category": "necessary",
+      "provider_company": "Automattic Inc. (WooCommerce)",
+      "privacy_url": "https://automattic.com/privacy/",
+      "country": "US",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/woocommerce/assets/js/frontend/"
+        ],
+        "inline_regex": [
+          "wc_add_to_cart_params",
+          "wc_cart_fragments_params",
+          "woocommerce_params"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "store_notice*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi nhớ việc khách đã đóng thông báo cửa hàng",
+          "purpose_en": "Remembers that the customer dismissed the store notice",
+          "domain_hint": ""
+        },
+        {
+          "name": "woocommerce_cart_hash",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Giúp WooCommerce nhận biết khi nội dung giỏ hàng thay đổi",
+          "purpose_en": "Helps WooCommerce determine when cart contents change",
+          "domain_hint": ""
+        },
+        {
+          "name": "woocommerce_items_in_cart",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Giúp WooCommerce nhận biết giỏ hàng có sản phẩm hay không",
+          "purpose_en": "Helps WooCommerce determine whether the cart has items",
+          "domain_hint": ""
+        },
+        {
+          "name": "woocommerce_recently_viewed",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Hiển thị danh sách sản phẩm đã xem gần đây",
+          "purpose_en": "Powers the recently viewed products widget",
+          "domain_hint": ""
+        },
+        {
+          "name": "wp_woocommerce_session_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "2 ngày",
+          "duration_en": "2 days",
+          "duration_seconds": 172800,
+          "purpose_vi": "Chứa mã duy nhất của từng khách để tìm dữ liệu giỏ hàng trong cơ sở dữ liệu",
+          "purpose_en": "Contains a unique code per customer to find the cart data in the database",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "woocommerce-order-attribution",
+      "name": "WooCommerce (nguồn đơn hàng)",
+      "category": "analytics",
+      "provider_company": "Automattic Inc. (WooCommerce)",
+      "privacy_url": "https://automattic.com/privacy/",
+      "country": "US",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "woocommerce/assets/js/(sourcebuster/sourcebuster|frontend/order-attribution)(\\.min)?\\.js"
+        ],
+        "inline_regex": [
+          "sbjs\\.init",
+          "wc_order_attribution"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "sbjs_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi nhận nguồn truy cập dẫn đến đơn hàng",
+          "purpose_en": "Records the traffic source that led to an order",
+          "domain_hint": ""
+        },
+        {
+          "name": "sbjs_session",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "30 phút",
+          "duration_en": "30 minutes",
+          "duration_seconds": 1800,
+          "purpose_vi": "Lưu số trang đã xem trong phiên và đường dẫn trang hiện tại",
+          "purpose_en": "Stores the number of page views in the session and the current page path",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "wordpress-core",
+      "name": "WordPress",
+      "category": "necessary",
+      "provider_company": "WordPress",
+      "privacy_url": "https://wordpress.org/about/privacy/",
+      "country": "US",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [],
+        "inline_regex": []
+      },
+      "cookies": [
+        {
+          "name": "wordpress_logged_in_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "Phiên (14 ngày nếu chọn Ghi nhớ đăng nhập)",
+          "duration_en": "Session (14 days when Remember Me is ticked)",
+          "duration_seconds": null,
+          "purpose_vi": "Nhận diện người dùng đã đăng nhập vào trang quản trị",
+          "purpose_en": "Identifies a user who is logged in",
+          "domain_hint": ""
+        },
+        {
+          "name": "wordpress_sec_*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "Phiên (14 ngày nếu chọn Ghi nhớ đăng nhập)",
+          "duration_en": "Session (14 days when Remember Me is ticked)",
+          "duration_seconds": null,
+          "purpose_vi": "Bảo mật phiên đăng nhập vào khu vực quản trị",
+          "purpose_en": "Secures the login session of the admin area",
+          "domain_hint": ""
+        },
+        {
+          "name": "wordpress_test_cookie",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Kiểm tra trình duyệt có cho phép cookie khi đăng nhập",
+          "purpose_en": "Checks whether the browser accepts cookies at login",
+          "domain_hint": ""
+        },
+        {
+          "name": "wp-settings-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Ghi nhớ tuỳ chọn giao diện quản trị của người dùng đã đăng nhập",
+          "purpose_en": "Remembers admin interface preferences of a logged-in user",
+          "domain_hint": ""
+        },
+        {
+          "name": "wp-settings-time-*",
+          "is_pattern": true,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Thời điểm lưu tuỳ chọn giao diện quản trị",
+          "purpose_en": "Time the admin interface preferences were saved",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "wpml",
+      "name": "WPML",
+      "category": "necessary",
+      "provider_company": "OnTheGoSystems (WPML)",
+      "privacy_url": "https://wpml.org/",
+      "country": "HK",
+      "is_third_party": false,
+      "script_patterns": {
+        "hosts": [],
+        "src_regex": [
+          "/wp-content/plugins/sitepress-multilingual-cms/"
+        ],
+        "inline_regex": [
+          "wpml_browser_redirect_params"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "wp-wpml_current_language",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi nhớ ngôn ngữ hiển thị",
+          "purpose_en": "Remembers the display language",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "yandex-metrica",
+      "name": "Yandex Metrica",
+      "category": "analytics",
+      "provider_company": "Yandex LLC",
+      "privacy_url": "https://yandex.com/legal/confidential/",
+      "country": "RU",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "mc.yandex.com",
+          "mc.yandex.ru"
+        ],
+        "src_regex": [
+          "mc\\.yandex\\.(ru|com)/metrika/",
+          "mc\\.yandex\\.(ru|com)/watch/"
+        ],
+        "inline_regex": [
+          "Ya\\.Metrika2?",
+          "mc\\.yandex\\.(ru|com)/metrika/",
+          "ym\\(\\s*\\d+\\s*,\\s*['\"]init['\"]"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "_ym_d",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Lưu ngày của phiên truy cập đầu tiên để thống kê lượt truy cập",
+          "purpose_en": "Saves the date of the first site session for visit statistics",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ym_isad",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Khoảng 20 giờ",
+          "duration_en": "About 20 hours",
+          "duration_seconds": 72000,
+          "purpose_vi": "Kiểm tra khách truy cập có dùng trình chặn quảng cáo hay không",
+          "purpose_en": "Checks whether the visitor uses an ad blocker",
+          "domain_hint": ""
+        },
+        {
+          "name": "_ym_uid",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 năm",
+          "duration_en": "1 year",
+          "duration_seconds": 31536000,
+          "purpose_vi": "Nhận diện khách truy cập để thống kê lượt truy cập",
+          "purpose_en": "Identifies site visitors for visit statistics",
+          "domain_hint": ""
+        },
+        {
+          "name": "mdd",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "1 ngày",
+          "duration_en": "1 day",
+          "duration_seconds": 86400,
+          "purpose_vi": "Cookie kỹ thuật của Yandex Metrica phục vụ thống kê lượt truy cập",
+          "purpose_en": "Yandex Metrica technical cookie used for visit statistics",
+          "domain_hint": ""
+        }
+      ]
+    },
+    {
+      "slug": "youtube",
+      "name": "YouTube (video nhúng)",
+      "category": "marketing",
+      "provider_company": "Google LLC",
+      "privacy_url": "https://policies.google.com/privacy",
+      "country": "US",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "youtube-nocookie.com",
+          "youtube.com"
+        ],
+        "src_regex": [
+          "youtube(-nocookie)?\\.com/embed/",
+          "youtube\\.com/iframe_api"
+        ],
+        "inline_regex": [
+          "YT\\.Player\\(",
+          "youtube(-nocookie)?\\.com/embed/"
+        ]
+      },
+      "cookies": [
+        {
+          "name": "VISITOR_INFO1_LIVE",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "179 ngày",
+          "duration_en": "179 days",
+          "duration_seconds": 15465600,
+          "purpose_vi": "Ước tính băng thông và ghi nhận lượt xem video nhúng; với youtube-nocookie.com chỉ được ghi khi bạn phát video",
+          "purpose_en": "Estimates bandwidth and records views of embedded videos; with youtube-nocookie.com it is only set once the video is played",
+          "domain_hint": ".youtube.com"
+        },
+        {
+          "name": "VISITOR_PRIVACY_METADATA",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "180 ngày",
+          "duration_en": "180 days",
+          "duration_seconds": 15552000,
+          "purpose_vi": "Lưu lựa chọn quyền riêng tư của khách truy cập YouTube",
+          "purpose_en": "Stores the YouTube visitor's privacy choices",
+          "domain_hint": ".youtube.com"
+        },
+        {
+          "name": "YSC",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "Phiên",
+          "duration_en": "Session",
+          "duration_seconds": null,
+          "purpose_vi": "Ghi ID duy nhất để thống kê những video YouTube bạn đã xem",
+          "purpose_en": "Registers a unique ID to keep statistics of the YouTube videos viewed",
+          "domain_hint": ".youtube.com"
+        },
+        {
+          "name": "__Secure-ROLLOUT_TOKEN",
+          "is_pattern": false,
+          "storage": "cookie",
+          "duration_vi": "180 ngày",
+          "duration_en": "180 days",
+          "duration_seconds": 15552000,
+          "purpose_vi": "Ghi ID duy nhất để thống kê những video YouTube bạn đã xem",
+          "purpose_en": "Registers a unique ID to keep statistics of the YouTube videos viewed",
+          "domain_hint": ".youtube.com"
+        }
+      ]
+    },
+    {
+      "slug": "zalo",
+      "name": "Zalo (widget / Official Account)",
+      "category": "marketing",
+      "provider_company": "Công ty Cổ phần VNG",
+      "privacy_url": "https://zalo.vn/privacy",
+      "country": "VN",
+      "is_third_party": true,
+      "script_patterns": {
+        "hosts": [
+          "sp.zalo.me"
+        ],
+        "src_regex": [
+          "sp\\.zalo\\.me/plugins/sdk\\.js"
+        ],
+        "inline_regex": [
+          "zalo-chat-widget",
+          "zalo-follow-only-button",
+          "zalo-share-button"
+        ]
+      },
+      "cookies": []
+    }
+  ]
+}

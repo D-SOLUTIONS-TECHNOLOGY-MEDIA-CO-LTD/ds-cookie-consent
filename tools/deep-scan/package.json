@@ -1,0 +1,11 @@
+{
+  "name": "dscc-deep-scan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless deep cookie scan for DS Cookie Consent",
+  "bin": { "dscc-deep-scan": "deep-scan.mjs" },
+  "scripts": { "test": "node --test \"test/*.test.mjs\"" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "1.49.1" }
+}

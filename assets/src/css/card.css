@@ -1,0 +1,39 @@
+/* Layout "card": compact box in a corner; preferences view in place. Ported from the v1.0.3 design. */
+#dscc{--dscc-sw-h:26px;--dscc-sw-pad:3px}
+#dscc .dscc-card{position:fixed;bottom:24px;left:24px;z-index:2147483000;width:min(480px,calc(100% - 48px));max-height:calc(100vh - 48px);overflow-y:auto;background:#fff;border:1px solid var(--dscc-line);border-radius:14px;box-shadow:0 16px 40px rgba(16,24,40,.16),0 2px 6px rgba(16,24,40,.06);padding:24px;font-size:15px;line-height:1.55;opacity:0;transform:translateY(12px);transition:opacity .2s ease,transform .2s ease}
+#dscc[data-card-pos="bottom_right"] .dscc-card{left:auto;right:24px}
+#dscc[data-card-pos="bottom_center"] .dscc-card{left:0;right:0;margin:0 auto}
+#dscc .dscc-card.is-in{opacity:1;transform:none}
+#dscc .dscc-card__x{position:absolute;top:12px;right:12px;width:32px;height:32px;border:0;border-radius:6px;background:transparent;color:#667085;cursor:pointer;display:grid;place-items:center}
+#dscc .dscc-card__x:hover{background:#eaecf0;color:var(--dscc-ink)}
+#dscc .dscc-card__title{margin:0 0 8px;font-family:inherit;font-size:18px;line-height:1.35;font-weight:700;color:var(--dscc-ink);letter-spacing:normal;text-transform:none}
+#dscc .dscc-card__x:not([hidden])~.dscc-view .dscc-card__title{padding-right:32px}
+#dscc .dscc-card__text{margin:0 0 20px;font-size:15px;color:var(--dscc-muted)}
+#dscc .dscc-card__text a{text-decoration:underline;text-underline-offset:2px}
+#dscc .dscc-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#dscc .dscc-push{flex:1 1 0}
+#dscc .dscc-card .dscc-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:var(--dscc-radius);border:1.5px solid var(--dscc-primary);box-shadow:none;font-size:15px;line-height:1.2}
+#dscc .dscc-btn--outline{background:#fff;color:var(--dscc-primary)}
+#dscc .dscc-btn--outline:hover{background:#f5f7fa;background:color-mix(in srgb,var(--dscc-primary) 8%,#fff);color:var(--dscc-primary)}
+#dscc .dscc-card .dscc-btn--text{border-color:transparent;background:transparent;color:var(--dscc-ink);text-decoration:underline;text-underline-offset:3px;padding:0 6px 0 0}
+#dscc .dscc-card .dscc-btn--text:hover{color:var(--dscc-primary);background:transparent}
+
+/* Preferences view */
+#dscc .dscc-cats{margin:0 0 12px;border-top:1px solid var(--dscc-line)}
+#dscc .dscc-card .dscc-cat{padding:14px 0;border-bottom:1px solid var(--dscc-line)}
+#dscc .dscc-card .dscc-cat__row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+#dscc .dscc-card .dscc-cat__main{min-width:0;flex:1}
+#dscc .dscc-card .dscc-cat__title{font-weight:600;color:var(--dscc-ink);margin:0 0 4px}
+#dscc .dscc-card .dscc-cat__desc{margin:0;font-size:14px;color:var(--dscc-muted)}
+#dscc .dscc-card .dscc-always{font-size:14px;font-weight:600;color:#067647;white-space:nowrap}
+#dscc .dscc-card__more{margin:0 0 16px}
+#dscc .dscc-linkbtn{padding:0;border:0;background:none;color:var(--dscc-primary);font-size:14px;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+
+@media (max-width:560px){
+  #dscc .dscc-card,#dscc[data-card-pos="bottom_right"] .dscc-card,#dscc[data-card-pos="bottom_center"] .dscc-card{left:0;right:0;bottom:0;width:100%;margin:0;max-height:85vh;border-radius:16px 16px 0 0;border-left:0;border-right:0;border-bottom:0;padding:20px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+  #dscc .dscc-card .dscc-btn--primary,#dscc .dscc-card .dscc-btn--outline{flex:1 1 140px}
+  #dscc .dscc-card .dscc-btn--text{flex:1 1 100%;order:3;justify-content:center;padding:0}
+  #dscc .dscc-push{display:none}
+  #dscc .dscc-actions--prefs .dscc-btn--primary{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){#dscc .dscc-card{transition:none}}

@@ -1,0 +1,88 @@
+name: Release
+
+# A tag such as v1.0.0 runs the whole CI first, builds the package, and only then publishes it as a GitHub Release
+# with the asset ds-cookie-consent.zip. Sites update from it through the in-plugin updater.
+# Repository: https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: CI on this commit
+    uses: ./.github/workflows/ci.yml
+
+  build:
+    name: Build the package
+    needs: ci
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          tools: composer
+          coverage: none
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Build the zip (fails when the tag and the plugin version differ)
+        env:
+          DSCC_RELEASE_TAG: ${{ github.ref_name }}
+        run: bash tools/release/build-zip.sh "$RUNNER_TEMP/out"
+      - name: Release notes from CHANGELOG.md
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## " v "( |$)" { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+          ' CHANGELOG.md > "$RUNNER_TEMP/out/notes.md"
+          if [ ! -s "$RUNNER_TEMP/out/notes.md" ]; then
+            echo "CHANGELOG.md has no section for $version" >&2
+            exit 1
+          fi
+      - name: Checksum of the zip
+        run: cd "$RUNNER_TEMP/out" && sha256sum ds-cookie-consent.zip > ds-cookie-consent.zip.sha256
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-files
+          path: |
+            ${{ runner.temp }}/out/ds-cookie-consent.zip
+            ${{ runner.temp }}/out/ds-cookie-consent.zip.sha256
+            ${{ runner.temp }}/out/notes.md
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    name: Publish the release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-files
+          path: out
+      - name: The zip is the one that was built
+        run: cd out && sha256sum --check ds-cookie-consent.zip.sha256
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          flags=""
+          case "$GITHUB_REF_NAME" in *-*) flags="--prerelease" ;; esac
+          gh release create "$GITHUB_REF_NAME" out/ds-cookie-consent.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --verify-tag \
+            --title "DS Cookie Consent ${GITHUB_REF_NAME#v}" \
+            --notes-file out/notes.md \
+            $flags

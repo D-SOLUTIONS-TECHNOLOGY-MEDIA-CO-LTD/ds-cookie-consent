@@ -1,0 +1,19 @@
+/vendor/
+/node_modules/
+/bin/strauss.phar
+/test-results/
+/playwright-report/
+.phpunit.result.cache
+.DS_Store
+*.zip
+/plans/
+/reference/
+
+# Internal project files (kept locally, not published)
+/SPEC.md
+/tools/staging-check.md
+/docs/code-standards.md
+/docs/codebase-summary.md
+/docs/deployment-guide.md
+/docs/project-roadmap.md
+/docs/system-architecture.md

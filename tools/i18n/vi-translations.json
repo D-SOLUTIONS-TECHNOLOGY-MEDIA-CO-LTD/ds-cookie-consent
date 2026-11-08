@@ -1,0 +1,2074 @@
+[
+  {
+    "msgid": "\"inherit\" to follow the theme, or the name of a font already available on the site.",
+    "msgstr": "\"inherit\" để theo theme, hoặc tên font đã có sẵn trên site."
+  },
+  {
+    "msgid": "%1$s - %2$s - %3$d pages - banner: %4$s.",
+    "msgstr": "%1$s - %2$s - %3$d trang - banner: %4$s."
+  },
+  {
+    "msgid": "%d cookie",
+    "msgid_plural": "%d cookies",
+    "msgstr": "%d cookie"
+  },
+  {
+    "msgid": "%d new cookie is waiting for classification.",
+    "msgid_plural": "%d new cookies are waiting for classification.",
+    "msgstr": "%d cookie mới đang chờ phân loại."
+  },
+  {
+    "msgid": "%d unclassified cookie",
+    "msgid_plural": "%d unclassified cookies",
+    "msgstr": "%d cookie chưa phân loại"
+  },
+  {
+    "msgid": "(%1$d times, latest %2$s)",
+    "msgstr": "(%1$d lần, gần nhất %2$s)"
+  },
+  {
+    "msgid": "... and %d more.",
+    "msgstr": "... và %d cookie khác."
+  },
+  {
+    "msgid": "0 = never delete automatically.",
+    "msgstr": "0 = không tự xoá."
+  },
+  {
+    "msgid": "A PHP error occurred in the blocker.",
+    "msgstr": "Một lỗi PHP xảy ra trong bộ chặn."
+  },
+  {
+    "msgid": "A cookie in the file has an invalid platform reference.",
+    "msgstr": "Một cookie trong file tham chiếu tới nền tảng không hợp lệ."
+  },
+  {
+    "msgid": "A cookie in the file has no name.",
+    "msgstr": "Một cookie trong file không có tên."
+  },
+  {
+    "msgid": "A limit error of the regular expression engine (PCRE) on a page that is too large or has an unusual structure.",
+    "msgstr": "Lỗi giới hạn của bộ xử lý biểu thức chính quy (PCRE) trên trang quá lớn hoặc có cấu trúc bất thường."
+  },
+  {
+    "msgid": "A platform in the file has no valid slug or name.",
+    "msgstr": "Một nền tảng trong file không có slug hoặc tên hợp lệ."
+  },
+  {
+    "msgid": "A plugin flushed part of the page before it ended, so the blocker could not process that page.",
+    "msgstr": "Một plugin đã đẩy một phần trang ra trước khi kết thúc nên bộ chặn không xử lý được trang đó."
+  },
+  {
+    "msgid": "A preset is a ready-made configuration for one site. It is never applied automatically; a file you upload wins over the preset.",
+    "msgstr": "Bộ mẫu là cấu hình dựng sẵn cho một site. Nó không bao giờ được áp dụng tự động; file bạn tải lên được ưu tiên hơn bộ mẫu."
+  },
+  {
+    "msgid": "Accept all",
+    "msgstr": "Đồng ý tất cả"
+  },
+  {
+    "msgid": "Accept at the far right",
+    "msgstr": "Đồng ý ngoài cùng bên phải"
+  },
+  {
+    "msgid": "Accept button, active toggles, links, the selected tab.",
+    "msgstr": "Nút Đồng ý, toggle bật, link, tab đang chọn."
+  },
+  {
+    "msgid": "Accept first",
+    "msgstr": "Đồng ý đứng đầu"
+  },
+  {
+    "msgid": "Actions for the selected cookies",
+    "msgstr": "Thao tác cho các cookie đã chọn"
+  },
+  {
+    "msgid": "Actions for the selected rows...",
+    "msgstr": "Thao tác cho các dòng đã chọn..."
+  },
+  {
+    "msgid": "Add a cookie manually",
+    "msgstr": "Thêm cookie thủ công"
+  },
+  {
+    "msgid": "Add a custom platform",
+    "msgstr": "Thêm nền tảng tự định nghĩa"
+  },
+  {
+    "msgid": "Add cookie",
+    "msgstr": "Thêm cookie"
+  },
+  {
+    "msgid": "Add platform",
+    "msgstr": "Thêm nền tảng"
+  },
+  {
+    "msgid": "Adds exclusions for the plugin's scripts, blocked hosts and blocked inline scripts (data-dscc marker) from Minify, Delay and Defer JS.",
+    "msgstr": "Thêm loại trừ cho script của plugin, host bị chặn và các script inline bị chặn (nhãn data-dscc) khỏi Minify, Delay và Defer JS."
+  },
+  {
+    "msgid": "Advanced",
+    "msgstr": "Nâng cao"
+  },
+  {
+    "msgid": "After every choice",
+    "msgstr": "Sau mọi lựa chọn"
+  },
+  {
+    "msgid": "After import",
+    "msgstr": "Sau khi nhập"
+  },
+  {
+    "msgid": "After the visitor rejected",
+    "msgstr": "Sau khi khách từ chối"
+  },
+  {
+    "msgid": "All",
+    "msgstr": "Tất cả"
+  },
+  {
+    "msgid": "All categories",
+    "msgstr": "Tất cả nhóm"
+  },
+  {
+    "msgid": "Also covers new cookies found by a scan that are not classified yet (WordPress, WooCommerce and PHP cookies are always kept). Unclassified localStorage/sessionStorage keys are not deleted.",
+    "msgstr": "Gồm cả cookie mới do quét phát hiện mà chưa được phân loại (cookie của WordPress, WooCommerce và PHP luôn được giữ). Khoá localStorage/sessionStorage chưa phân loại không bị xoá."
+  },
+  {
+    "msgid": "Also delete the log table when the plugin is uninstalled",
+    "msgstr": "Xoá cả bảng log khi gỡ plugin"
+  },
+  {
+    "msgid": "Always keep",
+    "msgstr": "Luôn giữ"
+  },
+  {
+    "msgid": "An HTML tag had more than 1000 attributes or was too long, so it could not be parsed and was left as is.",
+    "msgstr": "Có thẻ HTML có hơn 1000 thuộc tính hoặc quá dài nên không phân tích được và được giữ nguyên."
+  },
+  {
+    "msgid": "Analytics",
+    "msgstr": "Phân tích"
+  },
+  {
+    "msgid": "Analytics (blocked until consent)",
+    "msgstr": "Phân tích (chặn tới khi đồng ý)"
+  },
+  {
+    "msgid": "Appearance",
+    "msgstr": "Giao diện"
+  },
+  {
+    "msgid": "Applies to (English)",
+    "msgstr": "Áp dụng tại (tiếng Anh)"
+  },
+  {
+    "msgid": "Applies to (Vietnamese)",
+    "msgstr": "Áp dụng tại (tiếng Việt)"
+  },
+  {
+    "msgid": "Applies to (vi / en)",
+    "msgstr": "Áp dụng tại (vi / en)"
+  },
+  {
+    "msgid": "Applies to the User-Agent list above (for example an app webview). \"Run every script\" writes no consent cookie and no log; choose it only when the app already asked the visitor for consent. Search bots always follow the \"like a bot\" behaviour.",
+    "msgstr": "Áp dụng cho danh sách User-Agent ở trên (ví dụ webview của app). \"Chạy mọi script\" không ghi cookie lựa chọn và không ghi log; chỉ chọn khi app đã hỏi đồng ý cho khách. Bot tìm kiếm luôn theo cách \"giống bot\"."
+  },
+  {
+    "msgid": "Applies to unknown cookies that a scan saw the server send to a new visitor. \"Report only\" (default): the cookies are still sent and only appear in the list and compliance alerts for you to classify; safe for the site's own cookies (login, cart). \"Block\": the cookies are removed by the server filter and deleted by the browser until the visitor consents or you classify them as Necessary; stricter, but it can break unclassified own cookies. Cookies that are confirmed or recognised automatically always follow their category, whatever this mode says.",
+    "msgstr": "Áp dụng cho cookie lạ mà lượt quét thấy server gửi cho khách mới. \"Chỉ báo cáo\" (mặc định): cookie vẫn được gửi, chỉ hiện trong danh sách và cảnh báo tuân thủ để bạn phân loại; an toàn cho cookie riêng của site (đăng nhập, giỏ hàng). \"Chặn\": cookie bị bộ lọc server gỡ và trình duyệt xoá cho tới khi khách đồng ý hoặc bạn phân loại là Cần thiết; chặt chẽ hơn nhưng có thể làm hỏng cookie riêng chưa được phân loại. Cookie đã được xác nhận hoặc nhận diện tự động luôn tuân theo nhóm của nó, bất kể chế độ này."
+  },
+  {
+    "msgid": "Apply",
+    "msgstr": "Áp dụng"
+  },
+  {
+    "msgid": "Apply import",
+    "msgstr": "Áp dụng"
+  },
+  {
+    "msgid": "Ask every visitor to choose again",
+    "msgstr": "Yêu cầu tất cả khách chọn lại"
+  },
+  {
+    "msgid": "At most one email per day.",
+    "msgstr": "Tối đa một email mỗi ngày."
+  },
+  {
+    "msgid": "Automatic",
+    "msgstr": "Tự động"
+  },
+  {
+    "msgid": "Automatic by layout style",
+    "msgstr": "Tự động theo kiểu giao diện"
+  },
+  {
+    "msgid": "Automatic scan",
+    "msgstr": "Quét tự động"
+  },
+  {
+    "msgid": "Banner",
+    "msgstr": "Banner"
+  },
+  {
+    "msgid": "Banner background",
+    "msgstr": "Nền banner"
+  },
+  {
+    "msgid": "Banner logo",
+    "msgstr": "Logo banner"
+  },
+  {
+    "msgid": "Banner logo height (px)",
+    "msgstr": "Chiều cao logo banner (px)"
+  },
+  {
+    "msgid": "Banner text colour",
+    "msgstr": "Màu chữ banner"
+  },
+  {
+    "msgid": "Banner text on the banner background only reaches a contrast of %s:1, below the 4.5:1 minimum (WCAG AA).",
+    "msgstr": "Chữ banner trên nền banner chỉ đạt tương phản %s:1, thấp hơn mức tối thiểu 4.5:1 (WCAG AA)."
+  },
+  {
+    "msgid": "Banner text on the banner background reaches a contrast of %s:1 (4.5:1 minimum required).",
+    "msgstr": "Chữ banner trên nền banner đạt tương phản %s:1 (cần tối thiểu 4.5:1)."
+  },
+  {
+    "msgid": "Block",
+    "msgstr": "Chặn"
+  },
+  {
+    "msgid": "Block GTM too until the visitor consents to Analytics or Marketing",
+    "msgstr": "Chặn cả GTM tới khi khách đồng ý Phân tích hoặc Tiếp thị"
+  },
+  {
+    "msgid": "Block before the visitor consents",
+    "msgstr": "Chặn trước khi khách đồng ý"
+  },
+  {
+    "msgid": "Block detected third-party services that are not classified yet like the Marketing category",
+    "msgstr": "Chặn như nhóm Tiếp thị các dịch vụ bên thứ ba đã phát hiện nhưng chưa được phân loại"
+  },
+  {
+    "msgid": "Block like the Marketing category until you classify them",
+    "msgstr": "Chặn như nhóm Tiếp thị tới khi bạn phân loại"
+  },
+  {
+    "msgid": "Block scripts before consent",
+    "msgstr": "Chặn script trước khi có đồng ý"
+  },
+  {
+    "msgid": "Blocked like the Marketing category and hidden from visitors until you classify them.",
+    "msgstr": "Bị chặn như nhóm Tiếp thị và không hiện cho khách cho tới khi bạn phân loại."
+  },
+  {
+    "msgid": "Blocking",
+    "msgstr": "Đang chặn"
+  },
+  {
+    "msgid": "Blocking mode",
+    "msgstr": "Chế độ chặn"
+  },
+  {
+    "msgid": "Bottom centre",
+    "msgstr": "Dưới giữa"
+  },
+  {
+    "msgid": "Bottom left",
+    "msgstr": "Dưới trái"
+  },
+  {
+    "msgid": "Bottom right",
+    "msgstr": "Dưới phải"
+  },
+  {
+    "msgid": "Box position (Compact style)",
+    "msgstr": "Vị trí hộp (kiểu Gọn)"
+  },
+  {
+    "msgid": "Button",
+    "msgstr": "Nút"
+  },
+  {
+    "msgid": "Button corner radius",
+    "msgstr": "Bo góc nút"
+  },
+  {
+    "msgid": "Button order on the banner",
+    "msgstr": "Thứ tự nút trên banner"
+  },
+  {
+    "msgid": "By browser (the page lang attribute, for GTranslate)",
+    "msgstr": "Theo trình duyệt (thuộc tính lang của trang, dùng cho GTranslate)"
+  },
+  {
+    "msgid": "By site (WordPress, WPML, Polylang)",
+    "msgstr": "Theo site (WordPress, WPML, Polylang)"
+  },
+  {
+    "msgid": "Cancel",
+    "msgstr": "Huỷ"
+  },
+  {
+    "msgid": "Cannot upload SVG: the SVG sanitising filter is not available.",
+    "msgstr": "Không thể tải lên SVG: bộ lọc làm sạch SVG không khả dụng."
+  },
+  {
+    "msgid": "Category",
+    "msgstr": "Nhóm"
+  },
+  {
+    "msgid": "Category (when no vendor is chosen)",
+    "msgstr": "Nhóm (khi không chọn nhà cung cấp)"
+  },
+  {
+    "msgid": "Change the mode on the Script blocking tab",
+    "msgstr": "Đổi chế độ ở tab Chặn script"
+  },
+  {
+    "msgid": "Change this value (or press the button) so every visitor sees the banner again.",
+    "msgstr": "Đổi giá trị này (hoặc bấm nút) để mọi khách thấy lại banner."
+  },
+  {
+    "msgid": "Changing the category applies to the whole vendor \"%s\" (every cookie of this vendor).",
+    "msgstr": "Đổi nhóm áp dụng cho cả nhà cung cấp \"%s\" (mọi cookie của nhà cung cấp này)."
+  },
+  {
+    "msgid": "Choice",
+    "msgstr": "Lựa chọn"
+  },
+  {
+    "msgid": "Choice retention (days)",
+    "msgstr": "Thời hạn lưu lựa chọn (ngày)"
+  },
+  {
+    "msgid": "Choose a file or a bundled preset. You see what would change first; nothing is saved until you apply it. Settings in the file overwrite the same settings here, platforms and cookies are added or updated, nothing is deleted and the consent log is not touched.",
+    "msgstr": "Chọn một file hoặc một bộ mẫu có sẵn. Bạn xem trước những gì sẽ thay đổi; chưa có gì được lưu cho tới khi bạn bấm áp dụng. Cài đặt trong file ghi đè cài đặt cùng tên ở đây, nền tảng và cookie được thêm hoặc cập nhật, không có gì bị xoá và log đồng ý không bị đụng tới."
+  },
+  {
+    "msgid": "Choose a file or a preset first.",
+    "msgstr": "Hãy chọn một file hoặc một bộ mẫu trước."
+  },
+  {
+    "msgid": "Choose a header only when the site really sits behind that proxy: the header can be forged if the site is reachable directly. Used to mask the IP in the log and to rate-limit per visitor.",
+    "msgstr": "Chỉ chọn header khi site thật sự nằm sau proxy đó: header có thể bị giả mạo nếu truy cập được trực tiếp. Dùng để che IP trong log và giới hạn tần suất theo từng khách."
+  },
+  {
+    "msgid": "Choose a valid cookie category.",
+    "msgstr": "Hãy chọn nhóm cookie hợp lệ."
+  },
+  {
+    "msgid": "Choose a vendor or a cookie category.",
+    "msgstr": "Hãy chọn nhà cung cấp hoặc nhóm cookie."
+  },
+  {
+    "msgid": "Classify now",
+    "msgstr": "Phân loại ngay"
+  },
+  {
+    "msgid": "Clear leak alerts (after you have fixed them)",
+    "msgstr": "Xoá cảnh báo rò rỉ (sau khi đã xử lý)"
+  },
+  {
+    "msgid": "Clear report",
+    "msgstr": "Xoá báo cáo"
+  },
+  {
+    "msgid": "Collect cookies from visitors",
+    "msgstr": "Thu thập cookie từ khách truy cập"
+  },
+  {
+    "msgid": "Collect cookies from visitors (beacon)",
+    "msgstr": "Thu thập cookie từ khách truy cập (beacon)"
+  },
+  {
+    "msgid": "Compact (small box in a corner)",
+    "msgstr": "Gọn (hộp nhỏ ở góc)"
+  },
+  {
+    "msgid": "Compliance alerts",
+    "msgstr": "Cảnh báo tuân thủ"
+  },
+  {
+    "msgid": "Confirm",
+    "msgstr": "Xác nhận"
+  },
+  {
+    "msgid": "Confirmed",
+    "msgstr": "Đã xác nhận"
+  },
+  {
+    "msgid": "Consent ID",
+    "msgstr": "Mã đồng ý"
+  },
+  {
+    "msgid": "Consent Mode",
+    "msgstr": "Consent Mode"
+  },
+  {
+    "msgid": "Consent cookie name",
+    "msgstr": "Tên cookie lưu lựa chọn"
+  },
+  {
+    "msgid": "Contact Form 7, Elementor Forms, Cloudflare Turnstile and reCAPTCHA are never blocked. WPML, Polylang and GTranslate only provide the banner language.",
+    "msgstr": "Contact Form 7, Elementor Forms, Cloudflare Turnstile và reCAPTCHA không bao giờ bị chặn. WPML, Polylang, GTranslate chỉ cung cấp ngôn ngữ cho banner."
+  },
+  {
+    "msgid": "Content",
+    "msgstr": "Nội dung"
+  },
+  {
+    "msgid": "Cookie Consent",
+    "msgstr": "Cookie Consent"
+  },
+  {
+    "msgid": "Cookie Consent - Log",
+    "msgstr": "Cookie Consent - Log"
+  },
+  {
+    "msgid": "Cookie Consent - Overview",
+    "msgstr": "Cookie Consent - Tổng quan"
+  },
+  {
+    "msgid": "Cookie Consent - Settings",
+    "msgstr": "Cookie Consent - Cài đặt"
+  },
+  {
+    "msgid": "Cookie Policy page",
+    "msgstr": "Trang Chính sách Cookie"
+  },
+  {
+    "msgid": "Cookie added.",
+    "msgstr": "Đã thêm cookie."
+  },
+  {
+    "msgid": "Cookie banner preview",
+    "msgstr": "Xem trước banner cookie"
+  },
+  {
+    "msgid": "Cookie category",
+    "msgstr": "Nhóm cookie"
+  },
+  {
+    "msgid": "Cookie consent banner with Google Consent Mode v2, consent log and live-preview settings. Reusable across many sites.",
+    "msgstr": "Banner đồng ý cookie với Google Consent Mode v2, log đồng ý và cài đặt có xem trước trực tiếp. Dùng lại được cho nhiều site."
+  },
+  {
+    "msgid": "Cookie database update URL",
+    "msgstr": "URL cập nhật danh mục cookie"
+  },
+  {
+    "msgid": "Cookie database updated to version %1$s (%2$d platforms, %3$d cookies).",
+    "msgstr": "Đã cập nhật danh mục cookie lên phiên bản %1$s (%2$d nền tảng, %3$d cookie)."
+  },
+  {
+    "msgid": "Cookie domain",
+    "msgstr": "Domain của cookie"
+  },
+  {
+    "msgid": "Cookie name",
+    "msgstr": "Tên cookie"
+  },
+  {
+    "msgid": "Cookie not found.",
+    "msgstr": "Không tìm thấy cookie."
+  },
+  {
+    "msgid": "Cookie scan",
+    "msgstr": "Quét cookie"
+  },
+  {
+    "msgid": "Cookies",
+    "msgstr": "Cookie"
+  },
+  {
+    "msgid": "Cookies (%d new)",
+    "msgstr": "Cookie (%d mới)"
+  },
+  {
+    "msgid": "Cookies added or updated:",
+    "msgstr": "Cookie được thêm hoặc cập nhật:"
+  },
+  {
+    "msgid": "Cookies confirmed: %d.",
+    "msgstr": "Đã xác nhận %d cookie."
+  },
+  {
+    "msgid": "Cookies deleted: %d.",
+    "msgstr": "Đã xoá %d cookie."
+  },
+  {
+    "msgid": "Cookies ignored: %d.",
+    "msgstr": "Đã bỏ qua %d cookie."
+  },
+  {
+    "msgid": "Cookies leaking after the visitor rejected",
+    "msgstr": "Cookie rò rỉ sau khi khách từ chối"
+  },
+  {
+    "msgid": "Cookies moved to another category: %d.",
+    "msgstr": "Đã chuyển nhóm cho %d cookie."
+  },
+  {
+    "msgid": "Cookies on the site",
+    "msgstr": "Cookie trên site"
+  },
+  {
+    "msgid": "Cookies present on the site but missing from the policy page",
+    "msgstr": "Cookie có trên site nhưng không có trong trang chính sách"
+  },
+  {
+    "msgid": "Cookies set before the visitor consented",
+    "msgstr": "Cookie được ghi trước khi khách đồng ý"
+  },
+  {
+    "msgid": "Cookies to always keep",
+    "msgstr": "Cookie luôn giữ"
+  },
+  {
+    "msgid": "Could not apply the change. Please try again.",
+    "msgstr": "Không áp dụng được. Hãy thử lại."
+  },
+  {
+    "msgid": "Could not apply this to the selected cookies.",
+    "msgstr": "Không áp dụng được cho cookie đã chọn."
+  },
+  {
+    "msgid": "Could not create a temporary file for the update.",
+    "msgstr": "Không tạo được file tạm cho bản cập nhật."
+  },
+  {
+    "msgid": "Could not create the scan run.",
+    "msgstr": "Không tạo được lượt quét."
+  },
+  {
+    "msgid": "Could not create the uploads/dscc folder.",
+    "msgstr": "Không tạo được thư mục uploads/dscc."
+  },
+  {
+    "msgid": "Could not download the cookie database file from the configured URL.",
+    "msgstr": "Không tải được file danh mục cookie từ URL đã cấu hình."
+  },
+  {
+    "msgid": "Could not reach the server. Please try again.",
+    "msgstr": "Không gọi được máy chủ. Hãy thử lại."
+  },
+  {
+    "msgid": "Could not read the SVG file.",
+    "msgstr": "Không đọc được file SVG."
+  },
+  {
+    "msgid": "Could not rename the update folder to match the installed plugin.",
+    "msgstr": "Không đổi được tên thư mục cập nhật cho khớp với plugin đã cài."
+  },
+  {
+    "msgid": "Could not save the cookie.",
+    "msgstr": "Không lưu được cookie."
+  },
+  {
+    "msgid": "Could not save the platform.",
+    "msgstr": "Không lưu được nền tảng."
+  },
+  {
+    "msgid": "Could not save the scan result.",
+    "msgstr": "Không lưu được kết quả quét."
+  },
+  {
+    "msgid": "Could not save. Please try again.",
+    "msgstr": "Không lưu được. Hãy thử lại."
+  },
+  {
+    "msgid": "Could not write the cookie database file to the uploads folder.",
+    "msgstr": "Không ghi được file danh mục cookie vào thư mục uploads."
+  },
+  {
+    "msgid": "Current",
+    "msgstr": "Hiện tại"
+  },
+  {
+    "msgid": "Custom",
+    "msgstr": "Tùy chỉnh"
+  },
+  {
+    "msgid": "Custom CSS",
+    "msgstr": "CSS tuỳ chỉnh"
+  },
+  {
+    "msgid": "Custom CSS was not saved: it is longer than 20,000 characters. The previous CSS is kept; the other settings were saved.",
+    "msgstr": "CSS tuỳ chỉnh không được lưu: dài quá 20.000 ký tự. CSS cũ được giữ nguyên; các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "Custom CSS was not saved: the number of { and } does not match, which could break the whole page style. The previous CSS is kept; the other settings were saved.",
+    "msgstr": "CSS tuỳ chỉnh không được lưu: số dấu { và } không khớp nhau nên có thể làm hỏng toàn bộ kiểu của trang. CSS cũ được giữ nguyên; các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "Custom platform added.",
+    "msgstr": "Đã thêm nền tảng tự định nghĩa."
+  },
+  {
+    "msgid": "Customise button style",
+    "msgstr": "Kiểu nút Tùy chỉnh"
+  },
+  {
+    "msgid": "D-Solutions",
+    "msgstr": "D-Solutions"
+  },
+  {
+    "msgid": "DS Cookie Consent",
+    "msgstr": "DS Cookie Consent"
+  },
+  {
+    "msgid": "DS Cookie Consent %s has no published SHA-256 checksum on GitHub, so the download cannot be verified before it is installed.",
+    "msgstr": "DS Cookie Consent %s không có mã SHA-256 được công bố trên GitHub nên không thể kiểm tra file tải về trước khi cài."
+  },
+  {
+    "msgid": "DS Cookie Consent preview",
+    "msgstr": "Xem trước DS Cookie Consent"
+  },
+  {
+    "msgid": "Dark overlay while the popup is open (%)",
+    "msgstr": "Lớp phủ tối khi mở popup (%)"
+  },
+  {
+    "msgid": "Data",
+    "msgstr": "Dữ liệu"
+  },
+  {
+    "msgid": "Deep scan",
+    "msgstr": "Quét sâu"
+  },
+  {
+    "msgid": "Default language",
+    "msgstr": "Ngôn ngữ mặc định"
+  },
+  {
+    "msgid": "Default texts restored.",
+    "msgstr": "Đã khôi phục chữ mặc định."
+  },
+  {
+    "msgid": "Delete",
+    "msgstr": "Xoá"
+  },
+  {
+    "msgid": "Delete data on uninstall",
+    "msgstr": "Xoá dữ liệu khi gỡ plugin"
+  },
+  {
+    "msgid": "Desktop",
+    "msgstr": "Desktop"
+  },
+  {
+    "msgid": "Detected on the site",
+    "msgstr": "Phát hiện trên site"
+  },
+  {
+    "msgid": "Detected through GTM",
+    "msgstr": "Phát hiện qua GTM"
+  },
+  {
+    "msgid": "Direct connection address (default)",
+    "msgstr": "Địa chỉ kết nối trực tiếp (mặc định)"
+  },
+  {
+    "msgid": "Distance from the bottom edge (px)",
+    "msgstr": "Cách mép dưới (px)"
+  },
+  {
+    "msgid": "Distance from the side edge (px)",
+    "msgstr": "Cách mép ngang (px)"
+  },
+  {
+    "msgid": "Domain (optional)",
+    "msgstr": "Tên miền (tuỳ chọn)"
+  },
+  {
+    "msgid": "Download configuration",
+    "msgstr": "Tải cấu hình"
+  },
+  {
+    "msgid": "Downloads the settings, text overrides, platforms and cookies as a JSON file to copy this configuration to another site. The consent log is never included.",
+    "msgstr": "Tải về cài đặt, chữ tuỳ chỉnh, nền tảng và cookie dạng file JSON để sao chép cấu hình này sang site khác. Log đồng ý không bao giờ nằm trong file."
+  },
+  {
+    "msgid": "Duration",
+    "msgstr": "Thời hạn"
+  },
+  {
+    "msgid": "Duration (English)",
+    "msgstr": "Thời hạn (tiếng Anh)"
+  },
+  {
+    "msgid": "Duration (Vietnamese)",
+    "msgstr": "Thời hạn (tiếng Việt)"
+  },
+  {
+    "msgid": "Duration (vi / en)",
+    "msgstr": "Thời hạn (vi / en)"
+  },
+  {
+    "msgid": "Each row is one visitor choice on the banner. The data is anonymous: the IP is masked and not tied to a name or email. Times are UTC.",
+    "msgstr": "Mỗi dòng là một lần khách chọn trên banner. Dữ liệu ẩn danh: IP đã che, không gắn với tên hay email. Giờ theo UTC."
+  },
+  {
+    "msgid": "Email on new cookies",
+    "msgstr": "Email khi có cookie mới"
+  },
+  {
+    "msgid": "Embed the page (iframe, same-domain pages only)",
+    "msgstr": "Nhúng trang (iframe, chỉ trang cùng tên miền)"
+  },
+  {
+    "msgid": "English",
+    "msgstr": "English"
+  },
+  {
+    "msgid": "Enter a cookie name.",
+    "msgstr": "Hãy nhập tên cookie."
+  },
+  {
+    "msgid": "Enter a platform name.",
+    "msgstr": "Hãy nhập tên nền tảng."
+  },
+  {
+    "msgid": "Every category",
+    "msgstr": "Mọi nhóm"
+  },
+  {
+    "msgid": "Every selector is prefixed with #dscc automatically. @import, url(javascript:) and expression() are not allowed.",
+    "msgstr": "Mọi selector được tự thêm tiền tố #dscc. Không cho phép @import, url(javascript:), expression()."
+  },
+  {
+    "msgid": "Every source",
+    "msgstr": "Mọi nguồn"
+  },
+  {
+    "msgid": "Example",
+    "msgstr": "Ví dụ"
+  },
+  {
+    "msgid": "Exclusion list",
+    "msgstr": "Danh sách loại trừ"
+  },
+  {
+    "msgid": "Export",
+    "msgstr": "Xuất"
+  },
+  {
+    "msgid": "Export CSV",
+    "msgstr": "Xuất CSV"
+  },
+  {
+    "msgid": "Export file (.json)",
+    "msgstr": "File xuất (.json)"
+  },
+  {
+    "msgid": "Filter",
+    "msgstr": "Lọc"
+  },
+  {
+    "msgid": "Filter by category",
+    "msgstr": "Lọc theo nhóm"
+  },
+  {
+    "msgid": "Findings from visitors dropped because the review queue is full: %d. Classify or ignore some new cookies (server scan results are not subject to this limit).",
+    "msgstr": "%d phát hiện từ khách truy cập đã bị bỏ qua vì danh sách chờ duyệt đã đầy. Hãy phân loại hoặc bỏ qua bớt cookie mới (kết quả quét máy chủ không bị giới hạn này)."
+  },
+  {
+    "msgid": "Font",
+    "msgstr": "Font"
+  },
+  {
+    "msgid": "Frame size",
+    "msgstr": "Kích thước khung"
+  },
+  {
+    "msgid": "From 0 to 100. Visitors are picked at random in the browser, so the page HTML stays identical for every visitor and no extra database queries are made.",
+    "msgstr": "Từ 0 đến 100. Khách được chọn ngẫu nhiên ngay trong trình duyệt, nên HTML trang vẫn giống nhau cho mọi khách và không phát sinh truy vấn cơ sở dữ liệu thêm."
+  },
+  {
+    "msgid": "From date",
+    "msgstr": "Từ ngày"
+  },
+  {
+    "msgid": "Functional",
+    "msgstr": "Chức năng"
+  },
+  {
+    "msgid": "Functional category",
+    "msgstr": "Nhóm Chức năng"
+  },
+  {
+    "msgid": "GTM + Consent Mode (do not block GTM)",
+    "msgstr": "GTM + Consent Mode (không chặn GTM)"
+  },
+  {
+    "msgid": "GitHub answered with an unexpected download address.",
+    "msgstr": "GitHub trả về địa chỉ tải không hợp lệ."
+  },
+  {
+    "msgid": "GitHub refused the update download (HTTP %d).",
+    "msgstr": "GitHub từ chối cho tải bản cập nhật (HTTP %d)."
+  },
+  {
+    "msgid": "Google Tag Manager",
+    "msgstr": "Google Tag Manager"
+  },
+  {
+    "msgid": "Googlebot, Bingbot and similar bots see no banner and are not logged",
+    "msgstr": "Googlebot, Bingbot và các bot tương tự không thấy banner, không ghi log"
+  },
+  {
+    "msgid": "Handling",
+    "msgstr": "Cách xử lý"
+  },
+  {
+    "msgid": "Held back by the server cookie filter, a visitor who has not consented does not receive them: %s",
+    "msgstr": "Đã được bộ lọc cookie server giữ lại, khách chưa đồng ý không nhận được: %s"
+  },
+  {
+    "msgid": "Hide elements while the banner is open",
+    "msgstr": "Ẩn phần tử khi banner mở"
+  },
+  {
+    "msgid": "Horizontal bar (with a 3-tab popup)",
+    "msgstr": "Thanh ngang (kèm popup 3 tab)"
+  },
+  {
+    "msgid": "How the policy appears in the popup",
+    "msgstr": "Cách hiện chính sách trong popup"
+  },
+  {
+    "msgid": "IP (masked)",
+    "msgstr": "IP (đã che)"
+  },
+  {
+    "msgid": "Icon",
+    "msgstr": "Icon"
+  },
+  {
+    "msgid": "Icon corner",
+    "msgstr": "Góc của icon"
+  },
+  {
+    "msgid": "If not configured, the Privacy policy tab is not shown in the popup.",
+    "msgstr": "Không cấu hình thì tab Chính sách bảo mật không hiện trong popup."
+  },
+  {
+    "msgid": "Ignored",
+    "msgstr": "Bỏ qua"
+  },
+  {
+    "msgid": "Import",
+    "msgstr": "Nhập"
+  },
+  {
+    "msgid": "Import / Export",
+    "msgstr": "Nhập / Xuất"
+  },
+  {
+    "msgid": "Import finished: %1$d settings, %2$d platforms and %3$d cookies were added or updated.",
+    "msgstr": "Nhập xong: đã thêm hoặc cập nhật %1$d cài đặt, %2$d nền tảng và %3$d cookie."
+  },
+  {
+    "msgid": "In use",
+    "msgstr": "Đang dùng"
+  },
+  {
+    "msgid": "In use on the site",
+    "msgstr": "Đang dùng trên site"
+  },
+  {
+    "msgid": "Integrations",
+    "msgstr": "Tích hợp"
+  },
+  {
+    "msgid": "Invalid cookie category.",
+    "msgstr": "Nhóm cookie không hợp lệ."
+  },
+  {
+    "msgid": "Invalid report (%1$s: %2$s).",
+    "msgstr": "Báo cáo không hợp lệ (%1$s: %2$s)."
+  },
+  {
+    "msgid": "Invalid tab.",
+    "msgstr": "Tab không hợp lệ."
+  },
+  {
+    "msgid": "Item",
+    "msgstr": "Mục"
+  },
+  {
+    "msgid": "Keep advertising information in the URL while there is no cookie consent",
+    "msgstr": "Giữ thông tin quảng cáo trong URL khi chưa có đồng ý cookie"
+  },
+  {
+    "msgid": "Keep log (months)",
+    "msgstr": "Giữ log (tháng)"
+  },
+  {
+    "msgid": "Keep the Meta Pixel plugin on \"hold\" until the visitor consents to Marketing",
+    "msgstr": "Giữ plugin Meta Pixel ở trạng thái \"hold\" tới khi khách đồng ý Tiếp thị"
+  },
+  {
+    "msgid": "Known cookie catalog: version %1$s, %2$d platforms, %3$d cookies.",
+    "msgstr": "Danh mục cookie đã biết: phiên bản %1$s, %2$d nền tảng, %3$d cookie."
+  },
+  {
+    "msgid": "Known database",
+    "msgstr": "Danh mục có sẵn"
+  },
+  {
+    "msgid": "Language",
+    "msgstr": "Ngôn ngữ"
+  },
+  {
+    "msgid": "Language detection",
+    "msgstr": "Cách chọn ngôn ngữ"
+  },
+  {
+    "msgid": "Last %d day",
+    "msgid_plural": "Last %d days",
+    "msgstr": "%d ngày gần nhất"
+  },
+  {
+    "msgid": "Last seen",
+    "msgstr": "Lần cuối thấy"
+  },
+  {
+    "msgid": "Latest cookie scan: %s.",
+    "msgstr": "Lần quét cookie gần nhất: %s."
+  },
+  {
+    "msgid": "Latest deep scan (headless browser)",
+    "msgstr": "Quét sâu gần nhất (trình duyệt headless)"
+  },
+  {
+    "msgid": "Latest deep scan: %s.",
+    "msgstr": "Quét sâu gần nhất: %s."
+  },
+  {
+    "msgid": "Latest scan: %1$s - %2$d pages, %3$d cookies set by the server, %4$d new cookies.",
+    "msgstr": "Lần quét gần nhất: %1$s - %2$d trang, %3$d cookie do server ghi, %4$d cookie mới."
+  },
+  {
+    "msgid": "Layout style",
+    "msgstr": "Kiểu giao diện"
+  },
+  {
+    "msgid": "Leave empty for automatic (bar: pill, compact box: 8px). Enter \"pill\" or a number of px.",
+    "msgstr": "Để trống = tự động (thanh ngang: pill, hộp gọn: 8px). Nhập \"pill\" hoặc số px."
+  },
+  {
+    "msgid": "Leave empty for every region. One ISO 3166 code per line (for example VN, US-CA). At most %1$d regions and %2$d characters in total (the limit of the head script); the excess is dropped.",
+    "msgstr": "Để trống = mọi vùng. Mỗi dòng một mã ISO 3166 (ví dụ VN, US-CA). Tối đa %1$d vùng và %2$d ký tự gộp (giới hạn của script đầu trang); phần thừa bị bỏ."
+  },
+  {
+    "msgid": "Leave empty for the current host. Set \".example.com\" to share it across subdomains.",
+    "msgstr": "Để trống = host hiện tại. Đặt \".example.com\" để dùng chung giữa các subdomain."
+  },
+  {
+    "msgid": "Leave empty to compute it (12% darker).",
+    "msgstr": "Để trống thì tự tính (tối hơn 12%)."
+  },
+  {
+    "msgid": "Leave empty to compute it from the primary colour (12% mixed with white).",
+    "msgstr": "Để trống thì tự tính từ màu chính (pha 12% với trắng)."
+  },
+  {
+    "msgid": "Leave empty to use the banner logo.",
+    "msgstr": "Để trống thì dùng logo banner."
+  },
+  {
+    "msgid": "Leave empty to use the default text (Content tab).",
+    "msgstr": "Để trống thì dùng chữ mặc định (tab Nội dung)."
+  },
+  {
+    "msgid": "Leave empty to use the default text (shown faded in the field). You can use {site} (site name) and {policy_link} (link to the Cookie Policy).",
+    "msgstr": "Để trống = dùng chữ mặc định (hiện mờ trong ô). Có thể dùng {site} (tên site) và {policy_link} (liên kết Chính sách Cookie)."
+  },
+  {
+    "msgid": "Leave empty to use the site admin email. Currently sending to: %s",
+    "msgstr": "Để trống để dùng email quản trị của site. Đang gửi tới: %s"
+  },
+  {
+    "msgid": "Left",
+    "msgstr": "Trái"
+  },
+  {
+    "msgid": "Let visitors switch each vendor on or off in the popup",
+    "msgstr": "Cho khách bật/tắt từng nhà cung cấp trong popup"
+  },
+  {
+    "msgid": "Letters, digits, underscore and hyphen; at most %d characters.",
+    "msgstr": "Chữ, số, gạch dưới, gạch ngang; tối đa %d ký tự."
+  },
+  {
+    "msgid": "Like a bot: hide the banner, keep tracking scripts blocked, restore embedded videos and maps",
+    "msgstr": "Giống bot: ẩn banner, giữ script theo dõi bị chặn, hiện lại video và bản đồ nhúng"
+  },
+  {
+    "msgid": "Link",
+    "msgstr": "Liên kết"
+  },
+  {
+    "msgid": "Live preview",
+    "msgstr": "Xem trước trực tiếp"
+  },
+  {
+    "msgid": "Loads the site's pages like a new visitor (nothing chosen yet), records the cookies the server sets and detects platforms in the HTML and GTM containers.",
+    "msgstr": "Tải các trang của site như một khách mới (chưa chọn gì), ghi lại cookie do server đặt và nhận diện nền tảng trong HTML và container GTM."
+  },
+  {
+    "msgid": "Log",
+    "msgstr": "Log"
+  },
+  {
+    "msgid": "Log requests blocked by the rate limit: %1$d today, %2$d in 7 days.",
+    "msgstr": "Yêu cầu ghi log bị chặn do vượt giới hạn tần suất: %1$d hôm nay, %2$d trong 7 ngày."
+  },
+  {
+    "msgid": "Manual",
+    "msgstr": "Thủ công"
+  },
+  {
+    "msgid": "Marketing",
+    "msgstr": "Tiếp thị"
+  },
+  {
+    "msgid": "Marketing (blocked until consent)",
+    "msgstr": "Tiếp thị (chặn tới khi đồng ý)"
+  },
+  {
+    "msgid": "Maximum pages per run",
+    "msgstr": "Số trang tối đa mỗi lượt"
+  },
+  {
+    "msgid": "Meta Pixel for WordPress",
+    "msgstr": "Meta Pixel for WordPress"
+  },
+  {
+    "msgid": "Minimised icon",
+    "msgstr": "Icon thu nhỏ"
+  },
+  {
+    "msgid": "Mobile 390px",
+    "msgstr": "Mobile 390px"
+  },
+  {
+    "msgid": "Mode",
+    "msgstr": "Chế độ"
+  },
+  {
+    "msgid": "Move the minimised icon automatically",
+    "msgstr": "Tự dời icon thu nhỏ"
+  },
+  {
+    "msgid": "Move to category: %s",
+    "msgstr": "Chuyển sang nhóm: %s"
+  },
+  {
+    "msgid": "Necessary",
+    "msgstr": "Cần thiết"
+  },
+  {
+    "msgid": "New",
+    "msgstr": "Mới"
+  },
+  {
+    "msgid": "New platforms created by the scan:",
+    "msgstr": "Nền tảng mới do lần quét tạo:"
+  },
+  {
+    "msgid": "Newly detected platforms, blocked from now on until the visitor consents (not shown in the popup until you confirm them on the Platforms tab): %s",
+    "msgstr": "Nền tảng mới phát hiện và từ nay bị chặn tới khi khách đồng ý (chưa hiện trong popup cho tới khi bạn xác nhận ở tab Nền tảng): %s"
+  },
+  {
+    "msgid": "No",
+    "msgstr": "Không"
+  },
+  {
+    "msgid": "No Analytics / Marketing cookie or service appeared before the visitor consented.",
+    "msgstr": "Không có cookie hay dịch vụ Phân tích / Tiếp thị nào xuất hiện trước khi khách đồng ý."
+  },
+  {
+    "msgid": "No Cookie policy page is selected on the Content tab, so cookies cannot be compared with the policy yet.",
+    "msgstr": "Chưa chọn trang Chính sách cookie ở tab Nội dung nên chưa thể đối chiếu cookie với chính sách."
+  },
+  {
+    "msgid": "No alerts from recent scans.",
+    "msgstr": "Không có cảnh báo nào từ các lượt quét gần đây."
+  },
+  {
+    "msgid": "No alerts yet. Run \"Scan now\" on the Cookies tab to check.",
+    "msgstr": "Chưa có cảnh báo. Hãy chạy \"Quét ngay\" ở tab Cookie để kiểm tra."
+  },
+  {
+    "msgid": "No cookie scan has run yet.",
+    "msgstr": "Chưa quét cookie lần nào."
+  },
+  {
+    "msgid": "No cookies yet. Tick a platform on the Platforms tab or add a cookie manually below.",
+    "msgstr": "Chưa có cookie nào. Tick nền tảng ở tab Nền tảng hoặc thêm cookie thủ công bên dưới."
+  },
+  {
+    "msgid": "No data yet.",
+    "msgstr": "Chưa có dữ liệu."
+  },
+  {
+    "msgid": "No matching platform.",
+    "msgstr": "Không có nền tảng phù hợp."
+  },
+  {
+    "msgid": "No page found to scan.",
+    "msgstr": "Không tìm thấy trang nào để quét."
+  },
+  {
+    "msgid": "No platform has a script pattern yet. Tick platforms on the Platforms tab to start blocking.",
+    "msgstr": "Chưa có nền tảng nào có mẫu script. Tick nền tảng ở tab Nền tảng để bắt đầu chặn."
+  },
+  {
+    "msgid": "No scan has run yet.",
+    "msgstr": "Chưa có lượt quét nào."
+  },
+  {
+    "msgid": "No script that would be blocked has been recorded yet. The report is written when visitors view pages (pages served from the cache do not run the blocker).",
+    "msgstr": "Chưa ghi nhận script nào sẽ bị chặn. Báo cáo được ghi khi có khách xem trang (trang lấy từ cache không chạy bộ chặn)."
+  },
+  {
+    "msgid": "No source URL yet. Enter a URL on the %s tab to enable updates.",
+    "msgstr": "Chưa có URL nguồn. Nhập URL trong tab %s để bật cập nhật."
+  },
+  {
+    "msgid": "Not present",
+    "msgstr": "Không có"
+  },
+  {
+    "msgid": "Notifications",
+    "msgstr": "Thông báo"
+  },
+  {
+    "msgid": "Observe mode report",
+    "msgstr": "Báo cáo chế độ quan sát"
+  },
+  {
+    "msgid": "Observe only (do not block, only record what would be blocked)",
+    "msgstr": "Chỉ quan sát (không chặn, chỉ ghi nhận cái sẽ bị chặn)"
+  },
+  {
+    "msgid": "Off",
+    "msgstr": "Tắt"
+  },
+  {
+    "msgid": "Off by default. When on, a small share of visitors who accepted or rejected report to the site, 5 seconds after the page loads, the NAMES of cookies, localStorage/sessionStorage keys and the domains of loaded resources. Cookie values are never sent, no IP address is stored, and nothing is sent from logged-in users. Used to detect cookies set by client-side scripts and cookies that leak after the visitor rejected.",
+    "msgstr": "Mặc định tắt. Khi bật, một tỉ lệ nhỏ khách đã chọn đồng ý hoặc từ chối sẽ gửi về site, sau khi tải trang 5 giây, TÊN cookie, khoá localStorage/sessionStorage và tên miền của tài nguyên đã tải. Không bao giờ gửi giá trị cookie, không lưu địa chỉ IP, không gửi từ người dùng đã đăng nhập. Dùng để phát hiện cookie do script phía khách ghi và cookie rò rỉ sau khi khách từ chối."
+  },
+  {
+    "msgid": "On",
+    "msgstr": "Bật"
+  },
+  {
+    "msgid": "Once a week (WP-Cron)",
+    "msgstr": "Mỗi tuần một lần (WP-Cron)"
+  },
+  {
+    "msgid": "One CSS selector per line, for example #chat-widget-root. The elements are hidden while the banner is shown.",
+    "msgstr": "Mỗi dòng một CSS selector, ví dụ #chat-widget-root. Phần tử bị ẩn trong lúc banner hiển thị."
+  },
+  {
+    "msgid": "One cookie name or pattern with * per line (for example my_session, shop_*). These cookies are never filtered or deleted, and are placed in the Necessary category when scanning. At most 30 lines, 3 to 64 characters each (letters, digits, _ . - % *).",
+    "msgstr": "Mỗi dòng một tên cookie hoặc mẫu có dấu * (ví dụ my_session, shop_*). Các cookie này không bao giờ bị lọc hay xoá, và được xếp vào nhóm Cần thiết khi quét. Tối đa 30 dòng, mỗi dòng 3 đến 64 ký tự (chữ, số, _ . - % *)."
+  },
+  {
+    "msgid": "One domain per line, for example cdn.littled.example. Used to block the script before the visitor consents.",
+    "msgstr": "Mỗi dòng một tên miền, ví dụ cdn.littled.example. Dùng để chặn script trước khi khách đồng ý."
+  },
+  {
+    "msgid": "One expression per line, without delimiters and without the ~ character.",
+    "msgstr": "Mỗi dòng một biểu thức, không có dấu phân cách và không chứa ký tự ~."
+  },
+  {
+    "msgid": "One piece of text per line (matched inside script and iframe tags) or a regular expression written between /.../. Matching tags are not blocked. At most 50 lines, 3 to 200 characters each.",
+    "msgstr": "Mỗi dòng một đoạn chữ (so khớp trong thẻ script, iframe) hoặc biểu thức chính quy viết trong dấu /.../. Thẻ khớp sẽ không bị chặn. Tối đa 50 dòng, mỗi dòng 3 đến 200 ký tự."
+  },
+  {
+    "msgid": "One regular expression per line (case-insensitive). On a match no banner is shown, Consent Mode stays denied and nothing is logged.",
+    "msgstr": "Mỗi dòng một biểu thức chính quy (không phân biệt hoa thường). Khớp thì không hiện banner, Consent Mode giữ denied, không ghi log."
+  },
+  {
+    "msgid": "Only after Reject (bar style)",
+    "msgstr": "Chỉ sau khi Từ chối (kiểu thanh ngang)"
+  },
+  {
+    "msgid": "Only applies when the Google Tag Manager platform is ticked on the Platforms tab. \"GTM + Consent Mode\": GTM is loaded up front and only the Google tags inside the container stop on their own through Consent Mode; third-party tags in the container (Meta, TikTok...) only stop if the container sets a trigger on the dscc_consent_update event or on the dscc_analytics / dscc_marketing variables. \"Block GTM\": GTM is only loaded when the visitor consents to Analytics OR Marketing, so consenting to Analytics alone also runs the Marketing tags in the container: set a trigger condition on each tag.",
+    "msgstr": "Chỉ áp dụng khi nền tảng Google Tag Manager đã được tick ở tab Nền tảng. \"GTM + Consent Mode\": GTM được tải sẵn và chỉ các thẻ Google bên trong container tự dừng theo Consent Mode; thẻ bên thứ ba trong container (Meta, TikTok...) chỉ dừng nếu container đặt điều kiện kích hoạt theo sự kiện dscc_consent_update hoặc biến dscc_analytics / dscc_marketing. \"Chặn cả GTM\": GTM chỉ được tải khi khách đồng ý Phân tích HOẶC Tiếp thị, nên đồng ý riêng Phân tích cũng chạy cả các thẻ Tiếp thị trong container: cần đặt điều kiện kích hoạt cho từng thẻ."
+  },
+  {
+    "msgid": "Only show a button that opens the page",
+    "msgstr": "Chỉ hiện nút mở trang"
+  },
+  {
+    "msgid": "Only takes effect when the Meta Pixel for WordPress plugin is active. Every page is rendered in the hold state (identical for every visitor, which suits page caching); for a visitor who consented, the browser calls release(), which adds one admin-ajax request per page view. Turn it off to avoid this cost; then only the script blocker and the server cookie filter remain.",
+    "msgstr": "Chỉ có tác dụng khi plugin Meta Pixel for WordPress đang bật. Mọi trang được render ở trạng thái hold (giống nhau cho mọi khách, hợp với trang cache); với khách đã đồng ý, trình duyệt gọi release() nên có thêm một yêu cầu admin-ajax mỗi lượt xem trang. Tắt nếu muốn tránh chi phí này, khi đó chỉ còn bộ chặn script và bộ lọc cookie server."
+  },
+  {
+    "msgid": "Only takes effect when the cookie catalog has vendors.",
+    "msgstr": "Chỉ có tác dụng khi danh mục cookie có nhà cung cấp."
+  },
+  {
+    "msgid": "Open the Cookies tab",
+    "msgstr": "Mở tab Cookie"
+  },
+  {
+    "msgid": "Open the Platforms tab",
+    "msgstr": "Mở tab Nền tảng"
+  },
+  {
+    "msgid": "Optional. Cookies of one group share a row (names joined by commas); the purpose, duration and where they apply come from the first cookie.",
+    "msgstr": "Tuỳ chọn. Các cookie cùng nhóm hiện chung một dòng (tên nối bằng dấu phẩy); mục đích, thời hạn, nơi áp dụng lấy theo cookie đầu tiên."
+  },
+  {
+    "msgid": "Optional. If empty, the policy table shows the cookie's domain or the site domain.",
+    "msgstr": "Tuỳ chọn. Để trống thì bảng chính sách hiện tên miền của cookie hoặc tên miền site."
+  },
+  {
+    "msgid": "Or a bundled preset",
+    "msgstr": "Hoặc bộ mẫu có sẵn"
+  },
+  {
+    "msgid": "Overview",
+    "msgstr": "Tổng quan"
+  },
+  {
+    "msgid": "PNG, WebP or SVG (SVG is sanitised on upload). Leave empty to use the site logo.",
+    "msgstr": "PNG, WebP hoặc SVG (SVG được làm sạch khi tải lên). Để trống thì dùng logo của site."
+  },
+  {
+    "msgid": "Page",
+    "msgstr": "Trang"
+  },
+  {
+    "msgid": "Page cache limits: blocked scripts in the HTML are identical for every visitor, so the cache does not affect them. Only cookies set by the server (for example _fbp from the Meta Pixel plugin) are filtered when the request reaches PHP; a page already in the cache does not run this filter. The thorough fix is to stop that plugin from setting the cookie in the first place (see the Integrations section below).",
+    "msgstr": "Giới hạn của trang cache: script bị chặn trong HTML giống nhau cho mọi khách nên cache không ảnh hưởng. Riêng cookie do server ghi (ví dụ _fbp của plugin Meta Pixel) chỉ được lọc khi yêu cầu đi tới PHP; trang đã nằm trong cache không chạy bộ lọc này. Cách xử lý triệt để là chặn plugin đó ghi cookie ngay từ đầu (xem mục Tích hợp bên dưới)."
+  },
+  {
+    "msgid": "Page views",
+    "msgstr": "Số lượt trang"
+  },
+  {
+    "msgid": "Passive collection",
+    "msgstr": "Thu thập thụ động"
+  },
+  {
+    "msgid": "Per-vendor toggles",
+    "msgstr": "Toggle theo từng nhà cung cấp"
+  },
+  {
+    "msgid": "Platform list saved.",
+    "msgstr": "Đã lưu danh sách nền tảng."
+  },
+  {
+    "msgid": "Platform name",
+    "msgstr": "Tên nền tảng"
+  },
+  {
+    "msgid": "Platform policy link",
+    "msgstr": "Link chính sách của nền tảng"
+  },
+  {
+    "msgid": "Platforms",
+    "msgstr": "Nền tảng"
+  },
+  {
+    "msgid": "Platforms added or updated:",
+    "msgstr": "Nền tảng được thêm hoặc cập nhật:"
+  },
+  {
+    "msgid": "Platforms being blocked",
+    "msgstr": "Nền tảng đang được chặn"
+  },
+  {
+    "msgid": "Platforms detected on the site:",
+    "msgstr": "Nền tảng phát hiện trên site:"
+  },
+  {
+    "msgid": "Plugin",
+    "msgstr": "Plugin"
+  },
+  {
+    "msgid": "Policy",
+    "msgstr": "Chính sách"
+  },
+  {
+    "msgid": "Policy links",
+    "msgstr": "Liên kết chính sách"
+  },
+  {
+    "msgid": "Policy version",
+    "msgstr": "Phiên bản chính sách"
+  },
+  {
+    "msgid": "Policy version increased: every visitor will be asked again.",
+    "msgstr": "Đã tăng phiên bản chính sách: mọi khách sẽ được hỏi lại."
+  },
+  {
+    "msgid": "Popup background",
+    "msgstr": "Nền popup"
+  },
+  {
+    "msgid": "Popup logo",
+    "msgstr": "Logo popup"
+  },
+  {
+    "msgid": "Popup logo height (px)",
+    "msgstr": "Chiều cao logo popup (px)"
+  },
+  {
+    "msgid": "Preferences",
+    "msgstr": "Tùy chọn"
+  },
+  {
+    "msgid": "Preview import",
+    "msgstr": "Xem trước khi nhập"
+  },
+  {
+    "msgid": "Preview screen",
+    "msgstr": "Màn hình xem trước"
+  },
+  {
+    "msgid": "Primary colour",
+    "msgstr": "Màu chính"
+  },
+  {
+    "msgid": "Primary colour on hover",
+    "msgstr": "Màu chính khi rê chuột"
+  },
+  {
+    "msgid": "Privacy Policy page",
+    "msgstr": "Trang Chính sách Bảo mật"
+  },
+  {
+    "msgid": "Purpose (English)",
+    "msgstr": "Mục đích (tiếng Anh)"
+  },
+  {
+    "msgid": "Purpose (Vietnamese)",
+    "msgstr": "Mục đích (tiếng Việt)"
+  },
+  {
+    "msgid": "Purpose (vi / en)",
+    "msgstr": "Mục đích (vi / en)"
+  },
+  {
+    "msgid": "Push the icon above the elements in the list above if they occupy the same corner",
+    "msgstr": "Đẩy icon lên trên các phần tử ở danh sách trên nếu chúng chiếm cùng góc"
+  },
+  {
+    "msgid": "Quick edit",
+    "msgstr": "Sửa nhanh"
+  },
+  {
+    "msgid": "Recipient address",
+    "msgstr": "Địa chỉ nhận email"
+  },
+  {
+    "msgid": "Records: %d.",
+    "msgstr": "%d bản ghi."
+  },
+  {
+    "msgid": "Regions where \"denied\" is the default",
+    "msgstr": "Vùng áp dụng mặc định \"denied\""
+  },
+  {
+    "msgid": "Reject all",
+    "msgstr": "Từ chối tất cả"
+  },
+  {
+    "msgid": "Reject button background",
+    "msgstr": "Nền nút Từ chối"
+  },
+  {
+    "msgid": "Reload the page after the visitor withdraws consent (so scripts that already ran stop setting cookies)",
+    "msgstr": "Tải lại trang sau khi khách rút lại đồng ý (để script đã chạy không tiếp tục ghi cookie)"
+  },
+  {
+    "msgid": "Report only",
+    "msgstr": "Chỉ báo cáo"
+  },
+  {
+    "msgid": "Report only (default): list and warn, do not delete cookies",
+    "msgstr": "Chỉ báo cáo (mặc định): liệt kê và cảnh báo, không xoá cookie"
+  },
+  {
+    "msgid": "Report only: the cookies are still sent and are not shown to visitors yet. Choose a category for each row below; Analytics and Marketing will be blocked until the visitor consents.",
+    "msgstr": "Chỉ báo cáo: cookie vẫn được gửi và chưa hiện cho khách. Chọn nhóm cho từng dòng bên dưới; Phân tích và Tiếp thị sẽ bị chặn tới khi khách đồng ý."
+  },
+  {
+    "msgid": "Reported by the deep scan",
+    "msgstr": "Do quét sâu báo về"
+  },
+  {
+    "msgid": "Reported by visitors",
+    "msgstr": "Do khách truy cập báo về"
+  },
+  {
+    "msgid": "Restore default texts",
+    "msgstr": "Khôi phục chữ mặc định"
+  },
+  {
+    "msgid": "Restore default texts (both languages)",
+    "msgstr": "Khôi phục chữ mặc định (cả hai ngôn ngữ)"
+  },
+  {
+    "msgid": "Right",
+    "msgstr": "Phải"
+  },
+  {
+    "msgid": "Row group in the policy table",
+    "msgstr": "Nhóm dòng trong bảng chính sách"
+  },
+  {
+    "msgid": "Row group in the policy table (cookies of one group are merged into one row)",
+    "msgstr": "Nhóm dòng trong bảng chính sách (cookie cùng nhóm gộp một dòng)"
+  },
+  {
+    "msgid": "Run \"Observe only\" for about a week to see which scripts the blocker would touch before turning real blocking on. In this mode the plugin does not change the HTML, does not delete cookies, and the integrations (Meta Pixel, PixelYourSite) block nothing.",
+    "msgstr": "Chạy \"Chỉ quan sát\" khoảng một tuần để xem bộ chặn sẽ động tới những script nào trước khi bật chặn thật. Ở chế độ này plugin không đổi HTML, không xoá cookie và các tích hợp (Meta Pixel, PixelYourSite) không chặn gì."
+  },
+  {
+    "msgid": "Sampling rate (%)",
+    "msgstr": "Tỉ lệ lấy mẫu (%)"
+  },
+  {
+    "msgid": "Save",
+    "msgstr": "Lưu"
+  },
+  {
+    "msgid": "Save changes",
+    "msgstr": "Lưu thay đổi"
+  },
+  {
+    "msgid": "Save platform list",
+    "msgstr": "Lưu danh sách nền tảng"
+  },
+  {
+    "msgid": "Scan",
+    "msgstr": "Quét"
+  },
+  {
+    "msgid": "Scan finished: %1$s cookies set by the server, %2$s new cookies. Reloading the page...",
+    "msgstr": "Quét xong: %1$s cookie do server ghi, %2$s cookie mới. Đang tải lại trang..."
+  },
+  {
+    "msgid": "Scan now",
+    "msgstr": "Quét ngay"
+  },
+  {
+    "msgid": "Scanned %d days ago.",
+    "msgstr": "Quét %d ngày trước."
+  },
+  {
+    "msgid": "Scanned today.",
+    "msgstr": "Quét hôm nay."
+  },
+  {
+    "msgid": "Scanning: %1$s/%2$s pages...",
+    "msgstr": "Đang quét: %1$s/%2$s trang..."
+  },
+  {
+    "msgid": "Script URL regex (optional)",
+    "msgstr": "Regex của URL script (tuỳ chọn)"
+  },
+  {
+    "msgid": "Script blocking",
+    "msgstr": "Chặn script"
+  },
+  {
+    "msgid": "Script hosts",
+    "msgstr": "Host của script"
+  },
+  {
+    "msgid": "Search by cookie name or vendor",
+    "msgstr": "Tìm theo tên cookie hoặc nhà cung cấp"
+  },
+  {
+    "msgid": "Search cookies",
+    "msgstr": "Tìm cookie"
+  },
+  {
+    "msgid": "Search platforms",
+    "msgstr": "Tìm nền tảng"
+  },
+  {
+    "msgid": "Search platforms...",
+    "msgstr": "Tìm nền tảng..."
+  },
+  {
+    "msgid": "Select image",
+    "msgstr": "Chọn ảnh"
+  },
+  {
+    "msgid": "Select logo",
+    "msgstr": "Chọn logo"
+  },
+  {
+    "msgid": "Send an email when a scan finds new cookies",
+    "msgstr": "Gửi email khi một lượt quét phát hiện cookie mới"
+  },
+  {
+    "msgid": "Server scan",
+    "msgstr": "Quét từ máy chủ"
+  },
+  {
+    "msgid": "Service",
+    "msgstr": "Dịch vụ"
+  },
+  {
+    "msgid": "Set by",
+    "msgstr": "Ghi bởi"
+  },
+  {
+    "msgid": "Setting",
+    "msgstr": "Cài đặt"
+  },
+  {
+    "msgid": "Settings",
+    "msgstr": "Cài đặt"
+  },
+  {
+    "msgid": "Settings saved.",
+    "msgstr": "Đã lưu cài đặt."
+  },
+  {
+    "msgid": "Settings that change",
+    "msgstr": "Cài đặt sẽ thay đổi"
+  },
+  {
+    "msgid": "Settings that do not exist or are specific to one site were ignored: %s",
+    "msgstr": "Đã bỏ qua các cài đặt không tồn tại hoặc chỉ dành riêng cho một site: %s"
+  },
+  {
+    "msgid": "Show the Functional cookie category separately (merged into Necessary by default)",
+    "msgstr": "Hiện nhóm cookie Chức năng riêng (mặc định gộp vào Cần thiết)"
+  },
+  {
+    "msgid": "Show the shield icon after the visitor chooses",
+    "msgstr": "Hiện icon khiên sau khi khách chọn"
+  },
+  {
+    "msgid": "Site Kit Consent Mode is off: the Google tags of Site Kit are blocked until the visitor accepts Analytics. You can turn on Consent Mode in Site Kit (Settings > Admin Settings > Consent Mode) so the tags load in denied mode.",
+    "msgstr": "Consent Mode của Site Kit đang tắt: thẻ Google của Site Kit bị chặn tới khi khách đồng ý Phân tích. Có thể bật Consent Mode trong Site Kit (Settings > Admin Settings > Consent Mode) để thẻ được tải sẵn ở chế độ denied."
+  },
+  {
+    "msgid": "Site Kit Consent Mode is on: Site Kit tags are not blocked; the visitor's choice is passed on through the WP Consent API.",
+    "msgstr": "Consent Mode của Site Kit đang bật: thẻ của Site Kit không bị chặn; lựa chọn của khách được chuyển qua WP Consent API."
+  },
+  {
+    "msgid": "Skip by User-Agent",
+    "msgstr": "Bỏ qua theo User-Agent"
+  },
+  {
+    "msgid": "Skip search bots",
+    "msgstr": "Bỏ qua bot tìm kiếm"
+  },
+  {
+    "msgid": "Skip the banner",
+    "msgstr": "Bỏ qua banner"
+  },
+  {
+    "msgid": "Skipped cookies without a vendor or category: %d. Move them to a category first, then confirm.",
+    "msgstr": "Bỏ qua %d cookie chưa có nhà cung cấp hoặc nhóm: hãy chuyển nhóm trước rồi xác nhận."
+  },
+  {
+    "msgid": "Source",
+    "msgstr": "Nguồn"
+  },
+  {
+    "msgid": "Source: %s. The file is only loaded when its SHA-256 checksum matches.",
+    "msgstr": "Nguồn: %s. File chỉ được nạp khi mã SHA-256 khớp."
+  },
+  {
+    "msgid": "Status",
+    "msgstr": "Trạng thái"
+  },
+  {
+    "msgid": "Storage type",
+    "msgstr": "Loại lưu trữ"
+  },
+  {
+    "msgid": "Text on icon hover",
+    "msgstr": "Chữ khi rê chuột vào icon"
+  },
+  {
+    "msgid": "Text shown to visitors",
+    "msgstr": "Chữ hiển thị cho khách"
+  },
+  {
+    "msgid": "Texts",
+    "msgstr": "Chữ hiển thị"
+  },
+  {
+    "msgid": "Texts with an unknown key were ignored: %d.",
+    "msgstr": "Đã bỏ qua các đoạn chữ có khoá không hợp lệ: %d."
+  },
+  {
+    "msgid": "That preset does not exist.",
+    "msgstr": "Bộ mẫu này không tồn tại."
+  },
+  {
+    "msgid": "The \"%1$s\" section has more than %2$d entries.",
+    "msgstr": "Mục \"%1$s\" có nhiều hơn %2$d phần tử."
+  },
+  {
+    "msgid": "The \"%s\" section of the file is malformed.",
+    "msgstr": "Mục \"%s\" trong file bị sai cấu trúc."
+  },
+  {
+    "msgid": "The \"block until consent\" switch of each platform is on the Platforms tab.",
+    "msgstr": "Công tắc \"chặn tới khi có đồng ý\" của từng nền tảng nằm ở tab Nền tảng."
+  },
+  {
+    "msgid": "The Compact style always shows the icon because it is the visitor's only way to change the choice.",
+    "msgstr": "Kiểu Gọn luôn hiện icon vì đây là lối duy nhất để khách đổi lựa chọn."
+  },
+  {
+    "msgid": "The Consent Mode region list exceeds the limit of %1$d regions: only the first %2$d regions were saved and the extra ones were dropped. The other settings were saved.",
+    "msgstr": "Danh sách vùng Consent Mode vượt giới hạn %1$d vùng: chỉ %2$d vùng đầu tiên được lưu, các vùng thừa đã bị bỏ. Các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "The Consent Mode region list exceeds the limit of %d characters (codes joined by commas, because the head script is only 1.5 KB): the last regions were dropped. The other settings were saved.",
+    "msgstr": "Danh sách vùng Consent Mode vượt giới hạn %d ký tự (các mã nối bằng dấu phẩy, vì script đầu trang chỉ có 1,5 KB): các vùng cuối đã bị bỏ. Các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "The SVG file is unsafe or invalid.",
+    "msgstr": "File SVG không an toàn hoặc không hợp lệ."
+  },
+  {
+    "msgid": "The automatic scan detects the cookies and platforms running on the site. The manual scan is on the Cookies tab.",
+    "msgstr": "Quét tự động nhận diện cookie và nền tảng đang chạy trên site. Quét thủ công nằm ở tab Cookie."
+  },
+  {
+    "msgid": "The blocker let a page through without blocking (the tracking scripts on that page ran before the visitor consented). Reason: %1$s Page: %2$s at %3$s. Save this tab to clear the warning.",
+    "msgstr": "Bộ chặn đã để một trang đi qua không chặn (các script theo dõi trên trang đó chạy trước khi khách đồng ý). Lý do: %1$s Trang: %2$s lúc %3$s. Lưu tab này để xoá cảnh báo."
+  },
+  {
+    "msgid": "The body is not valid JSON.",
+    "msgstr": "Nội dung không phải JSON hợp lệ."
+  },
+  {
+    "msgid": "The consent cookie name is invalid (letters, digits, underscore and hyphen only; at most %d characters): the old name is kept so visitors are not asked again. The other settings were saved.",
+    "msgstr": "Tên cookie lựa chọn không hợp lệ (chỉ chữ, số, gạch dưới, gạch ngang; tối đa %d ký tự): giữ nguyên tên cũ để khách không bị hỏi lại. Các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "The cookie \"%s\" appears twice in the file.",
+    "msgstr": "Cookie \"%s\" xuất hiện hai lần trong file."
+  },
+  {
+    "msgid": "The cookie \"%s\" was skipped because its platform is not in the file and not on this site.",
+    "msgstr": "Đã bỏ qua cookie \"%s\" vì nền tảng của nó không có trong file và cũng không có trên site này."
+  },
+  {
+    "msgid": "The cookie database update URL is not configured (Advanced tab).",
+    "msgstr": "Chưa cấu hình URL cập nhật danh mục cookie (Nâng cao)."
+  },
+  {
+    "msgid": "The cookie database update URL must start with https://: the previous value is kept. The other settings were saved.",
+    "msgstr": "URL cập nhật danh mục cookie phải bắt đầu bằng https://: giá trị cũ được giữ nguyên. Các cài đặt khác đã lưu."
+  },
+  {
+    "msgid": "The cookie scan on %1$s just found new cookies. Cookies waiting for classification: %2$d. Unclassified cookies are blocked like the Marketing category and are hidden from visitors until you handle them.",
+    "msgstr": "Lần quét cookie trên %1$s vừa phát hiện cookie mới. Hiện có %2$d cookie đang chờ phân loại; cookie chưa phân loại bị chặn như nhóm Tiếp thị và không hiện cho khách cho tới khi bạn xử lý."
+  },
+  {
+    "msgid": "The downloaded update does not match the checksum published by GitHub, so it was discarded.",
+    "msgstr": "Bản cập nhật tải về không khớp mã kiểm tra do GitHub công bố nên đã bị loại bỏ."
+  },
+  {
+    "msgid": "The file could not be uploaded.",
+    "msgstr": "Không tải file lên được."
+  },
+  {
+    "msgid": "The file is empty.",
+    "msgstr": "File trống."
+  },
+  {
+    "msgid": "The file is larger than 2 MB.",
+    "msgstr": "File lớn hơn 2 MB."
+  },
+  {
+    "msgid": "The file is not a valid JSON object.",
+    "msgstr": "File không phải đối tượng JSON hợp lệ."
+  },
+  {
+    "msgid": "The head script (Consent Mode) is %1$d bytes long, above the recommended %2$d bytes. Nothing was cut; shorten the consent cookie name or the region list.",
+    "msgstr": "Script đầu trang (Consent Mode) đang dài %1$d byte, vượt mức khuyến nghị %2$d byte. Không có dữ liệu nào bị cắt; hãy rút ngắn tên cookie lựa chọn hoặc danh sách vùng."
+  },
+  {
+    "msgid": "The home page, pages with forms, WooCommerce pages and the 20 latest items of each public content type. The plugin only loads pages of this site itself.",
+    "msgstr": "Trang chủ, trang có form, trang WooCommerce và 20 bài mới nhất của mỗi loại nội dung công khai. Plugin chỉ tải các trang của chính site này."
+  },
+  {
+    "msgid": "The host app manages consent: run every script as if the visitor pressed Accept all",
+    "msgstr": "Ứng dụng chủ quản lý đồng ý: chạy mọi script như khi khách bấm Đồng ý tất cả"
+  },
+  {
+    "msgid": "The https address of known-cookies.json (known-cookies.json.sha256 in the same folder). The update button on the Platforms tab only loads the file when the SHA-256 checksum matches.",
+    "msgstr": "Địa chỉ https của known-cookies.json (cùng thư mục có known-cookies.json.sha256). Nút cập nhật ở tab Nền tảng chỉ nạp file khi mã SHA-256 khớp."
+  },
+  {
+    "msgid": "The import preview has expired. Choose the file again.",
+    "msgstr": "Bản xem trước đã hết hạn. Hãy chọn lại file."
+  },
+  {
+    "msgid": "The list of unknown cookies being blocked has reached the limit of 100 cookies; newer cookies are not blocked yet. Classify or ignore some cookies on the Cookies tab.",
+    "msgstr": "Danh sách cookie lạ đang bị chặn đã đạt giới hạn 100 cookie; các cookie mới hơn chưa được chặn. Hãy phân loại hoặc bỏ qua bớt cookie ở tab Cookie."
+  },
+  {
+    "msgid": "The page selected above takes priority.",
+    "msgstr": "Trang được chọn ở trên được ưu tiên."
+  },
+  {
+    "msgid": "The platform \"%s\" appears twice in the file.",
+    "msgstr": "Nền tảng \"%s\" xuất hiện hai lần trong file."
+  },
+  {
+    "msgid": "The plugin is kept on \"hold\" until the visitor accepts Marketing (no _fbp is set by the server, no pixel is initialised); the browser calls release() once the visitor accepts.",
+    "msgstr": "Plugin được giữ ở trạng thái \"hold\" cho tới khi khách đồng ý Tiếp thị (không ghi _fbp từ server, không khởi tạo pixel); trình duyệt gọi release() khi khách đồng ý."
+  },
+  {
+    "msgid": "The plugin's scripts and the blocked hosts are added to the automatic Combine/Defer exclusion list. The cache stores the blocked HTML, identical for every visitor.",
+    "msgstr": "Script của plugin và các host bị chặn được thêm vào danh sách loại trừ Combine/Defer tự động. Cache lưu HTML đã chặn, giống nhau cho mọi khách."
+  },
+  {
+    "msgid": "The preview link is invalid or has expired.",
+    "msgstr": "Liên kết xem trước không hợp lệ hoặc đã hết hạn."
+  },
+  {
+    "msgid": "The preview updates as you change colours, text or logo, without saving.",
+    "msgstr": "Xem trước cập nhật ngay khi bạn đổi màu, chữ, logo mà không cần lưu."
+  },
+  {
+    "msgid": "The report belongs to another site.",
+    "msgstr": "Báo cáo thuộc về site khác."
+  },
+  {
+    "msgid": "The report exceeds 2 MB.",
+    "msgstr": "Báo cáo vượt quá 2 MB."
+  },
+  {
+    "msgid": "The scan failed. Check that the site can load itself (loopback), then try again.",
+    "msgstr": "Quét không thành công. Hãy kiểm tra site có tải được từ chính nó không (loopback) rồi thử lại."
+  },
+  {
+    "msgid": "The scan was inconclusive: %s. Its \"clean\" result is not counted and the older deep scan alerts are kept.",
+    "msgstr": "Lần quét chưa kết luận được: %s. Kết quả \"sạch\" của lần này không được tính và cảnh báo quét sâu cũ được giữ nguyên."
+  },
+  {
+    "msgid": "The script blocker took %1$s ms (limit %4$d ms) on %2$s at %3$s. Add heavy scripts that do not need blocking to the exclusion list, or turn blocking off for the related platform. Save this tab to measure again.",
+    "msgstr": "Bộ chặn script xử lý chậm %1$s ms (giới hạn %4$d ms) trên %2$s lúc %3$s. Hãy thêm các script nặng, không cần chặn vào danh sách loại trừ, hoặc tắt chặn cho nền tảng liên quan. Lưu tab này để đo lại."
+  },
+  {
+    "msgid": "The script blocker took %1$s ms on %2$s. See the Script blocking tab to fix it.",
+    "msgstr": "Bộ chặn script xử lý chậm %1$s ms trên %2$s. Xem tab Chặn script để biết cách xử lý."
+  },
+  {
+    "msgid": "The update URL must be a valid https address.",
+    "msgstr": "URL cập nhật phải là địa chỉ https hợp lệ."
+  },
+  {
+    "msgid": "The update information has expired. Check for updates again and retry.",
+    "msgstr": "Thông tin cập nhật đã hết hạn. Hãy kiểm tra cập nhật lại rồi thử lại."
+  },
+  {
+    "msgid": "The update package does not contain the DS Cookie Consent plugin file.",
+    "msgstr": "Gói cập nhật không chứa file plugin DS Cookie Consent."
+  },
+  {
+    "msgid": "The value of %s is not valid: the current value is kept.",
+    "msgstr": "Giá trị của %s không hợp lệ: giữ nguyên giá trị hiện tại."
+  },
+  {
+    "msgid": "The vendor does not exist.",
+    "msgstr": "Nhà cung cấp không tồn tại."
+  },
+  {
+    "msgid": "The visitor's choice is synced to the statistics, marketing and preferences categories of the WP Consent API.",
+    "msgstr": "Lựa chọn của khách được đồng bộ sang các nhóm statistics, marketing, preferences của WP Consent API."
+  },
+  {
+    "msgid": "Third-party widget compatibility",
+    "msgstr": "Tương thích widget bên thứ ba"
+  },
+  {
+    "msgid": "This export file was made by a newer version of the plugin. Update the plugin first.",
+    "msgstr": "File xuất này do phiên bản plugin mới hơn tạo ra. Hãy cập nhật plugin trước."
+  },
+  {
+    "msgid": "This file would not change anything: the site already has these settings, platforms and cookies.",
+    "msgstr": "File này không làm thay đổi gì: site đã có sẵn các cài đặt, nền tảng và cookie này."
+  },
+  {
+    "msgid": "This is not a DS Cookie Consent export file.",
+    "msgstr": "Đây không phải file xuất của DS Cookie Consent."
+  },
+  {
+    "msgid": "Tick the platforms used on the site. The cookies of the selected platforms enter the cookie catalog (confirmed) and appear in the popup for visitors.",
+    "msgstr": "Tick các nền tảng đang dùng trên site. Cookie của nền tảng được chọn sẽ vào danh mục cookie (đã xác nhận) và hiện trong popup cho khách."
+  },
+  {
+    "msgid": "Time (UTC)",
+    "msgstr": "Thời điểm (UTC)"
+  },
+  {
+    "msgid": "Times seen",
+    "msgstr": "Số lần thấy"
+  },
+  {
+    "msgid": "To date",
+    "msgstr": "Đến ngày"
+  },
+  {
+    "msgid": "Total choices recorded: %d.",
+    "msgstr": "Tổng %d lựa chọn được ghi nhận."
+  },
+  {
+    "msgid": "URL passthrough",
+    "msgstr": "URL passthrough"
+  },
+  {
+    "msgid": "Unchanged",
+    "msgstr": "Không đổi"
+  },
+  {
+    "msgid": "Unclassified",
+    "msgstr": "Chưa phân loại"
+  },
+  {
+    "msgid": "Unclassified cookies set by the server",
+    "msgstr": "Cookie chưa phân loại do server ghi"
+  },
+  {
+    "msgid": "Unclassified cookies:",
+    "msgstr": "Cookie chưa phân loại:"
+  },
+  {
+    "msgid": "Unclassified services",
+    "msgstr": "Dịch vụ chưa phân loại"
+  },
+  {
+    "msgid": "Unrecognised third-party domains (not blocked; add a custom platform if they are tracking tools): %s",
+    "msgstr": "Tên miền bên thứ ba chưa nhận diện (không bị chặn, hãy thêm nền tảng tự định nghĩa nếu là công cụ theo dõi): %s"
+  },
+  {
+    "msgid": "Update refused: the accompanying SHA-256 checksum does not match the downloaded file.",
+    "msgstr": "Từ chối cập nhật: mã SHA-256 đi kèm không khớp với file tải về."
+  },
+  {
+    "msgid": "Update refused: the file has no SHA-256 checksum to verify.",
+    "msgstr": "Từ chối cập nhật: file không có mã SHA-256 để kiểm tra."
+  },
+  {
+    "msgid": "Update refused: the file is invalid (%s).",
+    "msgstr": "Từ chối cập nhật: file không hợp lệ (%s)."
+  },
+  {
+    "msgid": "Update the cookie catalog",
+    "msgstr": "Cập nhật danh mục cookie"
+  },
+  {
+    "msgid": "Updated",
+    "msgstr": "Cập nhật"
+  },
+  {
+    "msgid": "Use * for the variable part, for example _ga_* or ttcsid*.",
+    "msgstr": "Dùng * cho phần thay đổi, ví dụ _ga_* hoặc ttcsid*."
+  },
+  {
+    "msgid": "Use this image",
+    "msgstr": "Dùng ảnh này"
+  },
+  {
+    "msgid": "Used for every site language other than Vietnamese or English.",
+    "msgstr": "Dùng cho mọi ngôn ngữ site không phải tiếng Việt hoặc tiếng Anh."
+  },
+  {
+    "msgid": "User-defined",
+    "msgstr": "Tự định nghĩa"
+  },
+  {
+    "msgid": "Uses the plugin's GDPR filters (pys_disable_*_by_gdpr, pys_check_consent_by_gdpr) and enables value updates over AJAX so cached pages still follow the visitor's choice. Cost: the plugin calls admin-ajax to refresh values on every page view. How it refreshes after the visitor changes the choice has not been verified on the real plugin: test it on a staging site.",
+    "msgstr": "Dùng các filter GDPR của plugin (pys_disable_*_by_gdpr, pys_check_consent_by_gdpr) và bật cập nhật giá trị qua AJAX để trang cache vẫn theo lựa chọn của khách. Chi phí: plugin gọi admin-ajax để làm mới giá trị ở mỗi lượt xem trang. Cách làm mới sau khi khách đổi lựa chọn chưa được kiểm chứng trên plugin thật: cần thử trên site staging."
+  },
+  {
+    "msgid": "Vendor",
+    "msgstr": "Nhà cung cấp"
+  },
+  {
+    "msgid": "Version",
+    "msgstr": "Phiên bản"
+  },
+  {
+    "msgid": "Vietnamese",
+    "msgstr": "Tiếng Việt"
+  },
+  {
+    "msgid": "View list",
+    "msgstr": "Xem danh sách"
+  },
+  {
+    "msgid": "View log",
+    "msgstr": "Xem log"
+  },
+  {
+    "msgid": "Visitor IP source",
+    "msgstr": "Nguồn IP của khách"
+  },
+  {
+    "msgid": "Visitor choice",
+    "msgstr": "Lựa chọn của khách"
+  },
+  {
+    "msgid": "Visitor choices chart",
+    "msgstr": "Biểu đồ lựa chọn của khách"
+  },
+  {
+    "msgid": "What would change",
+    "msgstr": "Những gì sẽ thay đổi"
+  },
+  {
+    "msgid": "When GTranslate is active the browser mode is used automatically: both languages are in the HTML and the browser picks one.",
+    "msgstr": "GTranslate đang bật sẽ tự dùng chế độ theo trình duyệt: cả hai ngôn ngữ nằm trong HTML, trình duyệt chọn một."
+  },
+  {
+    "msgid": "When the User-Agent matches",
+    "msgstr": "Khi User-Agent khớp"
+  },
+  {
+    "msgid": "When the icon is shown",
+    "msgstr": "Icon hiện khi nào"
+  },
+  {
+    "msgid": "When the visitor has not chosen",
+    "msgstr": "Khi khách chưa chọn"
+  },
+  {
+    "msgid": "White text on the primary colour (Accept button) only reaches a contrast of %s:1, below the 4.5:1 minimum (WCAG AA).",
+    "msgstr": "Chữ trắng trên màu chính (nút Đồng ý) chỉ đạt tương phản %s:1, thấp hơn mức tối thiểu 4.5:1 (WCAG AA)."
+  },
+  {
+    "msgid": "White text on the primary colour reaches a contrast of %s:1 (4.5:1 minimum required).",
+    "msgstr": "Chữ trắng trên màu chính đạt tương phản %s:1 (cần tối thiểu 4.5:1)."
+  },
+  {
+    "msgid": "Withdraw consent",
+    "msgstr": "Rút lại đồng ý"
+  },
+  {
+    "msgid": "X-Forwarded-For (first IP)",
+    "msgstr": "X-Forwarded-For (IP đầu tiên)"
+  },
+  {
+    "msgid": "Yes",
+    "msgstr": "Có"
+  },
+  {
+    "msgid": "You do not have permission to access this page.",
+    "msgstr": "Bạn không có quyền truy cập trang này."
+  },
+  {
+    "msgid": "You do not have permission to export the consent log.",
+    "msgstr": "Bạn không có quyền xuất log đồng ý."
+  },
+  {
+    "msgid": "You do not have permission to perform this action.",
+    "msgstr": "Bạn không có quyền thực hiện thao tác này."
+  },
+  {
+    "msgid": "You do not have permission to view the log.",
+    "msgstr": "Bạn không có quyền xem log."
+  },
+  {
+    "msgid": "You do not have permission to view this page.",
+    "msgstr": "Bạn không có quyền xem trang này."
+  },
+  {
+    "msgid": "You must sign in with an administrator's Application Password.",
+    "msgstr": "Cần đăng nhập bằng Application Password của quản trị viên."
+  },
+  {
+    "msgid": "[%1$s] Cookie Consent: new cookies to classify: %2$d",
+    "msgstr": "[%1$s] Cookie Consent: có %2$d cookie mới cần phân loại"
+  },
+  {
+    "msgid": "cookie set by the server",
+    "msgstr": "cookie do server ghi"
+  },
+  {
+    "msgid": "deep scan",
+    "msgstr": "quét sâu"
+  },
+  {
+    "msgid": "detected through GTM",
+    "msgstr": "phát hiện qua GTM"
+  },
+  {
+    "msgid": "e.g. 180 ngày (Vietnamese text)",
+    "msgstr": "ví dụ 180 ngày (viết tiếng Việt)"
+  },
+  {
+    "msgid": "found",
+    "msgstr": "có"
+  },
+  {
+    "msgid": "from visitors",
+    "msgstr": "từ khách truy cập"
+  },
+  {
+    "msgid": "https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent",
+    "msgstr": "https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent"
+  },
+  {
+    "msgid": "in HTML",
+    "msgstr": "trong HTML"
+  },
+  {
+    "msgid": "no Reject / Accept button found on the banner",
+    "msgstr": "không thấy nút Từ chối / Đồng ý trên banner"
+  },
+  {
+    "msgid": "no page could be loaded",
+    "msgstr": "không tải được trang nào"
+  },
+  {
+    "msgid": "not found",
+    "msgstr": "không thấy"
+  },
+  {
+    "msgid": "or enter the Cookie Policy URL",
+    "msgstr": "hoặc nhập URL Chính sách Cookie"
+  },
+  {
+    "msgid": "or enter the Privacy Policy URL",
+    "msgstr": "hoặc nhập URL Chính sách Bảo mật"
+  },
+  {
+    "msgid": "the page has no DS Cookie Consent (window.DSCC)",
+    "msgstr": "trang không có DS Cookie Consent (window.DSCC)"
+  },
+  {
+    "msgid": "third-party servers",
+    "msgstr": "máy chủ bên thứ ba"
+  },
+  {
+    "msgid": "— Choose a category below —",
+    "msgstr": "— Chọn nhóm bên dưới —"
+  },
+  {
+    "msgid": "— None —",
+    "msgstr": "— Không chọn —"
+  },
+  {
+    "msgid": "— Unclassified —",
+    "msgstr": "— Chưa phân loại —"
+  }
+]

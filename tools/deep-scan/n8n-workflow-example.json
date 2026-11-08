@@ -1,0 +1,63 @@
+{
+  "name": "DSCC Deep Scan weekly",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [1],
+              "triggerAtHour": 3
+            }
+          ]
+        }
+      },
+      "id": "5f1b6c1e-0a11-4c7e-9a10-000000000001",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "command": "docker run --rm --ipc=host --cap-drop=ALL --security-opt no-new-privileges --read-only --tmpfs /tmp --env-file /etc/dscc/deep-scan.env dscc-deep-scan https://example.com --push"
+      },
+      "id": "5f1b6c1e-0a11-4c7e-9a10-000000000002",
+      "name": "Run deep scan container",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [240, 0],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://example.com/replace-with-your-alert-webhook",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { \"text\": \"DSCC deep scan failed for example.com\", \"detail\": $json.stderr || $json.error || \"unknown\" } }}",
+        "options": {}
+      },
+      "id": "5f1b6c1e-0a11-4c7e-9a10-000000000003",
+      "name": "Alert on failure (optional)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 120]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [[{ "node": "Run deep scan container", "type": "main", "index": 0 }]]
+    },
+    "Run deep scan container": {
+      "main": [
+        [],
+        [{ "node": "Alert on failure (optional)", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": { "executionOrder": "v1" },
+  "active": false
+}

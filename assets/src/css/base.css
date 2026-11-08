@@ -1,0 +1,57 @@
+/* Shared base: scoped entirely under #dscc so the theme is never affected. */
+#dscc{
+  --dscc-primary:#005ea3;--dscc-primary-hover:#00538f;--dscc-text:#1e3a5f;--dscc-bar-bg:#f1f5f9;
+  --dscc-reject-bg:#e0ecf4;--dscc-modal-bg:#f6f6f6;--dscc-radius:999px;--dscc-overlay:rgba(15,23,42,.35);
+  --dscc-widget-x:20px;--dscc-widget-bottom:20px;--dscc-font:inherit;--dscc-logo-h:30px;--dscc-logo-popup-h:22px;
+  --dscc-ink:#1d2939;--dscc-muted:#475467;--dscc-line:#e4e7ec;
+  font-family:var(--dscc-font);font-size:14px;line-height:1.5;color:var(--dscc-ink);
+}
+#dscc *,#dscc *::before,#dscc *::after{box-sizing:border-box}
+#dscc button{font-family:inherit}
+#dscc a{color:var(--dscc-primary)}
+#dscc [hidden]{display:none!important}
+html.dscc-skip #dscc{display:none!important}
+/* Both languages are printed when the page language is picked in the browser; show the active one. */
+#dscc[data-dscc-active-lang=vi] [data-dscc-lang=en],#dscc[data-dscc-active-lang=en] [data-dscc-lang=vi]{display:none!important}
+#dscc .dscc-btn:focus-visible,#dscc .dscc-link:focus-visible,#dscc .dscc-linkbtn:focus-visible,#dscc .dscc-x:focus-visible,#dscc .dscc-card__x:focus-visible,#dscc .dscc-tab:focus-visible,#dscc .dscc-widget:focus-visible,#dscc a:focus-visible,#dscc .dscc-modal:focus-visible{outline:2px solid var(--dscc-primary);outline-offset:2px}
+#dscc .dscc-btn{-webkit-appearance:none;appearance:none;margin:0;cursor:pointer;font-weight:600;letter-spacing:normal;text-transform:none;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+#dscc .dscc-btn--accept,#dscc .dscc-btn--primary{background:var(--dscc-primary);color:#fff}
+#dscc .dscc-btn--accept:hover,#dscc .dscc-btn--primary:hover{background:var(--dscc-primary-hover);border-color:var(--dscc-primary-hover);color:#fff}
+#dscc .dscc-btn--reject{background:var(--dscc-reject-bg);color:var(--dscc-primary)}
+#dscc .dscc-btn--reject:hover{filter:brightness(.96)}
+
+/* Switch (role=switch checkbox) */
+#dscc{--dscc-sw-h:24px;--dscc-sw-pad:2px}
+#dscc .dscc-switch{position:relative;flex:none;display:inline-block;width:44px;height:var(--dscc-sw-h);cursor:pointer}
+#dscc .dscc-switch input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;z-index:1}
+#dscc .dscc-switch__track{position:absolute;inset:0;border-radius:999px;background:#d0d5dd;transition:background-color .15s ease}
+#dscc .dscc-switch__track::after{content:"";position:absolute;top:var(--dscc-sw-pad);left:var(--dscc-sw-pad);width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(16,24,40,.2);transition:transform .15s ease}
+#dscc .dscc-switch input:checked+.dscc-switch__track{background:var(--dscc-primary)}
+#dscc .dscc-switch input:checked+.dscc-switch__track::after{transform:translateX(calc(24px - 2 * var(--dscc-sw-pad)))}
+#dscc .dscc-switch input:focus-visible+.dscc-switch__track{outline:2px solid var(--dscc-primary);outline-offset:2px}
+#dscc .dscc-switch--sm{width:34px;height:18px}
+#dscc .dscc-switch--sm .dscc-switch__track::after{top:2px;left:2px;width:14px;height:14px}
+#dscc .dscc-switch--sm input:checked+.dscc-switch__track::after{transform:translateX(16px)}
+
+/* Shield widget */
+#dscc .dscc-widget{position:fixed;left:var(--dscc-widget-x);bottom:var(--dscc-widget-bottom);z-index:2147483639;display:flex;align-items:center;gap:0;height:36px;min-width:42px;padding:0 13px;border:0;border-radius:8px;background:#fff;color:var(--dscc-primary);box-shadow:0 4px 12px rgba(0,0,0,.12);cursor:pointer;overflow:hidden;transition:box-shadow .15s ease,bottom .2s ease}
+#dscc[data-widget-side="right"] .dscc-widget{left:auto;right:var(--dscc-widget-x)}
+#dscc .dscc-widget svg{flex:none;width:16px;height:16px}
+#dscc .dscc-widget__label{max-width:0;opacity:0;white-space:nowrap;font-size:13px;font-weight:600;transition:max-width .25s ease,opacity .2s ease,margin .25s ease}
+#dscc .dscc-widget:hover,#dscc .dscc-widget:focus-visible{box-shadow:0 6px 18px rgba(0,0,0,.18)}
+#dscc .dscc-widget:hover .dscc-widget__label,#dscc .dscc-widget:focus-visible .dscc-widget__label{max-width:140px;opacity:1;margin-left:8px}
+#dscc .dscc-widget.is-pop{animation:dscc-pop .35s ease}
+@keyframes dscc-pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  #dscc .dscc-widget,#dscc .dscc-widget__label,#dscc .dscc-widget.is-pop{transition:none;animation:none}
+  #dscc .dscc-switch__track,#dscc .dscc-switch__track::after,#dscc .dscc-btn{transition:none}
+}
+
+/* Placeholder printed in the page in place of a blocked embed (outside #dscc, so it carries its own colours). */
+.dscc-placeholder{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:var(--dscc-ph-w,100%);max-width:100%;min-height:var(--dscc-ph-h,160px);margin:0 0 1em;padding:16px;border:1px solid #d0d5dd;border-radius:8px;background:#f2f4f7;color:#1d2939;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}
+.dscc-placeholder__text{margin:0}
+.dscc-placeholder__btn{-webkit-appearance:none;appearance:none;margin:0;padding:8px 18px;border:0;border-radius:999px;background:var(--dscc-primary,#005ea3);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.dscc-placeholder__btn:hover{filter:brightness(.92)}
+.dscc-placeholder__btn:focus-visible{outline:2px solid var(--dscc-primary,#005ea3);outline-offset:2px}
+[data-dscc-ph] [data-dscc-lang][hidden]{display:none}
+iframe[data-dscc-src][hidden]{display:none!important}

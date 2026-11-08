@@ -1,0 +1,18 @@
+{
+  "tag_name": "v1.2.0",
+  "name": "1.2.0",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-12-01T08:00:00Z",
+  "html_url": "https://github.com/LittleD-org/littled-cookie/releases/tag/v1.2.0",
+  "body": "## Changes\n- Fixed LittleD banner focus\n- Added <b>import</b> preview",
+  "assets": [
+    {
+      "url": "https://api.github.com/repos/LittleD-org/littled-cookie/releases/assets/7001",
+      "id": 7001,
+      "name": "source.zip",
+      "size": 412345,
+      "browser_download_url": "https://github.com/LittleD-org/littled-cookie/releases/download/v1.2.0/source.zip"
+    }
+  ]
+}

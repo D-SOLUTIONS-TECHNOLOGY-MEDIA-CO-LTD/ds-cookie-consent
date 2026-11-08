@@ -1,0 +1,24 @@
+/* Layout "bar": bottom banner (ported from the approved demo). */
+#dscc .dscc-bar{position:fixed;left:0;right:0;bottom:0;z-index:2147483640;display:flex;align-items:center;gap:24px;padding:18px 24px;background:var(--dscc-bar-bg);color:var(--dscc-text);box-shadow:0 -4px 20px rgba(16,24,40,.10);border-top:1px solid #e2e8f0;transition:transform .28s ease,opacity .28s ease;animation:dscc-slide .28s ease}
+@keyframes dscc-slide{from{transform:translateY(100%)}to{transform:none}}
+#dscc .dscc-bar.is-hiding{transform:translateY(110%);opacity:0}
+#dscc .dscc-bar__logo{flex:none;display:block;height:var(--dscc-logo-h);width:auto}
+#dscc .dscc-bar__msg{flex:1 1 auto;margin:0;font-size:14px;line-height:1.55;color:var(--dscc-text)}
+#dscc .dscc-bar__msg a{color:var(--dscc-primary);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+#dscc .dscc-bar__btns{flex:none;display:flex;align-items:center;gap:8px}
+#dscc .dscc-bar .dscc-btn{height:40px;padding:0 22px;border-radius:var(--dscc-radius);border:0;font-size:14px;line-height:40px;white-space:nowrap}
+#dscc .dscc-bar .dscc-btn--prefs{background:transparent;color:var(--dscc-primary);padding:0 12px;text-decoration:underline;text-underline-offset:3px}
+#dscc .dscc-bar .dscc-btn--prefs:hover{color:var(--dscc-primary-hover)}
+#dscc .dscc-bar .dscc-btn--outline{background:#fff;color:var(--dscc-primary);border:1.5px solid var(--dscc-primary);line-height:37px}
+
+/* Category cards in the preferences tab use the modal styles; nothing layout specific here. */
+@media (max-width:640px){
+  #dscc .dscc-bar{flex-direction:column;align-items:stretch;gap:12px;padding:16px 16px calc(16px + env(safe-area-inset-bottom));max-height:90vh;overflow-y:auto}
+  #dscc .dscc-bar__logo{height:26px;align-self:flex-start}
+  #dscc .dscc-bar__btns{flex-direction:column;align-items:stretch;gap:8px}
+  #dscc .dscc-bar .dscc-btn{height:44px;line-height:44px;width:100%}
+  #dscc .dscc-bar .dscc-btn--outline{line-height:41px}
+  #dscc .dscc-bar .dscc-btn--prefs{height:40px;line-height:40px}
+  #dscc{--dscc-widget-x:12px}
+}
+@media (prefers-reduced-motion:reduce){#dscc .dscc-bar{transition:none;animation:none}}

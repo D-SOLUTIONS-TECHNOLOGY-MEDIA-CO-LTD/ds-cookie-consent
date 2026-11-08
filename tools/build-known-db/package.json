@@ -1,0 +1,13 @@
+{
+  "name": "dscc-build-known-db",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Builds data/known-cookies.json for DS Cookie Consent",
+  "scripts": {
+    "build": "node build-known-db.mjs",
+    "build:offline": "node build-known-db.mjs --offline",
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "engines": { "node": ">=20" }
+}

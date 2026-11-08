@@ -1,0 +1,50 @@
+{
+  "name": "d-solutions/ds-cookie-consent",
+  "description": "Reusable cookie consent plugin for WordPress: banner, Consent Mode v2, consent log.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.4",
+    "enshrined/svg-sanitize": "^1.1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "yoast/phpunit-polyfills": "^2.0",
+    "brain/monkey": "^2.6",
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+  },
+  "autoload": {
+    "psr-4": { "DSolutions\\CookieConsent\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "DSolutions\\CookieConsent\\Tests\\Unit\\": "tests/php/unit/" }
+  },
+  "config": {
+    "allow-plugins": { "dealerdirect/phpcodesniffer-composer-installer": true },
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4.33"
+    }
+  },
+  "extra": {
+    "strauss": {
+      "target_directory": "vendor-prefixed",
+      "namespace_prefix": "DSolutions\\CookieConsent\\Vendor\\",
+      "classmap_prefix": "DSCC_Vendor_",
+      "constant_prefix": "DSCC_VENDOR_",
+      "packages": ["enshrined/svg-sanitize"],
+      "update_call_sites": false
+    }
+  },
+  "scripts": {
+    "prefix-namespaces": [
+      "bash tools/release/fetch-strauss.sh",
+      "@php bin/strauss.phar"
+    ],
+    "test:unit": "phpunit -c phpunit.xml.dist",
+    "lint": "phpcs",
+    "lint:fix": "phpcbf"
+  }
+}
