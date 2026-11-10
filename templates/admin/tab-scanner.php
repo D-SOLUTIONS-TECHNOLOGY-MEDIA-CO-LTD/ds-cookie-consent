@@ -93,6 +93,12 @@ $g = 'scanner';
 		__( 'At most one email per day.', 'ds-cookie-consent' )
 	);
 	F::row(
+		__( 'Email on deep scan violations', 'ds-cookie-consent' ),
+		'dscc-scanner-notify_violations',
+		F::checkbox( $g, 'notify_violations', $s['notify_violations'], __( 'Send an email when a deep scan finds consent violations', 'ds-cookie-consent' ) ),
+		__( 'The same list is not sent again within a day; a different list is sent at once.', 'ds-cookie-consent' )
+	);
+	F::row(
 		__( 'Recipient address', 'ds-cookie-consent' ),
 		'dscc-scanner-notify_email',
 		F::input(

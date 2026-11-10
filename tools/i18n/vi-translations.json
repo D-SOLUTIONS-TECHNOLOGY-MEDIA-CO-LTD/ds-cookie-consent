@@ -711,6 +711,10 @@
     "msgstr": "Mỗi dòng là một lần khách chọn trên banner. Dữ liệu ẩn danh: IP đã che, không gắn với tên hay email. Giờ theo UTC."
   },
   {
+    "msgid": "Email on deep scan violations",
+    "msgstr": "Email khi quét sâu có vi phạm"
+  },
+  {
     "msgid": "Email on new cookies",
     "msgstr": "Email khi có cookie mới"
   },
@@ -1504,12 +1508,20 @@
     "msgstr": "Tìm nền tảng..."
   },
   {
+    "msgid": "Select %s",
+    "msgstr": "Chọn %s"
+  },
+  {
     "msgid": "Select image",
     "msgstr": "Chọn ảnh"
   },
   {
     "msgid": "Select logo",
     "msgstr": "Chọn logo"
+  },
+  {
+    "msgid": "Send an email when a deep scan finds consent violations",
+    "msgstr": "Gửi email khi quét sâu phát hiện vi phạm sự đồng ý"
   },
   {
     "msgid": "Send an email when a scan finds new cookies",
@@ -1548,8 +1560,8 @@
     "msgstr": "Đã bỏ qua các cài đặt không tồn tại hoặc chỉ dành riêng cho một site: %s"
   },
   {
-    "msgid": "Show the Functional cookie category separately (merged into Necessary by default)",
-    "msgstr": "Hiện nhóm cookie Chức năng riêng (mặc định gộp vào Cần thiết)"
+    "msgid": "Show the Functional cookie category separately (turn off to merge it into Necessary)",
+    "msgstr": "Hiện nhóm cookie Chức năng riêng (tắt để gộp vào Cần thiết)"
   },
   {
     "msgid": "Show the shield icon after the visitor chooses",
@@ -1680,6 +1692,10 @@
     "msgstr": "Lần quét cookie trên %1$s vừa phát hiện cookie mới. Hiện có %2$d cookie đang chờ phân loại; cookie chưa phân loại bị chặn như nhóm Tiếp thị và không hiện cho khách cho tới khi bạn xử lý."
   },
   {
+    "msgid": "The deep scan of %1$s (%2$s) found cookies, storage or requests of analytics or marketing services that should not be there.",
+    "msgstr": "Lần quét sâu %1$s (%2$s) thấy cookie, bộ nhớ trình duyệt hoặc yêu cầu của dịch vụ phân tích hoặc tiếp thị xuất hiện khi chưa được phép."
+  },
+  {
     "msgid": "The downloaded update does not match the checksum published by GitHub, so it was discarded.",
     "msgstr": "Bản cập nhật tải về không khớp mã kiểm tra do GitHub công bố nên đã bị loại bỏ."
   },
@@ -1756,8 +1772,20 @@
     "msgstr": "Báo cáo vượt quá 2 MB."
   },
   {
+    "msgid": "The same list is not sent again within a day; a different list is sent at once.",
+    "msgstr": "Danh sách giống hệt không gửi lại trong một ngày; danh sách khác sẽ gửi ngay."
+  },
+  {
     "msgid": "The scan failed. Check that the site can load itself (loopback), then try again.",
     "msgstr": "Quét không thành công. Hãy kiểm tra site có tải được từ chính nó không (loopback) rồi thử lại."
+  },
+  {
+    "msgid": "The scan is conclusive: it loaded pages and found the banner and the plugin.",
+    "msgstr": "Kết quả đáng tin: quét đã tải được trang và tìm thấy banner cùng plugin."
+  },
+  {
+    "msgid": "The scan is not conclusive (for example it did not find the banner or the plugin), so treat the result with care.",
+    "msgstr": "Kết quả chưa chắc chắn (ví dụ không thấy banner hoặc plugin) nên cần kiểm tra lại cẩn thận."
   },
   {
     "msgid": "The scan was inconclusive: %s. Its \"clean\" result is not counted and the older deep scan alerts are kept.",
@@ -1932,6 +1960,10 @@
     "msgstr": "Biểu đồ lựa chọn của khách"
   },
   {
+    "msgid": "Warning: before consent the browser still contacted these Google servers, but no Google cookie was set. This is usually a cookieless Google Consent Mode ping and is not counted as a violation. To avoid any contact before consent, choose \"Block GTM too\" in the Google Tag Manager mode on the Blocking tab.",
+    "msgstr": "Cảnh báo: trước khi khách đồng ý, trình duyệt vẫn kết nối tới các máy chủ Google này nhưng không có cookie Google nào được đặt. Đây thường là ping không cookie của Google Consent Mode nên không tính là vi phạm. Muốn không có kết nối nào trước khi khách đồng ý, chọn \"Chặn cả GTM\" ở mục chế độ Google Tag Manager trong tab Chặn script."
+  },
+  {
     "msgid": "What would change",
     "msgstr": "Những gì sẽ thay đổi"
   },
@@ -1996,6 +2028,10 @@
     "msgstr": "Cần đăng nhập bằng Application Password của quản trị viên."
   },
   {
+    "msgid": "[%1$s] Cookie Consent: deep scan found %2$d consent violation(s)",
+    "msgstr": "[%1$s] Cookie Consent: quét sâu phát hiện %2$d vi phạm sự đồng ý"
+  },
+  {
     "msgid": "[%1$s] Cookie Consent: new cookies to classify: %2$d",
     "msgstr": "[%1$s] Cookie Consent: có %2$d cookie mới cần phân loại"
   },
@@ -2058,6 +2094,10 @@
   {
     "msgid": "third-party servers",
     "msgstr": "máy chủ bên thứ ba"
+  },
+  {
+    "msgid": "unknown platform",
+    "msgstr": "nền tảng chưa rõ"
   },
   {
     "msgid": "— Choose a category below —",

@@ -95,4 +95,42 @@ class DeepScanViolationsTest extends TestCase {
 		$this->assertCount( 2, $v['after_reject'] );
 		$this->assertSame( array( 'cookie', 'localStorage' ), array_column( $v['after_reject'], 'storage' ) );
 	}
+
+	public function test_a_google_host_without_a_google_cookie_is_a_consent_mode_warning() {
+		$data = $this->data(
+			array(
+				'before_choice' => DeepScanFixtures::phase( array(), array( 'www.google-analytics.com', 'www.googleadservices.com', 'www.clarity.ms' ) ),
+				'after_reject'  => DeepScanFixtures::phase( array(), array( 'www.google-analytics.com' ) ),
+			)
+		);
+		$vendors = array(
+			array( 'host' => 'www.google-analytics.com', 'slug' => 'google-analytics', 'category' => 'analytics' ),
+			array( 'host' => 'www.googleadservices.com', 'slug' => 'google-ads', 'category' => 'marketing' ),
+			array( 'host' => 'www.clarity.ms', 'slug' => 'microsoft-clarity', 'category' => 'analytics' ),
+		);
+		$split = DeepScanViolations::split_consent_mode_pings( DeepScanViolations::compute( $data, array(), $vendors ) );
+		$this->assertSame( array( 'www.clarity.ms' ), array_column( $split['violations']['before_choice'], 'name' ), 'a non-Google vendor host stays a violation' );
+		$this->assertSame( array( 'www.google-analytics.com', 'www.googleadservices.com' ), array_column( $split['warnings']['before_choice'], 'name' ) );
+		$this->assertSame( array(), $split['violations']['after_reject'] );
+		$this->assertSame( array( 'www.google-analytics.com' ), array_column( $split['warnings']['after_reject'], 'name' ) );
+	}
+
+	public function test_a_google_host_next_to_a_google_cookie_stays_a_violation() {
+		$data    = $this->data( array( 'before_choice' => DeepScanFixtures::phase( array( DeepScanFixtures::cookie( '_ga' ) ), array( 'www.google-analytics.com', 'www.googleadservices.com' ) ) ) );
+		$vendors = array(
+			array( 'host' => 'www.google-analytics.com', 'slug' => 'google-analytics', 'category' => 'analytics' ),
+			array( 'host' => 'www.googleadservices.com', 'slug' => 'google-ads', 'category' => 'marketing' ),
+		);
+		$split = DeepScanViolations::split_consent_mode_pings( DeepScanViolations::compute( $data, array( $this->result( '_ga', 'analytics', 'google-analytics' ) ), $vendors ) );
+		$this->assertSame( array( '_ga', 'www.google-analytics.com' ), array_column( $split['violations']['before_choice'], 'name' ), 'the Google tag set its cookie: not a cookieless ping' );
+		$this->assertSame( array( 'www.googleadservices.com' ), array_column( $split['warnings']['before_choice'], 'name' ), 'Google Ads set nothing in this phase' );
+	}
+
+	public function test_the_ping_service_list_can_be_narrowed() {
+		$data  = $this->data( array( 'before_choice' => DeepScanFixtures::phase( array(), array( 'www.google-analytics.com' ) ) ) );
+		$v     = DeepScanViolations::compute( $data, array(), array( array( 'host' => 'www.google-analytics.com', 'slug' => 'google-analytics', 'category' => 'analytics' ) ) );
+		$split = DeepScanViolations::split_consent_mode_pings( $v, array() );
+		$this->assertSame( array( 'www.google-analytics.com' ), array_column( $split['violations']['before_choice'], 'name' ) );
+		$this->assertSame( array(), $split['warnings']['before_choice'] );
+	}
 }

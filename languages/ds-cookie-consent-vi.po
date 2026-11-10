@@ -199,7 +199,13 @@ msgstr "Xoá"
 msgid "No cookies yet. Tick a platform on the Platforms tab or add a cookie manually below."
 msgstr "Chưa có cookie nào. Tick nền tảng ở tab Nền tảng hoặc thêm cookie thủ công bên dưới."
 
-#: src/Admin/CookieListTable.php:187
+#. translators: %s: cookie name
+#: src/Admin/CookieListTable.php:160
+#, php-format
+msgid "Select %s"
+msgstr "Chọn %s"
+
+#: src/Admin/CookieListTable.php:191
 msgid "Quick edit"
 msgstr "Sửa nhanh"
 
@@ -591,6 +597,48 @@ msgstr "Lựa chọn của khách được đồng bộ sang các nhóm statisti
 msgid "Adds exclusions for the plugin's scripts, blocked hosts and blocked inline scripts (data-dscc marker) from Minify, Delay and Defer JS."
 msgstr "Thêm loại trừ cho script của plugin, host bị chặn và các script inline bị chặn (nhãn data-dscc) khỏi Minify, Delay và Defer JS."
 
+#. translators: 1: site name, 2: number of violations
+#: src/Scanner/DeepScanAlertMailer.php:64
+#, php-format
+msgid "[%1$s] Cookie Consent: deep scan found %2$d consent violation(s)"
+msgstr "[%1$s] Cookie Consent: quét sâu phát hiện %2$d vi phạm sự đồng ý"
+
+#. translators: 1: site name, 2: scan date and time
+#: src/Scanner/DeepScanAlertMailer.php:114
+#, php-format
+msgid "The deep scan of %1$s (%2$s) found cookies, storage or requests of analytics or marketing services that should not be there."
+msgstr "Lần quét sâu %1$s (%2$s) thấy cookie, bộ nhớ trình duyệt hoặc yêu cầu của dịch vụ phân tích hoặc tiếp thị xuất hiện khi chưa được phép."
+
+#: src/Scanner/DeepScanAlertMailer.php:119
+msgid "The scan is conclusive: it loaded pages and found the banner and the plugin."
+msgstr "Kết quả đáng tin: quét đã tải được trang và tìm thấy banner cùng plugin."
+
+#: src/Scanner/DeepScanAlertMailer.php:120
+msgid "The scan is not conclusive (for example it did not find the banner or the plugin), so treat the result with care."
+msgstr "Kết quả chưa chắc chắn (ví dụ không thấy banner hoặc plugin) nên cần kiểm tra lại cẩn thận."
+
+#: src/Scanner/DeepScanAlertMailer.php:124
+#: templates/admin/compliance-deep-scan.php:23
+msgid "When the visitor has not chosen"
+msgstr "Khi khách chưa chọn"
+
+#: src/Scanner/DeepScanAlertMailer.php:125
+#: templates/admin/compliance-deep-scan.php:24
+msgid "After the visitor rejected"
+msgstr "Sau khi khách từ chối"
+
+#. translators: %d: number of violations not listed
+#. translators: %d: number of cookies not listed
+#: src/Scanner/DeepScanAlertMailer.php:146
+#: src/Scanner/ScanNotifier.php:85
+#, php-format
+msgid "... and %d more."
+msgstr "... và %d cookie khác."
+
+#: src/Scanner/DeepScanAlertMailer.php:161
+msgid "unknown platform"
+msgstr "nền tảng chưa rõ"
+
 #: src/Scanner/DeepScanEndpoint.php:36
 msgid "The report exceeds 2 MB."
 msgstr "Báo cáo vượt quá 2 MB."
@@ -628,12 +676,6 @@ msgstr "[%1$s] Cookie Consent: có %2$d cookie mới cần phân loại"
 #, php-format
 msgid "The cookie scan on %1$s just found new cookies. Cookies waiting for classification: %2$d. Unclassified cookies are blocked like the Marketing category and are hidden from visitors until you handle them."
 msgstr "Lần quét cookie trên %1$s vừa phát hiện cookie mới. Hiện có %2$d cookie đang chờ phân loại; cookie chưa phân loại bị chặn như nhóm Tiếp thị và không hiện cho khách cho tới khi bạn xử lý."
-
-#. translators: %d: number of cookies not listed
-#: src/Scanner/ScanNotifier.php:85
-#, php-format
-msgid "... and %d more."
-msgstr "... và %d cookie khác."
 
 #. translators: %s: platform names
 #: src/Scanner/ScanNotifier.php:92
@@ -891,14 +933,6 @@ msgstr "không thấy nút Từ chối / Đồng ý trên banner"
 msgid "the page has no DS Cookie Consent (window.DSCC)"
 msgstr "trang không có DS Cookie Consent (window.DSCC)"
 
-#: templates/admin/compliance-deep-scan.php:23
-msgid "When the visitor has not chosen"
-msgstr "Khi khách chưa chọn"
-
-#: templates/admin/compliance-deep-scan.php:24
-msgid "After the visitor rejected"
-msgstr "Sau khi khách từ chối"
-
 #: templates/admin/compliance-deep-scan.php:28
 msgid "Latest deep scan (headless browser)"
 msgstr "Quét sâu gần nhất (trình duyệt headless)"
@@ -944,6 +978,10 @@ msgstr "Nền tảng mới do lần quét tạo:"
 #: templates/admin/compliance-deep-scan.php:86
 msgid "third-party servers"
 msgstr "máy chủ bên thứ ba"
+
+#: templates/admin/compliance-deep-scan.php:105
+msgid "Warning: before consent the browser still contacted these Google servers, but no Google cookie was set. This is usually a cookieless Google Consent Mode ping and is not counted as a violation. To avoid any contact before consent, choose \"Block GTM too\" in the Google Tag Manager mode on the Blocking tab."
+msgstr "Cảnh báo: trước khi khách đồng ý, trình duyệt vẫn kết nối tới các máy chủ Google này nhưng không có cookie Google nào được đặt. Đây thường là ping không cookie của Google Consent Mode nên không tính là vi phạm. Muốn không có kết nối nào trước khi khách đồng ý, chọn \"Chặn cả GTM\" ở mục chế độ Google Tag Manager trong tab Chặn script."
 
 #: templates/admin/dashboard.php:24
 msgid "Cookie Consent - Overview"
@@ -1387,8 +1425,8 @@ msgid "Functional category"
 msgstr "Nhóm Chức năng"
 
 #: templates/admin/tab-advanced.php:151
-msgid "Show the Functional cookie category separately (merged into Necessary by default)"
-msgstr "Hiện nhóm cookie Chức năng riêng (mặc định gộp vào Cần thiết)"
+msgid "Show the Functional cookie category separately (turn off to merge it into Necessary)"
+msgstr "Hiện nhóm cookie Chức năng riêng (tắt để gộp vào Cần thiết)"
 
 #: templates/admin/tab-advanced.php:155
 msgid "Data"
@@ -1438,7 +1476,7 @@ msgstr "Xoá cả bảng log khi gỡ plugin"
 #: templates/admin/tab-appearance.php:219
 #: templates/admin/tab-blocking.php:130
 #: templates/admin/tab-content.php:80
-#: templates/admin/tab-scanner.php:113
+#: templates/admin/tab-scanner.php:119
 msgid "Save changes"
 msgstr "Lưu thay đổi"
 
@@ -2182,11 +2220,23 @@ msgid "At most one email per day."
 msgstr "Tối đa một email mỗi ngày."
 
 #: templates/admin/tab-scanner.php:96
+msgid "Email on deep scan violations"
+msgstr "Email khi quét sâu có vi phạm"
+
+#: templates/admin/tab-scanner.php:98
+msgid "Send an email when a deep scan finds consent violations"
+msgstr "Gửi email khi quét sâu phát hiện vi phạm sự đồng ý"
+
+#: templates/admin/tab-scanner.php:99
+msgid "The same list is not sent again within a day; a different list is sent at once."
+msgstr "Danh sách giống hệt không gửi lại trong một ngày; danh sách khác sẽ gửi ngay."
+
+#: templates/admin/tab-scanner.php:102
 msgid "Recipient address"
 msgstr "Địa chỉ nhận email"
 
 #. translators: %s: email address that is used now
-#: templates/admin/tab-scanner.php:109
+#: templates/admin/tab-scanner.php:115
 #, php-format
 msgid "Leave empty to use the site admin email. Currently sending to: %s"
 msgstr "Để trống để dùng email quản trị của site. Đang gửi tới: %s"

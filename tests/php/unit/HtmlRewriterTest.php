@@ -110,7 +110,7 @@ class HtmlRewriterTest extends TestCase {
 			)
 		);
 		$this->assertSame(
-			'<p>Video</p><div class="dscc-placeholder" data-w="560" data-s="youtube"></div><iframe data-dscc-category="marketing" data-dscc-service="youtube" hidden width="560" height="315" data-dscc-src="https://www.youtube.com/embed/LittleD000" title="v" allowfullscreen></iframe><p>after</p>',
+			'<p>Video</p><div class="dscc-placeholder" data-w="560" data-s="youtube"></div><iframe data-dscc-category="functional" data-dscc-service="youtube" hidden width="560" height="315" data-dscc-src="https://www.youtube.com/embed/LittleD000" title="v" allowfullscreen></iframe><p>after</p>',
 			$result['html']
 		);
 		$this->assertSame( 'iframe', $result['matches'][0]['kind'] );

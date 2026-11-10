@@ -2,7 +2,7 @@
 
 Mọi `apply_filters()` và `do_action()` do plugin tự gọi (tiền tố `dscc_`). Đây là danh sách đầy đủ tại thời điểm viết; nguồn là các file được dẫn ở từng mục, hãy tìm `apply_filters( 'dscc_` hoặc `do_action( 'dscc_` trong [`src/`](../src/) để kiểm tra lại. Hook của plugin khác mà DS Cookie Consent đăng ký (WP Rocket, LiteSpeed, PixelYourSite, Meta Pixel...) nằm trong [`src/Integrations/`](../src/Integrations/) và không thuộc tài liệu này.
 
-Mục lục: [dscc_settings_defaults](#dscc_settings_defaults) · [dscc_should_render](#dscc_should_render) · [dscc_default_language](#dscc_default_language) · [dscc_client_side_language](#dscc_client_side_language) · [dscc_catalog_services](#dscc_catalog_services) · [dscc_update_repo](#dscc_update_repo) · [dscc_github_token](#dscc_github_token) · [dscc_known_db_url](#dscc_known_db_url) · [dscc_cookie_safelist](#dscc_cookie_safelist) · [dscc_blocker_enabled](#dscc_blocker_enabled) · [dscc_blocker_skip_tag](#dscc_blocker_skip_tag) · [dscc_blocker_slow_ms](#dscc_blocker_slow_ms) · [dscc_admin_tabs](#dscc_admin_tabs) · [dscc_policy_page_text](#dscc_policy_page_text) · [dscc_integration_detected](#dscc_integration_detected) · [dscc_client_ip](#dscc_client_ip) · [dscc_scan_urls](#dscc_scan_urls) · [dscc_scan_own_hosts](#dscc_scan_own_hosts) · [dscc_scan_request_args](#dscc_scan_request_args) · [dscc_scan_user_agent](#dscc_scan_user_agent) · [dscc_catalog_changed](#dscc_catalog_changed) · [dscc_scan_finished](#dscc_scan_finished)
+Mục lục: [dscc_settings_defaults](#dscc_settings_defaults) · [dscc_should_render](#dscc_should_render) · [dscc_default_language](#dscc_default_language) · [dscc_client_side_language](#dscc_client_side_language) · [dscc_catalog_services](#dscc_catalog_services) · [dscc_update_repo](#dscc_update_repo) · [dscc_github_token](#dscc_github_token) · [dscc_known_db_url](#dscc_known_db_url) · [dscc_cookie_safelist](#dscc_cookie_safelist) · [dscc_blocker_enabled](#dscc_blocker_enabled) · [dscc_blocker_skip_tag](#dscc_blocker_skip_tag) · [dscc_blocker_slow_ms](#dscc_blocker_slow_ms) · [dscc_admin_tabs](#dscc_admin_tabs) · [dscc_policy_page_text](#dscc_policy_page_text) · [dscc_integration_detected](#dscc_integration_detected) · [dscc_client_ip](#dscc_client_ip) · [dscc_scan_urls](#dscc_scan_urls) · [dscc_scan_own_hosts](#dscc_scan_own_hosts) · [dscc_consent_mode_ping_services](#dscc_consent_mode_ping_services) · [dscc_scan_request_args](#dscc_scan_request_args) · [dscc_scan_user_agent](#dscc_scan_user_agent) · [dscc_catalog_changed](#dscc_catalog_changed) · [dscc_scan_finished](#dscc_scan_finished)
 
 Ví dụ dùng dữ liệu giả `LittleD` và `example.com`. Đặt mã vào plugin riêng hoặc `mu-plugin`, không sửa trực tiếp plugin này.
 
@@ -199,6 +199,16 @@ add_filter( 'dscc_scan_own_hosts', function ( $hosts ) {
 	$hosts[] = 'web.internal';
 	return $hosts;
 } );
+```
+
+### dscc_consent_mode_ping_services
+
+`apply_filters( 'dscc_consent_mode_ping_services', string[] $slugs ): string[]` — `src/Scanner/DeepScanIngest.php`
+
+Slug nền tảng mà việc chỉ kết nối tới host (không có cookie hay khoá lưu trữ của nền tảng đó) trước khi khách đồng ý được coi là ping không cookie của Google Consent Mode: liệt kê thành cảnh báo trên thẻ quét sâu, không phải vi phạm. Mặc định `google-analytics`, `google-ads`, `google-floodlight`. Trả mảng rỗng để mọi kết nối như vậy đều là vi phạm.
+
+```php
+add_filter( 'dscc_consent_mode_ping_services', '__return_empty_array' );
 ```
 
 ### dscc_scan_request_args

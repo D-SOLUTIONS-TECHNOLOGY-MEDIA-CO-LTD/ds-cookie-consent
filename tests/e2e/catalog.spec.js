@@ -96,7 +96,7 @@ test.describe('per-service toggles bound to the consent s map', () => {
     await page.locator('#dscc .dscc-modal [data-dscc-action="save"]').click();
 
     const cookie = await consentCookie(context);
-    expect(cookie.c).toEqual({ analytics: 1, marketing: 0 });
+    expect(cookie.c).toEqual({ analytics: 1, marketing: 0, functional: 0 });
     expect(cookie.s).toEqual({ 'google-analytics': 1, 'microsoft-clarity': 0, 'meta-pixel': 0 });
     expect(await page.evaluate(() => [window.DSCC.has('google-analytics'), window.DSCC.has('microsoft-clarity'), window.DSCC.has('meta-pixel'), window.DSCC.has('analytics'), window.DSCC.has('marketing')])).toEqual([true, false, false, true, false]);
     expect(await page.evaluate(() => window.DSCC.get().services)).toEqual({ 'google-analytics': true, 'microsoft-clarity': false, 'meta-pixel': false });
@@ -131,7 +131,7 @@ test.describe('per-service toggles bound to the consent s map', () => {
     await page.locator('#dscc .dscc-modal [data-dscc-action="save"]').click();
 
     const cookie = await consentCookie(context);
-    expect(cookie.c).toEqual({ analytics: 1, marketing: 0 });
+    expect(cookie.c).toEqual({ analytics: 1, marketing: 0, functional: 0 });
     expect(cookie.s).toEqual({ 'google-analytics': 1, 'microsoft-clarity': 1, 'meta-pixel': 0 });
     const updates = await consentUpdates(page);
     expect(updates[updates.length - 1]).toMatchObject({ analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
@@ -187,14 +187,15 @@ test.describe('shortcode page', () => {
     await page.goto('/?page_id=' + id);
 
     const tables = page.locator('.dscc-cookie-table');
-    await expect(tables).toHaveCount(3);
-    expect(await page.locator('.dscc-cookie-table__title').allTextContents()).toEqual(['Cookie cần thiết', 'Cookie phân tích', 'Cookie tiếp thị']);
+    await expect(tables).toHaveCount(4);
+    expect(await page.locator('.dscc-cookie-table__title').allTextContents()).toEqual(['Cookie cần thiết', 'Cookie chức năng', 'Cookie phân tích', 'Cookie tiếp thị']);
     for (const t of await tables.all()) {
       expect(await t.locator('thead th').allTextContents()).toEqual(['Cookie', 'Bên đặt', 'Mục đích', 'Thời hạn', 'Áp dụng tại']);
     }
     expect(await page.locator('.dscc-cookie-table--necessary tbody tr').count()).toBe(12);
     expect(await page.locator('.dscc-cookie-table--analytics tbody tr').count()).toBe(8);
-    expect(await page.locator('.dscc-cookie-table--marketing tbody tr').count()).toBe(13);
+    expect(await page.locator('.dscc-cookie-table--functional tbody tr').count()).toBe(3);
+    expect(await page.locator('.dscc-cookie-table--marketing tbody tr').count()).toBe(10);
     const ga = page.locator('.dscc-cookie-table--analytics tbody tr', { hasText: '_gid' });
     await expect(ga.locator('td').nth(0)).toHaveText('_gid');
     await expect(ga.locator('td').nth(1)).toHaveText('Google Analytics (GA4)');
@@ -204,7 +205,7 @@ test.describe('shortcode page', () => {
     const link = ga.locator('td').nth(1).locator('a');
     expect(await link.getAttribute('target')).toBe('_blank');
     expect(await link.getAttribute('rel')).toBe(POLICY_REL);
-    const yt = page.locator('.dscc-cookie-table--marketing tbody tr', { hasText: 'YouTube' }).last();
+    const yt = page.locator('.dscc-cookie-table--functional tbody tr', { hasText: 'YouTube' }).last();
     await expect(yt.locator('td').nth(0)).toHaveText('YSC, __Secure-ROLLOUT_TOKEN');
     await expect(yt.locator('td').nth(3)).toHaveText('YSC: Phiên; __Secure-ROLLOUT_TOKEN: 180 ngày');
     await expect(yt.locator('td').nth(4)).toHaveText('.youtube.com');
@@ -229,7 +230,7 @@ test.describe('card layout: s map and partial consent', () => {
     await page.locator('#dscc [data-dscc-view="prefs"] [data-dscc-action="save"]').click();
 
     const cookie = await consentCookie(context);
-    expect(cookie.c).toEqual({ analytics: 1, marketing: 0 });
+    expect(cookie.c).toEqual({ analytics: 1, marketing: 0, functional: 0 });
     expect(cookie.s).toEqual({ 'google-analytics': 1, 'microsoft-clarity': 1, 'meta-pixel': 0 });
     expect(await page.evaluate(() => [window.DSCC.has('google-analytics'), window.DSCC.has('meta-pixel'), window.DSCC.has('analytics'), window.DSCC.has('marketing')])).toEqual([true, false, true, false]);
     const rows = await waitForLog(1);
@@ -254,6 +255,7 @@ test.describe('card layout: s map and partial consent', () => {
     await ui(page, 'card').widget.click();
     await page.locator('#dscc input[data-dscc-category="analytics"]').evaluate((el) => el.click());
     await page.locator('#dscc input[data-dscc-category="marketing"]').evaluate((el) => el.click());
+    await page.locator('#dscc input[data-dscc-category="functional"]').evaluate((el) => el.click());
     await page.locator('#dscc [data-dscc-view="prefs"] [data-dscc-action="save"]').click();
     const rows = await waitForLog(2);
     expect(rows[1]).toMatchObject({ choice: 'withdraw', analytics: 0, marketing: 0, src: 'widget' });

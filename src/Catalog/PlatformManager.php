@@ -211,7 +211,7 @@ final class PlatformManager {
 				'privacy_url' => $def['privacy_url'],
 				'cookies'     => count( $def['cookies'] ),
 				'enabled'     => false,
-				'block'       => ServiceRepository::default_block( $def['category'] ),
+				'block'       => ServiceRepository::default_block( $def['category'], ! empty( $def['is_third_party'] ) ),
 				'detected'    => array(),
 				'custom'      => false,
 			);

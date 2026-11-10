@@ -78,7 +78,7 @@ class HtmlRewriterAdversarialInputsTest extends TestCase {
 		} ) );
 
 		$this->assertSame( 1, substr_count( $result['html'], 'data-dscc-ph="youtube"' ) );
-		$this->assertStringContainsString( '<iframe data-dscc-category="marketing" data-dscc-service="youtube" hidden data-dscc-src="https://www.youtube.com/embed/LittleD000" WIDTH="560"></IFRAME>', $result['html'] );
+		$this->assertStringContainsString( '<iframe data-dscc-category="functional" data-dscc-service="youtube" hidden data-dscc-src="https://www.youtube.com/embed/LittleD000" WIDTH="560"></IFRAME>', $result['html'] );
 	}
 
 	public function test_pixel_hidden_with_an_inline_style_is_blocked_and_a_normal_image_is_not() {

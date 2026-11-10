@@ -29,10 +29,17 @@ final class ClientData {
 
 		$cats = array();
 		foreach ( $vm['categories'] as $cat ) {
-			$cats[] = array(
+			// Only services with a switch of their own are tracked one by one; the others follow their category.
+			$switchable = array_filter(
+				$cat['services'],
+				static function ( $svc ) {
+					return ! empty( $svc['blockable'] );
+				}
+			);
+			$cats[]     = array(
 				'key'      => $cat['key'],
 				'required' => $cat['required'],
-				'services' => wp_list_pluck( $cat['services'], 'slug' ),
+				'services' => array_values( wp_list_pluck( $switchable, 'slug' ) ),
 			);
 		}
 		$services = array();

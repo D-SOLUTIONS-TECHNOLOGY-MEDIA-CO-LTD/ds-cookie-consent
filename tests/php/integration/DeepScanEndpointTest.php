@@ -322,6 +322,40 @@ class Dscc_Deep_Scan_Endpoint_Test extends WP_UnitTestCase {
 		$this->assertSame( 'marketing', $run['report']['phases']['before_choice']['violations'][0]['category'] );
 	}
 
+	public function test_a_cookieless_google_consent_mode_ping_is_a_warning_without_alert_or_email() {
+		reset_phpmailer_instance();
+		delete_option( \DSolutions\CookieConsent\Scanner\DeepScanAlertMailer::OPTION );
+		$hosts = array( 'www.google-analytics.com', 'www.googleadservices.com' );
+		$res   = $this->post(
+			$this->report(
+				array(
+					'before_choice' => $this->phase( array(), $hosts ),
+					'after_reject'  => $this->phase( array(), $hosts ),
+				)
+			)
+		);
+		$this->assertSame( 200, $res->get_status() );
+		$this->assertSame( array( 'before_choice' => 0, 'after_reject' => 0 ), $res->get_data()['violations'] );
+		$this->assertSame( array( 'before_choice' => 2, 'after_reject' => 2 ), $res->get_data()['warnings'] );
+		$this->assertSame( array(), AlertStore::leaks(), 'a ping is not a leak alert' );
+		$this->assertCount( 0, tests_retrieve_phpmailer_instance()->mock_sent, 'a ping does not send the violation email' );
+		$run = ScanRunRepository::latest( 'deep', 'done' );
+		$this->assertSame( $hosts, array_column( $run['report']['phases']['before_choice']['warnings'], 'name' ) );
+
+		$html = $this->render_report();
+		$this->assertStringContainsString( 'id="dscc-deep-warnings"', $html );
+		$this->assertStringContainsString( 'data-dscc-deep-warning="www.google-analytics.com"', $html );
+		$this->assertSame( 1, substr_count( $html, 'data-dscc-deep-warning="www.google-analytics.com"' ), 'listed once for both phases' );
+		$this->assertStringContainsString( 'id="dscc-deep-ok"', $html );
+		$this->assertStringNotContainsString( 'data-dscc-deep-violation', $html );
+	}
+
+	public function test_a_google_host_with_a_google_cookie_stays_a_violation() {
+		$res = $this->post( $this->report( array( 'before_choice' => $this->phase( array( $this->cookie( '_ga' ) ), array( 'www.google-analytics.com' ) ) ) ) );
+		$this->assertSame( 2, $res->get_data()['violations']['before_choice'] );
+		$this->assertSame( 0, $res->get_data()['warnings']['before_choice'] );
+	}
+
 	public function test_platforms_created_by_the_scan_are_returned_and_listed_on_the_card() {
 		$res = $this->post( $this->report( array( 'after_accept' => $this->phase( array(), array( 'www.clarity.ms' ) ) ) ) );
 		$this->assertSame(
@@ -352,11 +386,13 @@ class Dscc_Deep_Scan_Endpoint_Test extends WP_UnitTestCase {
 		$this->assertNotContains( 'google-recaptcha', array_column( ScriptRules::active()['rules'], 's' ) );
 		$names = array_column( ScanRunRepository::latest( 'deep', 'done' )['report']['phases']['before_choice']['violations'], 'name' );
 		$this->assertNotContains( 'www.recaptcha.net', $names );
-		// Maps is catalogued as marketing: it is blocked like any marketing platform and contacting it is a violation.
+		// Maps is functional and third-party: it is blocked until the Functional group is allowed, but contacting it
+		// before a choice is not a violation (only analytics and marketing are).
+		$this->assertSame( 'functional', ServiceRepository::find_by_slug( 'google-maps' )['category_key'] );
 		$this->assertSame( 1, (int) ServiceRepository::find_by_slug( 'google-maps' )['block_enabled'] );
-		$this->assertContains( 'maps.googleapis.com', $names );
+		$this->assertNotContains( 'maps.googleapis.com', $names );
 		foreach ( ServiceRepository::all() as $service ) {
-			if ( in_array( $service['category_key'], array( 'necessary', 'functional' ), true ) ) {
+			if ( 'necessary' === $service['category_key'] || ( 'functional' === $service['category_key'] && ! $service['is_third_party'] ) ) {
 				$this->assertSame( 0, (int) $service['block_enabled'], $service['slug'] );
 			}
 		}

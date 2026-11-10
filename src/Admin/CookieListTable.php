@@ -154,7 +154,11 @@ final class CookieListTable extends \WP_List_Table {
 	 * @return string
 	 */
 	protected function column_cb( $item ) {
-		return '<input type="checkbox" name="cookie_ids[]" value="' . esc_attr( $item['id'] ) . '" />';
+		$id = 'dscc-cb-' . (int) $item['id'];
+		return '<label class="screen-reader-text" for="' . esc_attr( $id ) . '">'
+			/* translators: %s: cookie name */
+			. esc_html( sprintf( __( 'Select %s', 'ds-cookie-consent' ), $item['name'] ) ) . '</label>'
+			. '<input type="checkbox" id="' . esc_attr( $id ) . '" name="cookie_ids[]" value="' . esc_attr( $item['id'] ) . '" />';
 	}
 
 	/**

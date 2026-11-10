@@ -3,7 +3,7 @@
  * Plugin Name:       DS Cookie Consent
  * Plugin URI:        https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent
  * Description:       Cookie consent banner with Google Consent Mode v2, consent log and live-preview settings. Reusable across many sites.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Update URI:        https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DSCC_VERSION', '1.0.0' );
+define( 'DSCC_VERSION', '1.0.1' );
 define( 'DSCC_FILE', __FILE__ );
 define( 'DSCC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DSCC_URL', plugin_dir_url( __FILE__ ) );

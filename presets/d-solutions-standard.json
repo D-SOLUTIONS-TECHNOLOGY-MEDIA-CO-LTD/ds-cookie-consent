@@ -272,7 +272,7 @@
     {
       "slug": "youtube",
       "name": "YouTube (video nhúng)",
-      "category_key": "marketing",
+      "category_key": "functional",
       "provider_company": "Google LLC",
       "privacy_url": "https://policies.google.com/privacy",
       "is_third_party": true,

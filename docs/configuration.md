@@ -18,12 +18,12 @@ Mọi cài đặt lưu trong một option `dscc_settings`, chia theo nhóm (`app
 | `logo_popup_id` | `0` | Logo popup. Để trống thì dùng logo banner |
 | `logo_height` | `30` | Chiều cao logo banner, 12 đến 120 px |
 | `logo_popup_height` | `22` | Chiều cao logo popup, 12 đến 120 px |
-| `color_primary` | `#005ea3` | Màu chính: nút Đồng ý, toggle bật, link, tab đang chọn |
+| `color_primary` | `#1e3a8a` | Màu chính: nút Đồng ý, toggle bật, link, tab đang chọn |
 | `color_primary_hover` | trống | Màu chính khi rê chuột; trống = tự tính (tối hơn 12%) |
-| `color_text` | `#1e3a5f` | Màu chữ banner |
-| `color_bar_bg` | `#f1f5f9` | Nền banner |
+| `color_text` | `#1f2937` | Màu chữ banner |
+| `color_bar_bg` | `#f9fafb` | Nền banner |
 | `color_reject_bg` | trống | Nền nút Từ chối; trống = tự tính từ màu chính (pha 12% với trắng) |
-| `color_modal_bg` | `#f6f6f6` | Nền popup |
+| `color_modal_bg` | `#fafaf7` | Nền popup |
 | `font` | `inherit` | `inherit` để theo theme, hoặc tên font đã có sẵn trên site. Chỉ chữ, số, khoảng trắng, dấu phẩy, `-`, `_`; tối đa 100 ký tự |
 | `button_radius` | trống | Bo góc nút; trống = tự động (thanh ngang: pill, hộp gọn: 8 px). Nhập `pill` hoặc số 0 đến 40 |
 | `button_order` | trống | Thứ tự nút: trống = theo kiểu giao diện (Gọn: Đồng ý đứng cuối; Thanh ngang: Đồng ý đứng đầu), `accept_first`, `accept_last` |
@@ -38,6 +38,8 @@ Mọi cài đặt lưu trong một option `dscc_settings`, chia theo nhóm (`app
 | `overlay_opacity` | `35` | Lớp phủ tối khi mở popup, 0 đến 60 (%) |
 | `per_service_toggle` | bật | Cho khách bật/tắt từng nhà cung cấp trong popup; chỉ có tác dụng khi danh mục có nhà cung cấp |
 | `custom_css` | trống | CSS tuỳ chỉnh, tối đa 20.000 ký tự. Mọi selector được tự thêm tiền tố `#dscc`; không cho `@import`, `url(javascript:)`, `expression()`; ngoặc không cân bị từ chối |
+
+Bảng màu mặc định lấy theo d-solutions.vn (xanh đậm `#1e3a8a`, chữ `#1f2937`); mọi cặp chữ/nền đều đạt WCAG AA. Site đã lưu màu thì giữ màu đã lưu.
 
 Màn hình có **xem trước trực tiếp** (desktop và mobile 390 px) và cảnh báo khi độ tương phản dưới 4,5:1 (WCAG AA) cho chữ trắng trên màu chính hoặc chữ banner trên nền banner.
 
@@ -87,7 +89,8 @@ Giải thích ở [scanner-and-compliance.md](scanner-and-compliance.md).
 | `beacon_enabled` | tắt | Thu thập thụ động từ khách (beacon) |
 | `beacon_sample` | `5` | Tỉ lệ lấy mẫu, 0 đến 100 (%) |
 | `notify_enabled` | bật | Gửi email khi quét phát hiện cookie mới (tối đa một email mỗi ngày) |
-| `notify_email` | trống | Người nhận; trống = email quản trị của site |
+| `notify_violations` | bật | Gửi email khi quét sâu phát hiện vi phạm đồng ý (không gửi lại cùng một danh sách trong 24 giờ) |
+| `notify_email` | trống | Người nhận cả hai loại email; trống = email quản trị của site |
 
 ## Nhập / Xuất
 
@@ -110,7 +113,7 @@ Không có cài đặt riêng. **Tải cấu hình** xuất file JSON gồm cài
 | `raise_widget` | bật | Tự đẩy icon thu nhỏ lên trên các phần tử ở danh sách trên nếu chiếm cùng góc |
 | `retention_months` | `24` | Giữ log bao nhiêu tháng, 0 đến 120; `0` = không tự xoá |
 | `delete_data_on_uninstall` | tắt | Xoá cả bốn bảng dữ liệu khi gỡ plugin |
-| `show_functional` | tắt | Hiện nhóm cookie *Chức năng* riêng (mặc định gộp vào Cần thiết) |
+| `show_functional` | bật | Hiện nhóm cookie *Chức năng* riêng; tắt thì gộp vào Cần thiết. Site đã lưu cài đặt giữ giá trị cũ của mình |
 | `trusted_ip_header` | `none` | Nguồn IP của khách: `none` (kết nối trực tiếp), `cf-connecting-ip`, `x-forwarded-for` (IP đầu tiên). Chỉ chọn header khi site thật sự nằm sau proxy đó, vì header có thể bị giả |
 | `consent_regions` | trống | Vùng mà Consent Mode mặc định `denied`; trống = mọi vùng. Mỗi dòng một mã ISO 3166 (`VN`, `US-CA`); tối đa 40 vùng và 140 ký tự gộp, phần thừa bị bỏ |
 | `url_passthrough` | tắt | Bật `url_passthrough` của Consent Mode: giữ thông tin quảng cáo trong URL khi chưa có đồng ý |

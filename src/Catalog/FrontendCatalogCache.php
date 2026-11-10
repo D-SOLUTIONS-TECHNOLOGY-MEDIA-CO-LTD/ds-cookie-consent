@@ -15,6 +15,7 @@
 
 namespace DSolutions\CookieConsent\Catalog;
 
+use DSolutions\CookieConsent\Blocker\ScriptRules;
 use DSolutions\CookieConsent\Database\Schema;
 
 defined( 'ABSPATH' ) || exit;
@@ -155,7 +156,8 @@ final class FrontendCatalogCache {
 				'name'        => $row['name'],
 				'category'    => $row['category_key'],
 				'privacy_url' => $row['privacy_url'],
-				'blockable'   => ! empty( $row['block_enabled'] ) && self::has_patterns( $row['script_patterns'] ),
+				// The tag manager follows the analytics/marketing choice (see ScriptRules), so it never gets a switch of its own.
+				'blockable'   => ScriptRules::GTM_SLUG !== $row['slug'] && ! empty( $row['block_enabled'] ) && self::has_patterns( $row['script_patterns'] ),
 				'cookies'     => array(),
 			);
 		}

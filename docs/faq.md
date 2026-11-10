@@ -70,7 +70,7 @@ Contact Form 7, Elementor, Cloudflare, Turnstile, reCAPTCHA và cookie cần thi
 
 ### Video YouTube/bản đồ chỉ hiện khung "Bật cookie ..."
 
-Đó là khung thay thế của iframe bị chặn; nút trong khung cho phép riêng nền tảng đó. Cùng nội dung hiện lại khi khách đồng ý nhóm tương ứng.
+Đó là khung thay thế của iframe bị chặn; nút trong khung cho phép riêng nền tảng đó. Cùng nội dung hiện lại khi khách đồng ý nhóm tương ứng. YouTube và Maps thuộc nhóm **Chức năng** (nút ghi "Bật cookie Chức năng"), không phải Tiếp thị; nếu bạn tắt *Hiện nhóm Chức năng* ở tab Nâng cao thì chúng không còn bị chặn.
 
 ### Cookie `_fbp` hoặc `_ga` vẫn thấy trong trình duyệt
 

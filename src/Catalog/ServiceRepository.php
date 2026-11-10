@@ -23,12 +23,17 @@ final class ServiceRepository {
 	const FIELDS = array( 'slug', 'name', 'category_key', 'provider_company', 'privacy_url', 'is_third_party', 'transfers_abroad', 'country', 'script_patterns', 'block_enabled', 'status', 'source', 'detected_via' );
 
 	/**
-	 * Should a category be blocked until consent by default? Analytics, marketing and unclassified: yes.
+	 * Should a service be blocked until consent by default? Analytics, marketing and unclassified: yes.
+	 * Functional: only a third-party one (an embedded video or map); the site's own plugin scripts keep running.
 	 *
-	 * @param string $category Category key.
+	 * @param string $category    Category key.
+	 * @param bool   $third_party Whether the service belongs to another company.
 	 * @return int 1 or 0.
 	 */
-	public static function default_block( $category ) {
+	public static function default_block( $category, $third_party = false ) {
+		if ( 'functional' === $category ) {
+			return $third_party ? 1 : 0;
+		}
 		return in_array( $category, array( 'analytics', 'marketing', 'unclassified' ), true ) ? 1 : 0;
 	}
 
@@ -105,7 +110,7 @@ final class ServiceRepository {
 		} else {
 			$row = array_merge( ServiceRow::defaults(), $clean );
 			if ( ! array_key_exists( 'block_enabled', $data ) ) {
-				$row['block_enabled'] = self::default_block( $row['category_key'] );
+				$row['block_enabled'] = self::default_block( $row['category_key'], ! empty( $row['is_third_party'] ) );
 			}
 			$row['created_at'] = $now;
 			$row['updated_at'] = $now;
@@ -177,7 +182,7 @@ final class ServiceRepository {
 			array(
 				'slug'          => $service['slug'],
 				'category_key'  => $category,
-				'block_enabled' => self::default_block( $category ),
+				'block_enabled' => self::default_block( $category, ! empty( $service['is_third_party'] ) ),
 			)
 		) > 0;
 	}

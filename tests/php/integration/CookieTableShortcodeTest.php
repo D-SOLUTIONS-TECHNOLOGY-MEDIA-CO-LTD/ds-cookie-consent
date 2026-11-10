@@ -30,7 +30,7 @@ class Dscc_Cookie_Table_Shortcode_Test extends WP_UnitTestCase {
 	}
 
 	/**
-	 * The three policy tables the bundled D-Solutions preset must produce, transcribed by hand: for each group, its
+	 * The four policy tables the bundled D-Solutions preset must produce, transcribed by hand: for each group, its
 	 * heading and rows of Cookie | Bên đặt | Mục đích | Thời hạn | Áp dụng tại. A cookie without a domain applies to
 	 * the site host. The order is the order of the preset (the order cookies were added).
 	 *
@@ -54,6 +54,14 @@ class Dscc_Cookie_Table_Shortcode_Test extends WP_UnitTestCase {
 					array( 'woocommerce_recently_viewed', 'WooCommerce', 'Hiển thị danh sách sản phẩm đã xem gần đây', 'Phiên', $host ),
 					array( 'store_notice*', 'WooCommerce', 'Ghi nhớ việc khách đã đóng thông báo cửa hàng', 'Phiên', $host ),
 					array( '_GRECAPTCHA', 'Google reCAPTCHA', 'Phân biệt người dùng thật với bot trên biểu mẫu (phân tích rủi ro của reCAPTCHA)', '179 ngày', 'www.google.com' ),
+				),
+			),
+			'functional' => array(
+				'title' => 'Cookie chức năng',
+				'rows'  => array(
+					array( 'VISITOR_INFO1_LIVE', 'YouTube (video nhúng)', 'Ước tính băng thông và ghi nhận lượt xem video nhúng; với youtube-nocookie.com chỉ được ghi khi bạn phát video', '179 ngày', '.youtube.com' ),
+					array( 'VISITOR_PRIVACY_METADATA', 'YouTube (video nhúng)', 'Lưu lựa chọn quyền riêng tư của khách truy cập YouTube', '180 ngày', '.youtube.com' ),
+					array( 'YSC, __Secure-ROLLOUT_TOKEN', 'YouTube (video nhúng)', 'Ghi ID duy nhất để thống kê những video YouTube bạn đã xem', 'YSC: Phiên; __Secure-ROLLOUT_TOKEN: 180 ngày', '.youtube.com' ),
 				),
 			),
 			'analytics' => array(
@@ -82,9 +90,6 @@ class Dscc_Cookie_Table_Shortcode_Test extends WP_UnitTestCase {
 					array( '_ttp', 'TikTok Pixel', 'Nhận diện khách truy cập để đo hiệu quả quảng cáo trên TikTok', 'Khoảng 13 tháng', $host ),
 					array( '_tt_enable_cookie', 'TikTok Pixel', 'Cho biết TikTok Pixel được phép dùng cookie để đo hiệu quả quảng cáo', 'Khoảng 13 tháng', $host ),
 					array( 'ttcsid*', 'TikTok Pixel', 'Nhận diện phiên truy cập để đo hiệu quả quảng cáo trên TikTok', '1 năm', $host ),
-					array( 'VISITOR_INFO1_LIVE', 'YouTube (video nhúng)', 'Ước tính băng thông và ghi nhận lượt xem video nhúng; với youtube-nocookie.com chỉ được ghi khi bạn phát video', '179 ngày', '.youtube.com' ),
-					array( 'VISITOR_PRIVACY_METADATA', 'YouTube (video nhúng)', 'Lưu lựa chọn quyền riêng tư của khách truy cập YouTube', '180 ngày', '.youtube.com' ),
-					array( 'YSC, __Secure-ROLLOUT_TOKEN', 'YouTube (video nhúng)', 'Ghi ID duy nhất để thống kê những video YouTube bạn đã xem', 'YSC: Phiên; __Secure-ROLLOUT_TOKEN: 180 ngày', '.youtube.com' ),
 				),
 			),
 		);
@@ -131,7 +136,7 @@ class Dscc_Cookie_Table_Shortcode_Test extends WP_UnitTestCase {
 	public function test_output_equals_the_expected_policy_tables_row_for_row() {
 		$expected = $this->expected_tables();
 		$actual   = $this->parse_tables( do_shortcode( '[dscc_cookie_table lang="vi"]' ) );
-		$this->assertSame( array( 'necessary', 'analytics', 'marketing' ), array_keys( $actual ), 'three groups in the policy order' );
+		$this->assertSame( array( 'necessary', 'functional', 'analytics', 'marketing' ), array_keys( $actual ), 'four groups in the policy order' );
 		foreach ( $expected as $key => $table ) {
 			$this->assertSame( $table['title'], $actual[ $key ]['title'], $key . ' heading' );
 			$this->assertSame( array( 'Cookie', 'Bên đặt', 'Mục đích', 'Thời hạn', 'Áp dụng tại' ), $actual[ $key ]['head'], $key . ' columns' );
@@ -207,28 +212,28 @@ class Dscc_Cookie_Table_Shortcode_Test extends WP_UnitTestCase {
 		$this->assertSame( '', do_shortcode( '[dscc_cookie_table category="bogus"]' ) );
 	}
 
-	public function test_functional_cookies_merge_into_necessary_unless_the_category_is_enabled() {
+	public function test_functional_cookies_have_their_own_table_unless_the_category_is_turned_off() {
 		$svc = ServiceRepository::upsert( array( 'slug' => 'littled-fn', 'name' => 'LittleD Fn', 'category_key' => 'functional', 'status' => 'confirmed' ) );
 		CookieRepository::upsert( array( 'name' => 'littled_fn_cookie', 'service_id' => $svc, 'status' => 'confirmed', 'purpose' => 'Chức năng', 'duration_label' => '1 ngày' ) );
 		FrontendCatalogCache::rebuild();
 
+		$split = do_shortcode( '[dscc_cookie_table lang="vi"]' );
+		$this->assertSame( 4, substr_count( $split, '<table' ), 'the Functional group is shown by default' );
+		$this->assertStringContainsString( 'dscc-cookie-table--functional', $split );
+		$this->assertStringNotContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="necessary" lang="vi"]' ) );
+		$this->assertStringContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="functional" lang="vi"]' ) );
+
+		$this->set_show_functional( false );
 		$merged = do_shortcode( '[dscc_cookie_table lang="vi"]' );
 		$this->assertSame( 3, substr_count( $merged, '<table' ) );
 		$this->assertStringContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="necessary" lang="vi"]' ) );
 		$this->assertStringContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="functional" lang="vi"]' ), 'a disabled functional category resolves to necessary' );
-
-		$this->set_show_functional( true );
-		$split = do_shortcode( '[dscc_cookie_table lang="vi"]' );
-		$this->assertSame( 4, substr_count( $split, '<table' ) );
-		$this->assertStringContainsString( 'dscc-cookie-table--functional', $split );
-		$this->assertStringNotContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="necessary" lang="vi"]' ) );
-		$this->assertStringContainsString( 'littled_fn_cookie', do_shortcode( '[dscc_cookie_table category="functional" lang="vi"]' ) );
 	}
 
 	public function test_an_empty_category_prints_a_note_and_no_table() {
-		$html = do_shortcode( '[dscc_cookie_table category="functional" lang="en"]' );
-		// Functional resolves to necessary when disabled, so enable it to get an empty group.
-		$this->set_show_functional( true );
+		// The preset's only functional platform is YouTube; moving it away leaves the (visible by default) group empty.
+		ServiceRepository::set_category( (int) ServiceRepository::find_by_slug( 'youtube' )['id'], 'marketing' );
+		FrontendCatalogCache::rebuild();
 		$html = do_shortcode( '[dscc_cookie_table category="functional" lang="en"]' );
 		$this->assertStringContainsString( '<p class="dscc-cookie-table__empty">No cookies in this group yet.</p>', $html );
 		$this->assertStringNotContainsString( '<table', $html );

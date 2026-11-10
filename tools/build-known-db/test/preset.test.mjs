@@ -58,14 +58,14 @@ test('every preset cookie is the known-db record of its service, confirmed', () 
   }
 });
 
-test('categories: necessary, analytics and marketing hold the expected cookies', () => {
+test('categories: necessary, functional, analytics and marketing hold the expected cookies', () => {
   const cat = (c) => preset.services.find((s) => s.slug === c.service_slug).category_key;
   const row = (name) => preset.cookies.find((c) => c.name === name);
   const expect = [
     ['dscc_consent', 'necessary', '180 ngày'], ['wordpress_test_cookie', 'necessary', 'Phiên'], ['woocommerce_cart_hash', 'necessary', 'Phiên'], ['_GRECAPTCHA', 'necessary', '179 ngày'],
     ['_ga', 'analytics', '2 năm'], ['_ga_*', 'analytics', '2 năm'], ['_gid', 'analytics', '24 giờ'], ['_gat_UA-*', 'analytics', '1 phút'],
     ['_clck', 'analytics', '1 năm'], ['_clsk', 'analytics', '1 ngày'], ['sbjs_*', 'analytics', 'Phiên'],
-    ['_gcl_au', 'marketing', '90 ngày'], ['_fbp', 'marketing', '90 ngày'], ['_ttp', 'marketing', 'Khoảng 13 tháng'], ['YSC', 'marketing', 'Phiên'],
+    ['_gcl_au', 'marketing', '90 ngày'], ['_fbp', 'marketing', '90 ngày'], ['_ttp', 'marketing', 'Khoảng 13 tháng'], ['YSC', 'functional', 'Phiên'],
   ];
   for (const [name, category, duration] of expect) {
     const c = row(name);

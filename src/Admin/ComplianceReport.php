@@ -106,8 +106,10 @@ final class ComplianceReport {
 		}
 		$summary    = $run['summary'];
 		$violations = array();
+		$warnings   = array();
 		foreach ( array( 'before_choice', 'after_reject' ) as $phase ) {
 			$violations[ $phase ] = isset( $run['report']['phases'][ $phase ]['violations'] ) ? (array) $run['report']['phases'][ $phase ]['violations'] : array();
+			$warnings[ $phase ]   = isset( $run['report']['phases'][ $phase ]['warnings'] ) ? (array) $run['report']['phases'][ $phase ]['warnings'] : array();
 		}
 		return array(
 			'id'              => $run['id'],
@@ -121,6 +123,7 @@ final class ComplianceReport {
 			'platforms'       => isset( $summary['platforms'] ) && is_array( $summary['platforms'] ) ? $summary['platforms'] : array(),
 			'violations'      => $violations,
 			'count'           => count( $violations['before_choice'] ) + count( $violations['after_reject'] ),
+			'warnings'        => $warnings,
 		);
 	}
 }

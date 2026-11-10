@@ -16,6 +16,10 @@ class SettingsSchemaTest extends UnitTestCase {
 		$this->assertSame( 180, $d['advanced']['consent_days'] );
 		$this->assertSame( gmdate( 'Y-m' ), $d['advanced']['policy_version'] );
 		$this->assertTrue( $d['advanced']['skip_bots'] );
+		$this->assertTrue( $d['advanced']['show_functional'], 'the Functional group is shown separately by default' );
+		$this->assertTrue( $d['scanner']['notify_violations'] );
+		$this->assertSame( '#1e3a8a', $d['appearance']['color_primary'] );
+		$this->assertSame( '#fafaf7', $d['appearance']['color_modal_bg'] );
 		$this->assertSame( 'report', $d['blocking']['unclassified_cookie_mode'], 'owner decision 2026-11-07: unclassified cookies are reported, not blocked, by default' );
 	}
 
@@ -56,7 +60,7 @@ class SettingsSchemaTest extends UnitTestCase {
 			),
 			$cur
 		);
-		$this->assertSame( '#005ea3', $out['color_primary'] );
+		$this->assertSame( '#1e3a8a', $out['color_primary'] );
 		$this->assertSame( '#aabbcc', $out['color_text'] );
 		$this->assertSame( '', $out['color_primary_hover'] );
 		$this->assertSame( '#00ff00', $out['color_reject_bg'] );

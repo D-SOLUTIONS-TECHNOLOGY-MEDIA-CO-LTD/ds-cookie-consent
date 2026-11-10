@@ -66,9 +66,11 @@ class Dscc_Catalog_Repository_Test extends WP_UnitTestCase {
 		$this->service( 'littled-a', 'analytics' );
 		$this->service( 'littled-n', 'necessary' );
 		$this->service( 'littled-f', 'functional' );
+		ServiceRepository::upsert( array( 'slug' => 'littled-own', 'name' => 'LittleD Own', 'category_key' => 'functional', 'is_third_party' => 0, 'status' => 'confirmed' ) );
 		$this->assertSame( 1, ServiceRepository::find_by_slug( 'littled-a' )['block_enabled'] );
 		$this->assertSame( 0, ServiceRepository::find_by_slug( 'littled-n' )['block_enabled'] );
-		$this->assertSame( 0, ServiceRepository::find_by_slug( 'littled-f' )['block_enabled'] );
+		$this->assertSame( 1, ServiceRepository::find_by_slug( 'littled-f' )['block_enabled'], 'a third-party functional service (embed) is blocked until the Functional group is allowed' );
+		$this->assertSame( 0, ServiceRepository::find_by_slug( 'littled-own' )['block_enabled'], 'the site\'s own functional scripts keep running' );
 		ServiceRepository::set_block( 'littled-n', true );
 		$this->assertSame( 0, ServiceRepository::find_by_slug( 'littled-n' )['block_enabled'] );
 		ServiceRepository::upsert( array( 'slug' => 'littled-n', 'block_enabled' => 1 ) );

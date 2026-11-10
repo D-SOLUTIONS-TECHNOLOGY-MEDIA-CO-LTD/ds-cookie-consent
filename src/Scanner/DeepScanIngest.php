@@ -1,7 +1,8 @@
 <?php
 /**
  * Stores one validated deep scan: merges the cookies and platforms into the catalog (FindingStore), computes the
- * compliance violations, records them as leak alerts and saves the run (`dscc_scan_runs`, type `deep`).
+ * compliance violations, records them as leak alerts, saves the run (`dscc_scan_runs`, type `deep`) and mails the
+ * violations (DeepScanAlertMailer).
  * No cookie value is ever present in the data this class receives.
  *
  * @package DSolutions\CookieConsent
@@ -88,8 +89,17 @@ final class DeepScanIngest {
 			}
 		}
 
-		$vendors    = self::detect_vendors( $data );
-		$violations = DeepScanViolations::compute( $data, $results, $vendors['watched'] );
+		$vendors = self::detect_vendors( $data );
+		/**
+		 * Service slugs whose host-only contact before consent is a cookieless Google Consent Mode ping: listed as a
+		 * warning on the deep scan card, not as a violation (no alert, no email).
+		 *
+		 * @param string[] $slugs Default: google-analytics, google-ads, google-floodlight.
+		 */
+		$ping_slugs = array_values( array_filter( (array) apply_filters( 'dscc_consent_mode_ping_services', DeepScanViolations::CONSENT_MODE_SERVICES ), 'is_string' ) );
+		$split      = DeepScanViolations::split_consent_mode_pings( DeepScanViolations::compute( $data, $results, $vendors['watched'] ), $ping_slugs );
+		$violations = $split['violations'];
+		$warnings   = $split['warnings'];
 		$reason     = self::inconclusive_reason( $data );
 		self::record_alerts( $violations, '' === $reason );
 
@@ -107,14 +117,16 @@ final class DeepScanIngest {
 			'cookies'         => count( $results ),
 			'new_cookies'     => $new,
 			'violations'      => $counts,
+			'warnings'        => array_map( 'count', $warnings ),
 			'errors'          => count( $data['errors'] ),
 			'conclusive'      => '' === $reason,
 			'reason'          => $reason,
 			'platforms'       => $vendors['created'],
 		);
-		$run_id  = ScanRunRepository::create( 'deep', $summary, self::stored_report( $data, $violations ), 'done' );
+		$run_id  = ScanRunRepository::create( 'deep', $summary, self::stored_report( $data, $violations, $warnings ), 'done' );
 		if ( $run_id ) {
 			ScanRunRepository::update( $run_id, array( 'finished_at' => current_time( 'mysql', true ) ) );
+			DeepScanAlertMailer::maybe_send( $violations, '' === $reason, $data['scanned_at'] );
 		}
 		return array(
 			'run_id'            => $run_id,
@@ -122,6 +134,7 @@ final class DeepScanIngest {
 			'created'           => $created,
 			'skipped'           => $built['skipped'],
 			'violations'        => $counts,
+			'warnings'          => array_map( 'count', $warnings ),
 			'conclusive'        => '' === $reason,
 			'platforms_created' => $vendors['created'],
 		);
@@ -206,9 +219,10 @@ final class DeepScanIngest {
 	 *
 	 * @param array $data       Validated report.
 	 * @param array $violations Violations per phase.
+	 * @param array $warnings   Cookieless Consent Mode pings per phase.
 	 * @return array
 	 */
-	private static function stored_report( array $data, array $violations ) {
+	private static function stored_report( array $data, array $violations, array $warnings ) {
 		$phases = array();
 		foreach ( $data['phases'] as $name => $phase ) {
 			$phases[ $name ] = array(
@@ -216,6 +230,7 @@ final class DeepScanIngest {
 				'cookies'    => array_slice( array_values( array_unique( wp_list_pluck( $phase['cookies'], 'name' ) ) ), 0, self::MAX_REPORT_NAMES ),
 				'hosts'      => $phase['hosts'],
 				'violations' => isset( $violations[ $name ] ) ? $violations[ $name ] : array(),
+				'warnings'   => isset( $warnings[ $name ] ) ? $warnings[ $name ] : array(),
 			);
 		}
 		return array(

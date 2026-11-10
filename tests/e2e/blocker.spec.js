@@ -68,9 +68,10 @@ for (const layout of ['card', 'bar']) {
       const frame = page.locator('#littled-video');
       expect(await frame.getAttribute('src')).toBeNull();
       expect(await frame.getAttribute('data-dscc-src')).toContain('youtube.com/embed/LittleD000');
+      expect(await frame.getAttribute('data-dscc-category')).toBe('functional');
       await expect(frame).toBeHidden();
       await expect(page.locator('.dscc-placeholder')).toBeVisible();
-      await expect(page.locator('.dscc-placeholder__text')).toHaveText(/^(Bật cookie Tiếp thị để xem video|Enable Marketing cookies to watch this video)\.$/);
+      await expect(page.locator('.dscc-placeholder__text')).toHaveText(/^(Bật cookie Chức năng để xem video|Enable Functional cookies to watch this video)\.$/);
       expect(await page.locator('#littled-pixel').getAttribute('src')).toBeNull();
       // The pixel in <noscript> is removed too: a visitor without JavaScript cannot consent.
       expect(await page.locator('noscript').evaluateAll((els) => els.map((e) => e.textContent).join(''))).not.toContain('facebook.com/tr');
@@ -112,7 +113,7 @@ for (const layout of ['card', 'bar']) {
       expect(rows[0].choice).toBe('reject_all');
     });
 
-    test(`E4 [${layout}] only analytics: Google and Clarity run, Meta and YouTube stay blocked`, async ({ page, context }) => {
+    test(`E4 [${layout}] only analytics: Google and Clarity run, Meta and YouTube (Functional) stay blocked`, async ({ page, context }) => {
       await page.goto('/');
       await ui(page, layout).customize.click();
       await page.locator('#dscc input[data-dscc-category="analytics"]').evaluate((el) => el.click());
@@ -126,7 +127,21 @@ for (const layout of ['card', 'bar']) {
       expect(names).toEqual(expect.arrayContaining(['_ga', '_clck']));
       expect(names).not.toContain('_fbp');
       await expect(page.locator('.dscc-placeholder')).toBeVisible();
-      expect((await consentCookie(context)).c).toEqual({ analytics: 1, marketing: 0 });
+      expect((await consentCookie(context)).c).toEqual({ analytics: 1, marketing: 0, functional: 0 });
+    });
+
+    test(`E4b [${layout}] only Functional: YouTube loads, Google, Clarity and Meta stay blocked`, async ({ page, context }) => {
+      await page.goto('/');
+      await ui(page, layout).customize.click();
+      await page.locator('#dscc input[data-dscc-category="functional"]').evaluate((el) => el.click());
+      await page.locator('#dscc [data-dscc-action="save"]:visible').first().click();
+
+      await expect.poll(() => net.count(YOUTUBE)).toBeGreaterThan(0);
+      await page.waitForTimeout(600);
+      expect(net.count(GA) + net.count(META) + net.count(CLARITY)).toBe(0);
+      await expect(page.locator('.dscc-placeholder')).toHaveCount(0);
+      expect((await consentCookie(context)).c).toEqual({ analytics: 0, marketing: 0, functional: 1 });
+      expect(await page.evaluate(() => [window.DSCC.has('youtube'), window.DSCC.has('google-analytics'), window.DSCC.has('meta-pixel')])).toEqual([true, false, false]);
     });
 
     test(`E5 [${layout}] withdraw marketing: _fbp is deleted, the page reloads, Meta stays off`, async ({ page, context }) => {
@@ -230,7 +245,7 @@ test.describe('blocker details', () => {
     await expect(page.locator('.dscc-placeholder')).toHaveCount(0);
     expect(await page.evaluate(() => [window.DSCC.has('youtube'), window.DSCC.has('google-analytics'), window.DSCC.has('microsoft-clarity')])).toEqual([true, false, false]);
     const cookie = await consentCookie(context);
-    expect(cookie.c).toEqual({ analytics: 0, marketing: 1 });
+    expect(cookie.c).toEqual({ analytics: 0, marketing: 0, functional: 1 });
     expect(cookie.s.youtube).toBe(1);
     expect(cookie.s['meta-pixel']).toBe(0);
     expect(net.count(GA)).toBe(0);

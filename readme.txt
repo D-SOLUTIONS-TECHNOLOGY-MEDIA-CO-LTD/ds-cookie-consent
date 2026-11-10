@@ -4,7 +4,7 @@ Tags: cookie, consent, gdpr, consent mode, privacy
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,14 @@ Settings, caches and scheduled events are removed. The consent log and the catal
 
 == Changelog ==
 
+= 1.0.1 =
+* YouTube and Google Maps moved from Marketing to the Functional category; third-party functional embeds stay blocked until the visitor allows Functional.
+* The Functional group is shown separately by default (existing sites keep their saved setting). Consent Mode mapping is unchanged.
+* New default colours taken from the D-Solutions palette, all passing WCAG AA.
+* New email alert when a deep scan finds consent violations (setting `notify_violations`, not repeated for the same list within 24 hours).
+* Deep scan: a Google Analytics / Ads / Floodlight host contacted before consent without any Google cookie (a cookieless Consent Mode ping) is now a warning, not a violation, and sends no email.
+* Accessibility: the cookie table checkboxes in the admin have screen-reader labels.
+
 = 1.0.0 =
 * First stable release.
 * Banner with two layouts (card and bar), live preview, contrast warnings, per-platform switches, Vietnamese and English texts.
@@ -91,6 +99,9 @@ Settings, caches and scheduled events are removed. The consent log and the catal
 * English source strings with a Vietnamese translation; GitHub Releases updater.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Functional category shown by default, YouTube and Google Maps moved to Functional, deep scan violation emails. Sites with saved settings keep their colours and Functional setting.
 
 = 1.0.0 =
 First stable release.

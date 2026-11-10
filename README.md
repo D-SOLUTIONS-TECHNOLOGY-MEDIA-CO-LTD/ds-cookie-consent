@@ -2,7 +2,7 @@
 
 Plugin WordPress hỏi khách truy cập về cookie, chặn script theo dõi cho tới khi khách đồng ý, ghi lại lựa chọn và giúp bạn lập danh mục cookie của site. Do **D-Solutions** phát triển để dùng chung cho mọi site khách hàng: plugin không gắn với một khách nào, mọi dữ liệu mẫu đều là bộ mẫu bạn tự bấm nạp.
 
-- Phiên bản hiện tại: 1.0.0, giấy phép GPL-2.0-or-later.
+- Phiên bản hiện tại: 1.0.1, giấy phép GPL-2.0-or-later.
 - Bản phát hành: [GitHub Releases](https://github.com/D-SOLUTIONS-TECHNOLOGY-MEDIA-CO-LTD/ds-cookie-consent/releases) (file `ds-cookie-consent.zip`), có cập nhật ngay trong trang Plugin của WordPress.
 - English: xem [phần tiếng Anh](#english) ở cuối trang.
 
@@ -27,6 +27,7 @@ Plugin WordPress hỏi khách truy cập về cookie, chặn script theo dõi ch
 
 - Hai kiểu giao diện: **Gọn** (hộp nhỏ ở góc, mặc định) và **Thanh ngang** (kèm popup ba tab). Chỉnh logo, màu, font, bo góc nút, thứ tự nút, vị trí, icon thu nhỏ, CSS tuỳ chỉnh, có xem trước trực tiếp và cảnh báo độ tương phản.
 - Công tắc bật/tắt theo từng nhà cung cấp ngay trong popup.
+- Bốn nhóm cookie: Cần thiết, **Chức năng** (video, bản đồ nhúng như YouTube và Maps; hiện riêng mặc định, tắt được ở tab Nâng cao), Phân tích, Tiếp thị. Bảng màu mặc định theo d-solutions.vn, đạt độ tương phản WCAG AA.
 - Chữ hiển thị cho khách có tiếng Việt và tiếng Anh, sửa được trong admin. Chọn ngôn ngữ theo WordPress, WPML, Polylang hoặc GTranslate.
 - Script đầu trang dưới 1,5 KB, JS dưới 20 KB gzip; HTML giống hệt nhau cho mọi khách nên dùng được với cache trang.
 
@@ -52,6 +53,7 @@ Plugin WordPress hỏi khách truy cập về cookie, chặn script theo dõi ch
 
 - **Quét máy chủ** (HTML, container GTM, header `Set-Cookie`), quét tuần tự động.
 - **Beacon** thu thập thụ động từ khách (mặc định tắt, chỉ gửi tên, không gửi giá trị).
+- **Email cảnh báo**: một thư khi quét thấy cookie mới và một thư riêng khi quét sâu phát hiện vi phạm (không lặp cùng danh sách trong 24 giờ).
 - **Báo cáo tuân thủ** với chế độ **báo cáo cookie chưa phân loại** và các nút phân loại nhanh (Cần thiết, Phân tích, Tiếp thị, Luôn giữ, Bỏ qua).
 - **Quét sâu (deep scan)** bằng trình duyệt headless chạy ngoài WordPress (Docker, n8n, cron), gửi báo cáo về REST endpoint bằng Application Password.
 

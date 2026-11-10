@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-08T03:47:27+00:00\n"
+"POT-Creation-Date: 2026-11-10T16:12:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ds-cookie-consent\n"
@@ -200,7 +200,13 @@ msgstr ""
 msgid "No cookies yet. Tick a platform on the Platforms tab or add a cookie manually below."
 msgstr ""
 
-#: src/Admin/CookieListTable.php:187
+#. translators: %s: cookie name
+#: src/Admin/CookieListTable.php:160
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#: src/Admin/CookieListTable.php:191
 msgid "Quick edit"
 msgstr ""
 
@@ -592,6 +598,48 @@ msgstr ""
 msgid "Adds exclusions for the plugin's scripts, blocked hosts and blocked inline scripts (data-dscc marker) from Minify, Delay and Defer JS."
 msgstr ""
 
+#. translators: 1: site name, 2: number of violations
+#: src/Scanner/DeepScanAlertMailer.php:64
+#, php-format
+msgid "[%1$s] Cookie Consent: deep scan found %2$d consent violation(s)"
+msgstr ""
+
+#. translators: 1: site name, 2: scan date and time
+#: src/Scanner/DeepScanAlertMailer.php:114
+#, php-format
+msgid "The deep scan of %1$s (%2$s) found cookies, storage or requests of analytics or marketing services that should not be there."
+msgstr ""
+
+#: src/Scanner/DeepScanAlertMailer.php:119
+msgid "The scan is conclusive: it loaded pages and found the banner and the plugin."
+msgstr ""
+
+#: src/Scanner/DeepScanAlertMailer.php:120
+msgid "The scan is not conclusive (for example it did not find the banner or the plugin), so treat the result with care."
+msgstr ""
+
+#: src/Scanner/DeepScanAlertMailer.php:124
+#: templates/admin/compliance-deep-scan.php:23
+msgid "When the visitor has not chosen"
+msgstr ""
+
+#: src/Scanner/DeepScanAlertMailer.php:125
+#: templates/admin/compliance-deep-scan.php:24
+msgid "After the visitor rejected"
+msgstr ""
+
+#. translators: %d: number of violations not listed
+#. translators: %d: number of cookies not listed
+#: src/Scanner/DeepScanAlertMailer.php:146
+#: src/Scanner/ScanNotifier.php:85
+#, php-format
+msgid "... and %d more."
+msgstr ""
+
+#: src/Scanner/DeepScanAlertMailer.php:161
+msgid "unknown platform"
+msgstr ""
+
 #: src/Scanner/DeepScanEndpoint.php:36
 msgid "The report exceeds 2 MB."
 msgstr ""
@@ -628,12 +676,6 @@ msgstr ""
 #: src/Scanner/ScanNotifier.php:77
 #, php-format
 msgid "The cookie scan on %1$s just found new cookies. Cookies waiting for classification: %2$d. Unclassified cookies are blocked like the Marketing category and are hidden from visitors until you handle them."
-msgstr ""
-
-#. translators: %d: number of cookies not listed
-#: src/Scanner/ScanNotifier.php:85
-#, php-format
-msgid "... and %d more."
 msgstr ""
 
 #. translators: %s: platform names
@@ -893,14 +935,6 @@ msgstr ""
 msgid "the page has no DS Cookie Consent (window.DSCC)"
 msgstr ""
 
-#: templates/admin/compliance-deep-scan.php:23
-msgid "When the visitor has not chosen"
-msgstr ""
-
-#: templates/admin/compliance-deep-scan.php:24
-msgid "After the visitor rejected"
-msgstr ""
-
 #: templates/admin/compliance-deep-scan.php:28
 msgid "Latest deep scan (headless browser)"
 msgstr ""
@@ -945,6 +979,10 @@ msgstr ""
 
 #: templates/admin/compliance-deep-scan.php:86
 msgid "third-party servers"
+msgstr ""
+
+#: templates/admin/compliance-deep-scan.php:105
+msgid "Warning: before consent the browser still contacted these Google servers, but no Google cookie was set. This is usually a cookieless Google Consent Mode ping and is not counted as a violation. To avoid any contact before consent, choose \"Block GTM too\" in the Google Tag Manager mode on the Blocking tab."
 msgstr ""
 
 #: templates/admin/dashboard.php:24
@@ -1391,7 +1429,7 @@ msgid "Functional category"
 msgstr ""
 
 #: templates/admin/tab-advanced.php:151
-msgid "Show the Functional cookie category separately (merged into Necessary by default)"
+msgid "Show the Functional cookie category separately (turn off to merge it into Necessary)"
 msgstr ""
 
 #: templates/admin/tab-advanced.php:155
@@ -1442,7 +1480,7 @@ msgstr ""
 #: templates/admin/tab-appearance.php:219
 #: templates/admin/tab-blocking.php:130
 #: templates/admin/tab-content.php:80
-#: templates/admin/tab-scanner.php:113
+#: templates/admin/tab-scanner.php:119
 msgid "Save changes"
 msgstr ""
 
@@ -2187,11 +2225,23 @@ msgid "At most one email per day."
 msgstr ""
 
 #: templates/admin/tab-scanner.php:96
+msgid "Email on deep scan violations"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:98
+msgid "Send an email when a deep scan finds consent violations"
+msgstr ""
+
+#: templates/admin/tab-scanner.php:99
+msgid "The same list is not sent again within a day; a different list is sent at once."
+msgstr ""
+
+#: templates/admin/tab-scanner.php:102
 msgid "Recipient address"
 msgstr ""
 
 #. translators: %s: email address that is used now
-#: templates/admin/tab-scanner.php:109
+#: templates/admin/tab-scanner.php:115
 #, php-format
 msgid "Leave empty to use the site admin email. Currently sending to: %s"
 msgstr ""

@@ -87,10 +87,12 @@ for (const layout of LAYOUTS) {
       // Allow everything from the reopened dialog, then switch everything off again.
       const analytics = page.locator('#dscc input[data-dscc-category="analytics"]');
       const marketing = page.locator('#dscc input[data-dscc-category="marketing"]');
+      const functional = page.locator('#dscc input[data-dscc-category="functional"]');
       const save = page.locator('#dscc [data-dscc-action="save"]:visible');
       await ui(page, layout).widget.click();
       await analytics.evaluate((el) => el.click());
       await marketing.evaluate((el) => el.click());
+      await functional.evaluate((el) => el.click());
       await save.click();
       rows = await waitForLog(2);
       expect(rows[1]).toMatchObject({ choice: 'accept_all', src: 'widget' });
@@ -98,6 +100,7 @@ for (const layout of LAYOUTS) {
       await ui(page, layout).widget.click();
       await analytics.evaluate((el) => el.click());
       await marketing.evaluate((el) => el.click());
+      await functional.evaluate((el) => el.click());
       await save.click();
       rows = await waitForLog(3);
       expect(rows[2]).toMatchObject({ choice: 'withdraw', analytics: 0, marketing: 0, src: 'widget' });

@@ -92,4 +92,25 @@ $phases  = array(
 			</ul>
 		<?php endif; ?>
 	<?php endforeach; ?>
+	<?php
+	$pings = array();
+	foreach ( $deep['warnings'] as $phase_list ) {
+		foreach ( $phase_list as $item ) {
+			$pings[ $item['name'] ] = $item;
+		}
+	}
+	?>
+	<?php if ( $pings ) : ?>
+		<div class="notice notice-info inline" id="dscc-deep-warnings">
+			<p><?php esc_html_e( 'Warning: before consent the browser still contacted these Google servers, but no Google cookie was set. This is usually a cookieless Google Consent Mode ping and is not counted as a violation. To avoid any contact before consent, choose "Block GTM too" in the Google Tag Manager mode on the Blocking tab.', 'ds-cookie-consent' ); ?></p>
+			<ul class="dscc-compliance__list">
+				<?php foreach ( $pings as $item ) : ?>
+					<li data-dscc-deep-warning="<?php echo esc_attr( $item['name'] ); ?>">
+						<code><?php echo esc_html( $item['name'] ); ?></code> -
+						<?php echo esc_html( isset( $labels[ $item['category'] ] ) ? $labels[ $item['category'] ] : $item['category'] ); ?>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+	<?php endif; ?>
 </div>

@@ -23,9 +23,9 @@ class CssVarsTest extends UnitTestCase {
 		$a['color_bar_bg']  = '#12';
 		$a['color_modal_bg'] = '#ABCDEF';
 		$map                = CssVars::map( $a, 'card' );
-		$this->assertSame( '#005ea3', $map['--dscc-primary'] );
-		$this->assertSame( '#1e3a5f', $map['--dscc-text'] );
-		$this->assertSame( '#f1f5f9', $map['--dscc-bar-bg'] );
+		$this->assertSame( '#1e3a8a', $map['--dscc-primary'] );
+		$this->assertSame( '#1f2937', $map['--dscc-text'] );
+		$this->assertSame( '#f9fafb', $map['--dscc-bar-bg'] );
 		$this->assertSame( '#abcdef', $map['--dscc-modal-bg'] );
 		$this->assertStringNotContainsString( '<', CssVars::style( $a, 'card' ) );
 	}

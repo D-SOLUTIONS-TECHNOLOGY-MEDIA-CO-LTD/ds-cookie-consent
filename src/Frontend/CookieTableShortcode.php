@@ -41,7 +41,7 @@ final class CookieTableShortcode {
 		);
 		$lang    = in_array( $atts['lang'], array( 'vi', 'en' ), true ) ? $atts['lang'] : LanguageResolver::current();
 		$texts   = Settings::texts( $lang );
-		$show_fn = ! empty( Settings::get( 'advanced', 'show_functional', false ) );
+		$show_fn = ! empty( Settings::get( 'advanced', 'show_functional', true ) );
 		$columns = array_values( array_intersect( self::COLUMNS, array_map( 'trim', explode( ',', strtolower( (string) $atts['columns'] ) ) ) ) );
 		if ( ! $columns ) {
 			$columns = self::COLUMNS;

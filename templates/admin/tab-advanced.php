@@ -148,7 +148,7 @@ $bump = add_query_arg( 'dscc_bump_nonce', wp_create_nonce( 'dscc_bump_version' )
 		sprintf( __( 'Leave empty for every region. One ISO 3166 code per line (for example VN, US-CA). At most %1$d regions and %2$d characters in total (the limit of the head script); the excess is dropped.', 'ds-cookie-consent' ), SettingsSchema::MAX_REGIONS, SettingsSchema::MAX_REGION_CHARS )
 	);
 	F::row( __( 'URL passthrough', 'ds-cookie-consent' ), 'dscc-advanced-url_passthrough', F::checkbox( $g, 'url_passthrough', $s['url_passthrough'], __( 'Keep advertising information in the URL while there is no cookie consent', 'ds-cookie-consent' ) ) );
-	F::row( __( 'Functional category', 'ds-cookie-consent' ), 'dscc-advanced-show_functional', F::checkbox( $g, 'show_functional', $s['show_functional'], __( 'Show the Functional cookie category separately (merged into Necessary by default)', 'ds-cookie-consent' ) ) );
+	F::row( __( 'Functional category', 'ds-cookie-consent' ), 'dscc-advanced-show_functional', F::checkbox( $g, 'show_functional', $s['show_functional'], __( 'Show the Functional cookie category separately (turn off to merge it into Necessary)', 'ds-cookie-consent' ) ) );
 	?>
 </table>
 

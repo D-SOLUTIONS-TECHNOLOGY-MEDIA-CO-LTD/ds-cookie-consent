@@ -1,5 +1,5 @@
 {
-  "meta": { "version": "2026.11.08.1", "generated_at": "2026-11-08T09:00:00Z" },
+  "meta": { "version": "2026.11.08.2", "generated_at": "2026-11-08T16:00:00Z" },
   "services": [
     {
       "slug": "ds-cookie-consent", "name": "DS Cookie Consent", "category": "necessary",
@@ -93,7 +93,7 @@
       "cookies": []
     },
     {
-      "slug": "youtube", "name": "YouTube (video nhúng)", "category": "marketing",
+      "slug": "youtube", "name": "YouTube (video nhúng)", "category": "functional",
       "provider_company": "Google LLC", "privacy_url": "https://policies.google.com/privacy", "country": "US", "is_third_party": true,
       "script_patterns": {
         "hosts": ["youtube.com", "youtube-nocookie.com"],
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "slug": "google-maps", "name": "Google Maps", "category": "marketing",
+      "slug": "google-maps", "name": "Google Maps", "category": "functional",
       "provider_company": "Google LLC", "privacy_url": "https://policies.google.com/privacy", "country": "US", "is_third_party": true,
       "script_patterns": {
         "hosts": ["maps.googleapis.com", "maps.gstatic.com"],

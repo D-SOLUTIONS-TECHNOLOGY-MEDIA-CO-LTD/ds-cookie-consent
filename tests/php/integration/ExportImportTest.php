@@ -87,7 +87,7 @@ class Dscc_Export_Import_Test extends WP_UnitTestCase {
 		Settings::patch_group(
 			'appearance',
 			array(
-				'color_primary' => '#005ea3',
+				'color_primary' => '#1e3a8a',
 				'layout'        => 'card',
 			)
 		);
@@ -294,7 +294,7 @@ class Dscc_Export_Import_Test extends WP_UnitTestCase {
 			)
 		);
 		$plan = ImportPlanner::apply( ImportReader::read( $json ) );
-		$this->assertSame( '#005ea3', Settings::get( 'appearance', 'color_primary' ) );
+		$this->assertSame( '#1e3a8a', Settings::get( 'appearance', 'color_primary' ) );
 		$this->assertSame( 'card', Settings::get( 'appearance', 'layout' ) );
 		$this->assertSame( 'dscc_consent', Settings::get( 'advanced', 'cookie_name' ) );
 		$service = ServiceRepository::find_by_slug( 'littled-xss' );

@@ -33,7 +33,7 @@ Kết quả:
 - Cookie WordPress/WooCommerce/PHP và khoá trong danh sách giữ nguyên: Cần thiết.
 - Cookie còn lại: *Mới* (chưa phân loại). Hàng chờ cookie mới do beacon và quét sâu có trần 300 dòng; quét máy chủ không bị trần này.
 
-**Email cảnh báo** (`notify_enabled`): gửi khi một lượt quét thấy cookie mới, tối đa một email mỗi ngày, tới `notify_email` hoặc email quản trị site.
+**Email cảnh báo** (`notify_enabled`): gửi khi một lượt quét thấy cookie mới, tối đa một email mỗi ngày, tới `notify_email` hoặc email quản trị site. Email về vi phạm của quét sâu là một thư riêng, xem [Email cảnh báo vi phạm](#email-cảnh-báo-vi-phạm).
 
 ## Beacon: thu thập từ khách
 
@@ -121,8 +121,18 @@ Endpoint trả: `401` khi chưa xác thực, `403` khi thiếu quyền, `413` kh
 
 **Vi phạm** = cookie, khoá lưu trữ hoặc host dịch vụ thuộc nhóm Phân tích/Tiếp thị xuất hiện ở `before_choice` hoặc `after_reject`. Host nhà cung cấp được so theo `script_patterns.hosts` của danh mục (host hoặc subdomain), nên chỉ cần liên hệ tới `connect.facebook.net` cũng là vi phạm nếu nhà cung cấp thuộc nhóm đó. Danh sách xuất hiện ở khối cảnh báo; khi bộ chặn chạy đúng thì danh sách trống.
 
+**Cảnh báo ping không cookie của Google Consent Mode**: ở chế độ GTM + Consent Mode, thẻ Google vẫn gọi máy chủ của mình trước khi khách đồng ý nhưng không đặt cookie. Vì vậy host của Google Analytics, Google Ads hoặc Floodlight mà **không** đi kèm cookie hay khoá lưu trữ nào của cùng dịch vụ trong giai đoạn đó được tách ra thành *cảnh báo*: hiện ở khung thông tin trên thẻ *Quét sâu gần nhất*, không tạo cảnh báo rò rỉ, không gửi email và không làm mất dòng "không có vi phạm". Host Google đi kèm cookie Google (ví dụ `_ga`), hoặc host của nền tảng khác như `connect.facebook.net`, vẫn là vi phạm. Muốn không còn kết nối nào trước khi khách đồng ý, chọn *Chặn cả GTM* ở tab Chặn script. Đổi danh sách dịch vụ bằng bộ lọc [`dscc_consent_mode_ping_services`](developer-hooks.md#dscc_consent_mode_ping_services); phản hồi của endpoint có thêm `warnings` (số mục theo giai đoạn).
+
 Lượt quét **chưa kết luận được** khi không tải được trang nào, không thấy nút Từ chối/Đồng ý trên banner, hoặc trang không có `window.DSCC`. Thẻ *Quét sâu gần nhất* khi đó báo lý do thay vì dòng xanh "không có vi phạm", và cảnh báo quét sâu cũ **được giữ nguyên**. Báo cáo hợp lệ mới thay thế cảnh báo quét sâu của lần trước.
 
-Nền tảng mới do lượt quét tạo (`platforms_created`) được liệt kê kèm liên kết tới tab Nền tảng. Nền tảng Cần thiết và Chức năng do quét tạo có công tắc chặn tắt; Maps và YouTube thuộc Tiếp thị nên bị chặn như mọi nền tảng Tiếp thị.
+Nền tảng mới do lượt quét tạo (`platforms_created`) được liệt kê kèm liên kết tới tab Nền tảng. Nền tảng Cần thiết và nền tảng Chức năng của chính site có công tắc chặn tắt. YouTube và Maps thuộc nhóm Chức năng và là bên thứ ba nên vẫn bị chặn tới khi khách cho phép nhóm Chức năng; việc chúng xuất hiện trước khi khách chọn không tính là vi phạm (chỉ nhóm Phân tích và Tiếp thị tính).
+
+### Email cảnh báo vi phạm
+
+Sau khi lưu một báo cáo quét sâu có ít nhất một vi phạm, plugin gửi một email văn bản thuần tới `notify_email` (trống = email quản trị site). Nội dung gồm tên site, thời điểm quét, kết quả đã kết luận hay chưa, danh sách theo từng giai đoạn (chưa chọn, sau khi từ chối) với tên, kiểu lưu trữ, nhóm và nền tảng, tối đa 20 dòng rồi "... and N more", và liên kết tới khối cảnh báo ở trang Tổng quan.
+
+- Bật/tắt bằng `notify_violations` (mặc định bật), ngay dưới ô email cookie mới ở tab Quét.
+- Cùng một danh sách vi phạm không được gửi lại trong 24 giờ; danh sách khác đi ngay. Một lượt quét đã kết luận và không còn vi phạm sẽ xoá dấu vết đó, nên vi phạm quay lại sẽ được báo lại.
+- Không có vi phạm thì không gửi thư. Ping không cookie của Google Consent Mode chỉ là cảnh báo nên không gửi thư.
 
 Báo cáo `after_reject` phản ánh trạng thái cookie **tại thời điểm đó**: cookie đã có từ giai đoạn một mà plugin chưa xoá vẫn hiện, đúng với mục đích kiểm tra tuân thủ.

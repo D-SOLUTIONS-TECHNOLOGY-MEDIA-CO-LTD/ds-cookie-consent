@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.08.1",
-  "generated_at": "2026-11-08T09:00:00Z",
-  "sha256": "c572557fab9caed80911bd9f1c9ad7fe74b4b57f4473f3ff7c339753d5ffbf77",
+  "version": "2026.11.08.2",
+  "generated_at": "2026-11-08T16:00:00Z",
+  "sha256": "68449b524c483164220cc90ddb575f7b43b2c5436ee6756af23ef13cfa043d18",
   "services": [
     {
       "slug": "cloudflare",
@@ -370,7 +370,7 @@
     {
       "slug": "google-maps",
       "name": "Google Maps",
-      "category": "marketing",
+      "category": "functional",
       "provider_company": "Google LLC",
       "privacy_url": "https://policies.google.com/privacy",
       "country": "US",
@@ -1586,7 +1586,7 @@
     {
       "slug": "youtube",
       "name": "YouTube (video nhúng)",
-      "category": "marketing",
+      "category": "functional",
       "provider_company": "Google LLC",
       "privacy_url": "https://policies.google.com/privacy",
       "country": "US",

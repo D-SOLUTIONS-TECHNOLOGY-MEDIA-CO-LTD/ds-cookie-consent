@@ -108,13 +108,46 @@ class Dscc_Blocker_Test extends WP_UnitTestCase {
 		PlatformManager::enable( 'google-analytics' );
 		PlatformManager::enable( 'google-site-kit' );
 		ServiceRepository::set_block( 'google-site-kit', true );
-		$this->assertSame( array( 'google-analytics' ), $this->slugs( ScriptRules::active()['rules'] ), 'functional is merged into necessary by default' );
+		$this->assertContains( 'google-site-kit', $this->slugs( ScriptRules::active()['rules'] ), 'the Functional group is visible by default, so its services are blocked until it is allowed' );
 
-		Settings::save_group( 'advanced', array_merge( Settings::group( 'advanced' ), array( 'show_functional' => true ) ) );
-		$this->assertContains( 'google-site-kit', $this->slugs( ScriptRules::active()['rules'] ) );
+		Settings::save_group( 'advanced', array_merge( Settings::group( 'advanced' ), array( 'show_functional' => false ) ) );
+		$this->assertSame( array( 'google-analytics' ), $this->slugs( ScriptRules::active()['rules'] ), 'functional is merged into necessary when the group is turned off' );
 
 		PlatformManager::disable( 'google-analytics' );
 		$this->assertNotContains( 'google-analytics', $this->slugs( ScriptRules::active()['rules'] ) );
+	}
+
+	public function test_youtube_is_blocked_under_the_functional_category_and_its_placeholder_asks_for_it() {
+		PlatformManager::enable( 'youtube' );
+		$rules = ScriptRules::active()['rules'];
+		$this->assertSame( array( 'youtube' ), $this->slugs( $rules ) );
+		$this->assertSame( 'functional', $rules[0]['c'] );
+
+		$this->go_to( home_url( '/' ) );
+		OutputBuffer::start();
+		ob_end_clean();
+		$page = '<!doctype html><html><body><iframe src="https://www.youtube.com/embed/LittleD000"></iframe></body></html>';
+		$out  = OutputBuffer::callback( $page, PHP_OUTPUT_HANDLER_START | PHP_OUTPUT_HANDLER_FINAL );
+		$this->assertStringContainsString( 'data-dscc-category="functional"', $out );
+		$this->assertStringContainsString( 'data-dscc-enable-cat="functional"', $out );
+
+		Settings::save_group( 'advanced', array_merge( Settings::group( 'advanced' ), array( 'show_functional' => false ) ) );
+		$this->assertSame( array(), ScriptRules::active()['rules'], 'with the Functional group turned off YouTube is no longer blocked' );
+	}
+
+	public function test_the_tag_manager_never_gets_a_switch_of_its_own_in_the_popup() {
+		PlatformManager::enable( 'google-tag-manager' );
+		PlatformManager::enable( 'youtube' );
+		$by_slug = array_column( FrontendCatalogCache::services(), null, 'slug' );
+		$this->assertFalse( $by_slug['google-tag-manager']['blockable'] );
+		$this->assertTrue( $by_slug['youtube']['blockable'] );
+	}
+
+	public function test_only_services_with_a_switch_are_tracked_one_by_one_in_the_client_data() {
+		PlatformManager::enable( 'google-tag-manager' );
+		PlatformManager::enable( 'youtube' );
+		$cats = array_column( ClientData::build( ViewModel::build() )['cats'], null, 'key' );
+		$this->assertSame( array( 'youtube' ), $cats['functional']['services'], 'the tag manager follows the analytics/marketing choice, not the Functional group' );
 	}
 
 	public function test_rules_live_in_one_autoloaded_option_and_reading_them_costs_no_query() {

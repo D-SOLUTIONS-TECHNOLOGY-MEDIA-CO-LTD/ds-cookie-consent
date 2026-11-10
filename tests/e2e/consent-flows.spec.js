@@ -44,7 +44,7 @@ for (const layout of ['card', 'bar']) {
       expect((await consentEvents(page)).pop()).toEqual({ analytics: false, marketing: false });
 
       const cookie = await consentCookie(context);
-      expect(cookie.c).toEqual({ analytics: 0, marketing: 0 });
+      expect(cookie.c).toEqual({ analytics: 0, marketing: 0, functional: 0 });
 
       for (const p of ['/', '/?p=1', '/?page_id=2']) {
         await page.goto(p);
@@ -69,7 +69,7 @@ for (const layout of ['card', 'bar']) {
       expect((await consentEvents(page)).pop()).toEqual({ analytics: true, marketing: true });
 
       const cookie = await consentCookie(context);
-      expect(cookie.c).toEqual({ analytics: 1, marketing: 1 });
+      expect(cookie.c).toEqual({ analytics: 1, marketing: 1, functional: 1 });
       expect(cookie.v).toBe('2026-11');
       expect(cookie.id).toMatch(/^[a-f0-9-]{20,}$/);
 

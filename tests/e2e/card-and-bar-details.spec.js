@@ -38,7 +38,7 @@ test.describe('E13 card flow', () => {
     await expect(u.widget).toBeVisible();
     let rows = await waitForLog(1);
     expect(rows[0]).toMatchObject({ choice: 'custom', analytics: 1, marketing: 0, src: 'prefs' });
-    expect((await consentCookie(context)).c).toEqual({ analytics: 1, marketing: 0 });
+    expect((await consentCookie(context)).c).toEqual({ analytics: 1, marketing: 0, functional: 0 });
 
     // Widget reopens the card at the prefs view with the saved state
     await u.widget.click();

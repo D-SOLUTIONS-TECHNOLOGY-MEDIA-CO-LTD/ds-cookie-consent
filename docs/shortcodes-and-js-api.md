@@ -32,7 +32,7 @@ In bảng cookie cho trang Chính sách Cookie, lấy từ danh mục đã xác 
 
 | Thuộc tính | Mặc định | Giá trị |
 |---|---|---|
-| `category` | trống (mọi nhóm) | `necessary`, `functional`, `analytics`, `marketing`; nhiều nhóm cách nhau bằng dấu phẩy. Khi nhóm Chức năng chưa được bật riêng, `functional` được gộp vào `necessary` |
+| `category` | trống (mọi nhóm) | `necessary`, `functional`, `analytics`, `marketing`; nhiều nhóm cách nhau bằng dấu phẩy. Khi nhóm Chức năng bị tắt riêng (`show_functional`), `functional` được gộp vào `necessary` |
 | `columns` | `name,service,purpose,duration,applies` | Chọn và sắp lại các cột; giá trị lạ bị bỏ, rỗng thì dùng đủ năm cột |
 | `lang` | ngôn ngữ hiện tại | `vi` hoặc `en` |
 | `heading` | `1` | `0` để ẩn tiêu đề nhóm |
@@ -106,7 +106,7 @@ Script đầu trang chạy trước mọi thẻ (giới hạn 1,5 KB) nên Conse
 |---|---|
 | `analytics_storage` | `granted` nếu khách cho phép Phân tích, ngược lại `denied` |
 | `ad_storage`, `ad_user_data`, `ad_personalization` | `granted` nếu khách cho phép Tiếp thị, ngược lại `denied` |
-| `functionality_storage`, `security_storage` | luôn `granted` |
+| `functionality_storage`, `security_storage` | luôn `granted` (nhóm Chức năng của plugin không đổi các giá trị này; `personalization_storage` không được plugin đặt) |
 | `wait_for_update` | `500` (ms) |
 | `region` | danh sách `consent_regions` nếu có; trống = áp dụng mọi vùng |
 

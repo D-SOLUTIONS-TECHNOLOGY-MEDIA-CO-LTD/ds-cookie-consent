@@ -41,11 +41,19 @@ class Dscc_Rendering_Test extends WP_UnitTestCase {
 		$this->assertSame( 'accept_first', $bar['order'] );
 	}
 
+	public function test_the_functional_category_is_a_separate_group_by_default() {
+		$vm = ViewModel::build();
+		$this->assertSame( array( 'necessary', 'functional', 'analytics', 'marketing' ), array_column( $vm['categories'], 'key' ) );
+		Settings::save_group( 'advanced', array_merge( Settings::group( 'advanced' ), array( 'show_functional' => false ) ) );
+		$off = ViewModel::build();
+		$this->assertSame( array( 'necessary', 'analytics', 'marketing' ), array_column( $off['categories'], 'key' ) );
+	}
+
 	public function test_css_variables_are_derived_from_settings() {
 		$vm = ViewModel::build();
-		$this->assertStringContainsString( '--dscc-primary:#005ea3', $vm['style'] );
-		$this->assertStringContainsString( '--dscc-primary-hover:#00538f', $vm['style'] );
-		$this->assertStringContainsString( '--dscc-reject-bg:#e0ecf4', $vm['style'] );
+		$this->assertStringContainsString( '--dscc-primary:#1e3a8a', $vm['style'] );
+		$this->assertStringContainsString( '--dscc-primary-hover:#1a3379', $vm['style'] );
+		$this->assertStringContainsString( '--dscc-reject-bg:#e4e7f1', $vm['style'] );
 	}
 
 	public function test_services_from_catalog_render_toggles_and_external_policy_link() {

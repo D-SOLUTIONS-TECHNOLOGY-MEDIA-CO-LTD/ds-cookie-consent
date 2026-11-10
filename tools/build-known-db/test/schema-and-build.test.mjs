@@ -39,7 +39,7 @@ test('coverage: required services are present with expected categories', () => {
   const bySlug = Object.fromEntries(db.services.map((s) => [s.slug, s]));
   const required = {
     'ds-cookie-consent': 'necessary', 'google-analytics': 'analytics', 'google-ads': 'marketing', 'google-floodlight': 'marketing',
-    'google-tag-manager': 'functional', youtube: 'marketing', 'google-maps': 'marketing', 'google-recaptcha': 'necessary',
+    'google-tag-manager': 'functional', youtube: 'functional', 'google-maps': 'functional', 'google-recaptcha': 'necessary',
     cloudflare: 'necessary', 'cloudflare-turnstile': 'necessary', 'meta-pixel': 'marketing', 'tiktok-pixel': 'marketing',
     'microsoft-clarity': 'analytics', 'microsoft-uet': 'marketing', 'yandex-metrica': 'analytics', hotjar: 'analytics',
     'linkedin-insight': 'marketing', zalo: 'marketing', 'pancake-chat': 'functional', intercom: 'analytics',

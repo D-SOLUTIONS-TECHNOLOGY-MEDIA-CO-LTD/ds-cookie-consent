@@ -72,8 +72,8 @@ final class Placeholder {
 	 * @return string
 	 */
 	private static function color() {
-		$color = (string) Settings::get( 'appearance', 'color_primary', '#005ea3' );
-		return preg_match( '/^#[0-9a-f]{3,8}$/i', $color ) ? $color : '#005ea3';
+		$color = (string) Settings::get( 'appearance', 'color_primary', '#1e3a8a' );
+		return preg_match( '/^#[0-9a-f]{3,8}$/i', $color ) ? $color : '#1e3a8a';
 	}
 
 	/**

@@ -7,10 +7,12 @@ Plugin giữ một **danh mục** gồm *nền tảng* (còn gọi là nhà cung
 | Nhóm | Hiển thị cho khách | Chặn trước khi đồng ý |
 |---|---|---|
 | Cần thiết | Luôn bật, khách không tắt được | Không bao giờ |
-| Chức năng | Chỉ hiện riêng khi bật *Hiện nhóm Chức năng* ở tab Nâng cao; không thì gộp vào Cần thiết | Mặc định không chặn |
+| Chức năng | Có công tắc riêng (mặc định bật; tắt *Hiện nhóm Chức năng* ở tab Nâng cao thì gộp vào Cần thiết). Gồm video nhúng như YouTube và bản đồ Google Maps | Nền tảng bên thứ ba (YouTube, Maps...) bị chặn tới khi khách cho phép nhóm này; script của chính site (Elementor, Contact Form 7...) không bị chặn |
 | Phân tích | Có công tắc | Có (mặc định) |
 | Tiếp thị | Có công tắc | Có (mặc định) |
 | Chưa phân loại | **Không bao giờ** hiện cho khách | Xem phần cookie chưa phân loại ở [script-blocking.md](script-blocking.md#cookie-chưa-phân-loại) |
+
+Site đã lưu cài đặt trước phiên bản 1.0.1 giữ nguyên giá trị `show_functional` đã lưu (thường là tắt, tức nhóm Chức năng vẫn gộp vào Cần thiết); muốn dùng nhóm riêng, bật lại ở tab Nâng cao. YouTube và Google Maps nay thuộc nhóm Chức năng thay vì Tiếp thị.
 
 Nhóm của một cookie luôn là nhóm của nền tảng chứa nó. Đổi nhóm một cookie của nhà cung cấp sẽ đổi cả nhà cung cấp; cookie không có nhà cung cấp được gán vào nền tảng riêng của site ở nhóm đích.
 

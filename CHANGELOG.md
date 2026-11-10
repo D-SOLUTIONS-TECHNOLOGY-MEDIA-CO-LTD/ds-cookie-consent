@@ -2,6 +2,23 @@
 
 Định dạng theo [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), phiên bản theo [Semantic Versioning](https://semver.org/). Workflow phát hành lấy phần của từng phiên bản (từ dòng `## x.y.z` tới dòng `##` kế tiếp) làm ghi chú của GitHub Release, nên giữ đúng dạng tiêu đề này.
 
+## 1.0.1
+
+### Changed
+
+- **YouTube và Google Maps** chuyển từ nhóm Tiếp thị sang nhóm **Chức năng** (cơ sở dữ liệu cookie đã biết `2026.11.08.2`, bộ mẫu D-Solutions đã dựng lại). Nền tảng Chức năng của bên thứ ba vẫn bị chặn tới khi khách cho phép nhóm Chức năng; script của chính site (Elementor, Contact Form 7...) không bị chặn.
+- **Nhóm Chức năng hiện riêng theo mặc định** (`show_functional` mặc định bật): popup ở cả hai kiểu giao diện có thêm nhóm và công tắc, cookie lựa chọn có khoá `functional`, bảng `[dscc_cookie_table]` có bảng thứ tư, khung "Bật cookie Chức năng" cho video và bản đồ bị chặn. Mô tả mặc định: "Video, bản đồ nhúng và các tiện ích giúp trang hoạt động đầy đủ hơn." Site đã lưu cài đặt giữ giá trị `show_functional` của mình. Consent Mode không đổi: `functionality_storage` và `security_storage` vẫn luôn `granted`.
+- **Bảng màu mặc định theo d-solutions.vn**: màu chính `#1e3a8a`, chữ `#1f2937`, nền banner `#f9fafb`, nền popup `#fafaf7`; màu hover và nền nút Từ chối tự tính từ màu chính. Mọi cặp đều đạt WCAG AA. Site đã lưu màu giữ nguyên.
+
+### Added
+
+- **Email cảnh báo vi phạm của quét sâu**: thư văn bản thuần gửi khi báo cáo quét sâu có ít nhất một vi phạm, tới cùng người nhận với email cookie mới. Cùng một danh sách không gửi lại trong 24 giờ, danh sách khác gửi ngay. Bật/tắt bằng cài đặt `scanner.notify_violations` (mặc định bật) ở tab Quét.
+- **Cảnh báo ping không cookie của Google Consent Mode** trong quét sâu: khi trình duyệt kết nối tới máy chủ Google Analytics, Google Ads hoặc Floodlight trước khi khách đồng ý (hoặc sau khi từ chối) mà không có cookie hay khoá lưu trữ nào của dịch vụ đó, mục này hiện ở khung cảnh báo trên thẻ quét sâu chứ không tính là vi phạm: không tạo cảnh báo rò rỉ, không gửi email. Máy chủ Google đi kèm cookie Google, hoặc máy chủ của nền tảng khác, vẫn là vi phạm. Đổi danh sách dịch vụ bằng bộ lọc `dscc_consent_mode_ping_services`. Phản hồi của `POST /dscc/v1/scan-result` có thêm `warnings` (số mục theo giai đoạn).
+
+### Fixed
+
+- Ô chọn trong bảng Cookie ở admin có nhãn cho trình đọc màn hình (axe `label`).
+
 ## 1.0.0
 
 Bản phát hành ổn định đầu tiên.

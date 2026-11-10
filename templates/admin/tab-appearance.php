@@ -62,12 +62,12 @@ $g = 'appearance';
 					)
 				)
 			);
-			F::row( __( 'Primary colour', 'ds-cookie-consent' ), 'dscc-appearance-color_primary', F::color( $g, 'color_primary', $s['color_primary'], '#005ea3' ), __( 'Accept button, active toggles, links, the selected tab.', 'ds-cookie-consent' ) );
+			F::row( __( 'Primary colour', 'ds-cookie-consent' ), 'dscc-appearance-color_primary', F::color( $g, 'color_primary', $s['color_primary'], '#1e3a8a' ), __( 'Accept button, active toggles, links, the selected tab.', 'ds-cookie-consent' ) );
 			F::row( __( 'Primary colour on hover', 'ds-cookie-consent' ), 'dscc-appearance-color_primary_hover', F::color( $g, 'color_primary_hover', $s['color_primary_hover'] ), __( 'Leave empty to compute it (12% darker).', 'ds-cookie-consent' ) );
-			F::row( __( 'Banner text colour', 'ds-cookie-consent' ), 'dscc-appearance-color_text', F::color( $g, 'color_text', $s['color_text'], '#1e3a5f' ) );
-			F::row( __( 'Banner background', 'ds-cookie-consent' ), 'dscc-appearance-color_bar_bg', F::color( $g, 'color_bar_bg', $s['color_bar_bg'], '#f1f5f9' ) );
+			F::row( __( 'Banner text colour', 'ds-cookie-consent' ), 'dscc-appearance-color_text', F::color( $g, 'color_text', $s['color_text'], '#1f2937' ) );
+			F::row( __( 'Banner background', 'ds-cookie-consent' ), 'dscc-appearance-color_bar_bg', F::color( $g, 'color_bar_bg', $s['color_bar_bg'], '#f9fafb' ) );
 			F::row( __( 'Reject button background', 'ds-cookie-consent' ), 'dscc-appearance-color_reject_bg', F::color( $g, 'color_reject_bg', $s['color_reject_bg'] ), __( 'Leave empty to compute it from the primary colour (12% mixed with white).', 'ds-cookie-consent' ) );
-			F::row( __( 'Popup background', 'ds-cookie-consent' ), 'dscc-appearance-color_modal_bg', F::color( $g, 'color_modal_bg', $s['color_modal_bg'], '#f6f6f6' ) );
+			F::row( __( 'Popup background', 'ds-cookie-consent' ), 'dscc-appearance-color_modal_bg', F::color( $g, 'color_modal_bg', $s['color_modal_bg'], '#fafaf7' ) );
 			F::row( __( 'Font', 'ds-cookie-consent' ), 'dscc-appearance-font', F::input( $g, 'font', $s['font'], 'text', array( 'class' => 'regular-text' ) ), __( '"inherit" to follow the theme, or the name of a font already available on the site.', 'ds-cookie-consent' ) );
 			F::row(
 				__( 'Button corner radius', 'ds-cookie-consent' ),

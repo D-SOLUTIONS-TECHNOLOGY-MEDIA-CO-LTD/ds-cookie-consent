@@ -72,7 +72,7 @@ test.describe('admin', () => {
     // nothing was saved
     resetSite('card');
     await page.goto(SETTINGS);
-    expect(await page.inputValue('#dscc-appearance-color_primary')).toBe('#005ea3');
+    expect(await page.inputValue('#dscc-appearance-color_primary')).toBe('#1e3a8a');
   });
 
   test('contrast warning is shown live and after save, and saving is still allowed', async ({ page }) => {

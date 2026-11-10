@@ -7,12 +7,11 @@ use PHPUnit\Framework\TestCase;
 class ContrastCheckerTest extends TestCase {
 
 	public function test_default_colours_pass() {
-		$this->assertSame( array(), ContrastChecker::failures( array( 'color_primary' => '#005ea3', 'color_text' => '#1e3a5f', 'color_bar_bg' => '#f1f5f9' ) ) );
+		$this->assertSame( array(), ContrastChecker::failures( array( 'color_primary' => '#1e3a8a', 'color_text' => '#1f2937', 'color_bar_bg' => '#f9fafb' ) ) );
 	}
 
 	public function test_low_contrast_reported_with_ratio() {
-		$f = ContrastChecker::failures( array( 'color_primary' => '#7fbfef', 'color_text' => '#aaaaaa', 'color_bar_bg' => '#f1f5f9' ) );
-		$this->assertArrayHasKey( 'primary_on_white', $f );
+		$f = ContrastChecker::failures( array( 'color_primary' => '#7fbfef', 'color_text' => '#aaaaaa', 'color_bar_bg' => '#f9fafb' ) );		$this->assertArrayHasKey( 'primary_on_white', $f );
 		$this->assertArrayHasKey( 'text_on_bar', $f );
 		$this->assertLessThan( 4.5, $f['primary_on_white'] );
 	}

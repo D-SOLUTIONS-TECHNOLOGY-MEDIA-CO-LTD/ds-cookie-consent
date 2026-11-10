@@ -1,8 +1,9 @@
 <?php
 /**
  * Compliance violations of a deep scan (spec 6.2 C): an analytics or marketing cookie, web storage key or vendor host
- * that is present before the visitor chose (`before_choice`) or after they rejected (`after_reject`). Pure: no
- * WordPress calls; the classification comes from the merge results and the vendor host list.
+ * that is present before the visitor chose (`before_choice`) or after they rejected (`after_reject`). compute() is
+ * pure (no WordPress calls); the classification comes from the merge results and the vendor host list.
+ * split_consent_mode_pings() turns host-only Google Consent Mode contacts into warnings.
  *
  * @package DSolutions\CookieConsent
  */
@@ -22,6 +23,9 @@ final class DeepScanViolations {
 		),
 		's' => array(),
 	);
+
+	/** Services that send cookieless pings under Google Consent Mode (see split_consent_mode_pings()). */
+	const CONSENT_MODE_SERVICES = array( 'google-analytics', 'google-ads', 'google-floodlight' );
 
 	/**
 	 * Violations per checked phase.
@@ -63,6 +67,38 @@ final class DeepScanViolations {
 				}
 			}
 			$out[ $name ] = array_values( $found );
+		}
+		return $out;
+	}
+
+	/**
+	 * Split host-only Google Consent Mode pings out of the violations. With Consent Mode the Google tag still contacts
+	 * its servers before consent, but without cookies ("cookieless pings"), so a Google Analytics, Google Ads or
+	 * Floodlight host with no cookie or storage key of the same service in that phase is a warning, not a violation.
+	 * Any other vendor host, or a Google host next to a Google cookie, stays a violation.
+	 *
+	 * @param array<string,array[]> $violations Output of compute().
+	 * @param string[]              $slugs      Services that ping without cookies (default CONSENT_MODE_SERVICES).
+	 * @return array{violations: array<string,array[]>, warnings: array<string,array[]>}
+	 */
+	public static function split_consent_mode_pings( array $violations, array $slugs = self::CONSENT_MODE_SERVICES ) {
+		$out = array(
+			'violations' => array(),
+			'warnings'   => array(),
+		);
+		foreach ( $violations as $phase => $list ) {
+			$stored = array();
+			foreach ( $list as $item ) {
+				if ( 'host' !== $item['storage'] ) {
+					$stored[ $item['service'] ] = true;
+				}
+			}
+			$out['violations'][ $phase ] = array();
+			$out['warnings'][ $phase ]   = array();
+			foreach ( $list as $item ) {
+				$ping = 'host' === $item['storage'] && '' !== $item['service'] && in_array( $item['service'], $slugs, true ) && ! isset( $stored[ $item['service'] ] );
+				$out[ $ping ? 'warnings' : 'violations' ][ $phase ][] = $item;
+			}
 		}
 		return $out;
 	}

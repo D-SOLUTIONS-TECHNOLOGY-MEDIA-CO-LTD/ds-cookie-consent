@@ -136,7 +136,7 @@ final class ScriptRules {
 	public static function active() {
 		$snapshot = self::snapshot();
 		$blocking = Settings::group( 'blocking' );
-		$show_fn  = ! empty( Settings::get( 'advanced', 'show_functional' ) );
+		$show_fn  = ! empty( Settings::get( 'advanced', 'show_functional', true ) );
 		$rules    = array();
 		$map      = array();
 		foreach ( $snapshot['rules'] as $rule ) {
